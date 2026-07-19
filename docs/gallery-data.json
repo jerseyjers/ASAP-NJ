@@ -1,0 +1,79 @@
+{
+  "categories": {
+    "3D Videos": [
+      {
+        "filename": "ACP 3D short sample video.mp4",
+        "type": "video",
+        "video": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/ACP%203D%20short%20sample%20video.mp4",
+        "preview": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/ACP%203D%20short%20sample%20video_preview.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/ACP%203D%20short%20sample%20video_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "ACP 3D short with insta logo.mp4",
+        "type": "video",
+        "video": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/ACP%203D%20short%20with%20insta%20logo.mp4",
+        "preview": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/ACP%203D%20short%20with%20insta%20logo_preview.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/ACP%203D%20short%20with%20insta%20logo_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "Home 3D Thermal orbit.mp4",
+        "type": "video",
+        "video": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%203D%20Thermal%20orbit.mp4",
+        "preview": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%203D%20Thermal%20orbit_preview.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%203D%20Thermal%20orbit_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "Home Thermal 3D with IG tag.mp4",
+        "type": "video",
+        "video": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%20Thermal%203D%20with%20IG%20tag.mp4",
+        "preview": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%20Thermal%203D%20with%20IG%20tag_preview.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%20Thermal%203D%20with%20IG%20tag_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "Home Thermal with insta tag.jpg",
+        "type": "image",
+        "full": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%20Thermal%20with%20insta%20tag_watermarked.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Home%20Thermal%20with%20insta%20tag_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "Money Island 3d short sample vid.mp4",
+        "type": "video",
+        "video": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Money%20Island%203d%20short%20sample%20vid.mp4",
+        "preview": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Money%20Island%203d%20short%20sample%20vid_preview.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/Money%20Island%203d%20short%20sample%20vid_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "RTK Money Island Vid Clip 2025-12-21 084025.mp4",
+        "type": "video",
+        "video": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/RTK%20Money%20Island%20Vid%20Clip%202025-12-21%20084025.mp4",
+        "preview": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/RTK%20Money%20Island%20Vid%20Clip%202025-12-21%20084025_preview.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/3D%20Videos/RTK%20Money%20Island%20Vid%20Clip%202025-12-21%20084025_thumb.jpg"
+      }
+
+    ]
+    ,
+    "Pics": [
+      {
+        "filename": "Home Thermal with insta tag.jpg",
+        "type": "image",
+        "full": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/Pics/Home%20Thermal%20with%20insta%20tag_watermarked.jpg",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/Pics/Home%20Thermal%20with%20insta%20tag_thumb.jpg"
+      }
+      ,
+      {
+        "filename": "Home Thermal.png",
+        "type": "image",
+        "full": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/Pics/Home%20Thermal_watermarked.png",
+        "thumbnail": "https://pub-35431c64b54e4f579514c1cf25946692.r2.dev/Pics/Home%20Thermal_thumb.png"
+      }
+
+    ]
+
+  }
+}

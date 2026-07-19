@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="graphics/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="graphics/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="graphics/icons/favicon-16x16.png">
+        <link rel="manifest" href="graphics/icons/site.webmanifest">
+        <title>Aerial Surveying and Photography</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font-family: 'Source Sans Pro', arial, sans-serif; background: #000; color: #fff; }
+            .hero { min-height: 65vh; background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('graphics/hero-bg.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 56px 24px; }
+            .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 48px; font-weight: 400; margin-bottom: 8px; }
+            .container { max-width: 1160px; margin: 0 auto; padding: 24px 24px; }
+            h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 38px; text-align: center; margin-bottom: 40px; color: #969696; }
+            .contact-form { max-width: 800px; margin: 0 auto; }
+            .form-group { margin-bottom: 24px; }
+            input, textarea { width: 100%; padding: 16px; background: transparent; border: 1px solid #fff; border-radius: 4px; color: #ababab; font-size: 16px; font-family: inherit; }
+            input::placeholder, textarea::placeholder { color: #ababab; }
+            textarea { resize: vertical; min-height: 120px; }
+            button { background: #969696; color: #000; border: none; padding: 16px 32px; font-size: 14px; font-weight: 700; border-radius: 4px; cursor: pointer; display: block; margin: 24px auto 0; text-transform: uppercase; letter-spacing: 0.071em; }
+            button:hover { background: #ababab; }
+            .checkbox-group { display: flex; align-items: flex-start; gap: 8px; margin: 16px 0; }
+            .checkbox-group input { width: auto; }
+            .checkbox-group label { font-size: 14px; color: #8d8d8d; }
+            footer { text-align: center; padding: 24px; font-size: 12px; color: #969696; border-top: 2px solid #1b1b1b; margin-top: 40px; }
+            .social-links { text-align: center; }
+            .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; transition: transform 0.3s ease; text-decoration: none; margin: 0 8px; }
+            .social-links a:hover { transform: scale(1.1); }
+            .social-links svg { width: 44px; height: 44px; }
+        </style>
+        <!-- PhotoSwipe CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
+    </head>
+    <body>
+        <section class="hero">
+            <div>
+                <h1>We Elevate Your Vision</h1>
+            </div>
+        </section>
+        <section class="badge">
+            <div style="text-align: center">
+                <a href='https://certificates.airdata.com/BGSepI' target='_blank'><img align="left" alt='Airdata UAV|Drone Safety Verified Badge' src='https://certificates.airdata.com/badge?i=BGSepI&r=xJkJ&t=5&m=3&size=11&c=1' style='width:379px;height:100px;border:0;image-rendering: optimizequality;image-rendering: smooth;'></a>
+                <a class="container social-links" href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="instagram-gradient" cx="30%" cy="107%" r="150%">
+                                <stop offset="0%" style="stop-color:#fdf497" />
+                                <stop offset="5%" style="stop-color:#fdf497" />
+                                <stop offset="45%" style="stop-color:#fd5949" />
+                                <stop offset="60%" style="stop-color:#d6249f" />
+                                <stop offset="90%" style="stop-color:#285AEB" />
+                            </radialGradient>
+                        </defs>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#instagram-gradient)"/>
+                    </svg>
+                </a>
+                <a href='https://certificates.airdata.com/BGSepI' target='_blank'><img align="right" alt='FAA Part 107 Logo' src='graphics/FAA-Certified-Banner.png' style='width:379px;height:100px;border:0;image-rendering: optimizequality;image-rendering: smooth;'></a>
+            </div>
+        </section>
+        <section id="gallery-section">
+            <h2>Our Work, Our Passion</h2>
+            <!-- Featured rotating hero image -->
+            <div id="featured-container">
+                <a id="featured-image" href="" data-pswp-width="1920" data-pswp-height="1080">
+                    <img src="" alt="" loading="eager">
+                </a>
+            </div>
+            <!-- Thumbnail grid -->
+            <div id="gallery" class="gallery-grid"></div>
+        </section>
+        <style>
+            #featured-container {
+                max-width: 1160px;
+                margin: 0 auto 2rem;
+                padding: 0 1rem;
+            }
+
+            #featured-image {
+                display: block;
+                overflow: hidden;
+                border-radius: 12px;
+                box-shadow: 0 8px 24px rgba(255,255,255,0.1);
+                transition: transform 0.3s ease;
+            }
+
+            #featured-image:hover {
+                transform: scale(1.02);
+            }
+
+            #featured-image img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                display: block;
+                transition: opacity 0.5s ease;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .gallery-grid a {
+                display: block;
+                overflow: hidden;
+                border-radius: 8px;
+                transition: transform 0.2s;
+            }
+
+            .gallery-grid a:hover {
+                transform: scale(1.05);
+            }
+
+            .gallery-grid img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                display: block;
+            }
+            .category-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                margin: 2rem 0;
+                padding: 0 1rem;
+            }
+
+            .category-tab {
+                background: transparent;
+                color: #969696;
+                border: 1px solid #969696;
+                padding: 12px 24px;
+                font-size: 14px;
+                font-weight: 600;
+                border-radius: 4px;
+                cursor: pointer;
+                margin: 0 8px 8px 0;
+                text-transform: uppercase;
+                letter-spacing: 0.071em;
+                transition: all 0.3s ease;
+            }
+
+            .category-tab:hover {
+                background: #969696;
+                color: #000;
+            }
+
+            .category-tab.active {
+                background: #969696;
+                color: #000;
+            }
+
+            .video-play-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: #000;
+                pointer-events: none;
+            }
+
+            .gallery-grid a {
+                position: relative;
+            }
+            /* Custom video lightbox */
+            .video-lightbox {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                z-index: 9999;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .video-lightbox.active {
+                display: flex;
+            }
+
+            .video-lightbox video {
+                max-width: 90%;
+                max-height: 90vh;
+                border-radius: 8px;
+            }
+
+            .video-lightbox-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+                background: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s;
+            }
+
+            .video-lightbox-close:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        </style>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xldpaodl" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email*" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <footer>
+            <p>v2.0.1 - Copyright © 2025 ASAP New Jersey Drone Services - Professional Aerial Solutions - All Rights Reserved.</p>
+        </footer>
+        <script type="module">
+            import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
+            import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js';
+
+            // Load gallery data from JSON
+            fetch('./gallery-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.categories || Object.keys(data.categories).length === 0) {
+                        console.log('No images found in gallery');
+                        document.getElementById('gallery').innerHTML = '<p style="text-align: center; color: #969696; padding: 2rem; font-size: 18px;">Gallery coming soon! Check back later for stunning aerial photography.</p>';
+                        return;
+                    }
+
+                    const gallery = document.getElementById('gallery');
+                    const featuredLink = document.getElementById('featured-image');
+                    const featuredImg = featuredLink.querySelector('img');
+
+                    // Flatten all items from all categories for hero rotation
+                    const allItems = [];
+                    Object.keys(data.categories).forEach(category => {
+                        data.categories[category].forEach(item => {
+                            allItems.push({...item, category: category});
+                        });
+                    });
+
+                    if (allItems.length === 0) {
+                        console.log('No items to display');
+                        return;
+                    }
+
+                    let currentIndex = 0;
+
+                    // Function to update featured image/video
+                    function updateFeatured(index) {
+                        const item = allItems[index];
+                        featuredImg.style.opacity = '0';
+
+                        setTimeout(() => {
+                            if (item.type === 'video') {
+                                // Use video preview image for hero
+                                featuredLink.href = item.preview;
+                                featuredImg.src = item.preview;
+                                featuredImg.alt = item.filename;
+                            } else {
+                                // Use full image for hero
+                                featuredLink.href = item.full;
+                                featuredImg.src = item.full;
+                                featuredImg.alt = item.filename;
+                            }
+                            featuredImg.style.opacity = '1';
+                        }, 250);
+                    }
+
+                    // Initialize first featured item
+                    updateFeatured(0);
+
+                    // Rotate featured item every 4 seconds
+                    setInterval(() => {
+                        currentIndex = (currentIndex + 1) % allItems.length;
+                        updateFeatured(currentIndex);
+                    }, 4000);
+
+                    // Create category tabs
+                    const categoriesContainer = document.createElement('div');
+                    categoriesContainer.className = 'category-tabs';
+                    categoriesContainer.innerHTML = '<button class="category-tab active" data-category="all">All</button>';
+
+                    Object.keys(data.categories).sort().forEach(category => {
+                        const button = document.createElement('button');
+                        button.className = 'category-tab';
+                        button.dataset.category = category;
+                        button.textContent = category;
+                        categoriesContainer.appendChild(button);
+                    });
+
+                    gallery.parentNode.insertBefore(categoriesContainer, gallery);
+
+                    // Populate thumbnail grid
+                    function populateGallery(filterCategory = 'all') {
+                        gallery.innerHTML = '';
+
+                        Object.keys(data.categories).sort().forEach(category => {
+                            if (filterCategory !== 'all' && filterCategory !== category) return;
+
+                            data.categories[category].forEach(item => {
+                                const link = document.createElement('a');
+
+                                if (item.type === 'video') {
+                                    // For videos, open in custom lightbox
+                                    link.href = '#';
+                                    link.dataset.videoUrl = item.video;
+                                    link.classList.add('video-link');
+
+                                    link.addEventListener('click', (e) => {
+                                        e.preventDefault();
+                                        openVideoLightbox(item.video);
+                                    });
+
+                                    // Add video play icon overlay
+                                    const playIcon = document.createElement('div');
+                                    playIcon.className = 'video-play-icon';
+                                    playIcon.innerHTML = '▶';
+                                    link.appendChild(playIcon);
+                                } else {
+                                    // Images use PhotoSwipe normally
+                                    link.href = item.full;
+                                    link.dataset.pswpWidth = 1920;
+                                    link.dataset.pswpHeight = 1080;
+                                }
+
+                                const thumb = document.createElement('img');
+                                thumb.src = item.thumbnail;
+                                thumb.alt = item.filename;
+                                thumb.loading = 'lazy';
+
+                                link.appendChild(thumb);
+                                gallery.appendChild(link);
+                            });
+                        });
+                    }
+
+                    // Initial gallery population
+                    populateGallery('all');
+
+                    // Category tab filtering
+                    document.querySelectorAll('.category-tab').forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                            tab.classList.add('active');
+                            populateGallery(tab.dataset.category);
+                        });
+                    });
+
+                    // Initialize PhotoSwipe (exclude video links)
+                    const lightbox = new PhotoSwipeLightbox({
+                        gallery: '#gallery-section',
+                        children: 'a:not(.video-link)',  // Exclude videos
+                        pswpModule: PhotoSwipe,
+                        preload: [1, 2]
+                    });
+
+                    lightbox.init();
+                })
+                .catch(error => {
+                    console.error('Error loading gallery:', error);
+                    document.getElementById('gallery').innerHTML = '<p style="text-align: center; color: #969696; padding: 2rem; font-size: 18px;">Gallery coming soon! Check back later for stunning aerial photography.</p>';
+                    // Hide the featured image container too
+                    document.getElementById('featured-container').style.display = 'none';
+                });
+
+            // Video lightbox functions
+            window.openVideoLightbox = function(videoUrl) {
+                const lightbox = document.getElementById('video-lightbox');
+                const video = document.getElementById('lightbox-video');
+                video.src = videoUrl;
+                lightbox.classList.add('active');
+                video.play();
+            };
+
+            window.closeVideoLightbox = function() {
+                const lightbox = document.getElementById('video-lightbox');
+                const video = document.getElementById('lightbox-video');
+                video.pause();
+                video.src = '';
+                lightbox.classList.remove('active');
+            };
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeVideoLightbox();
+                }
+            });
+
+            // Close on background click
+            document.getElementById('video-lightbox').addEventListener('click', (e) => {
+                if (e.target.id === 'video-lightbox') {
+                    closeVideoLightbox();
+                }
+            });
+        </script>
+        <!-- Video lightbox -->
+        <div id="video-lightbox" class="video-lightbox">
+            <button class="video-lightbox-close" onclick="closeVideoLightbox()">×</button>
+            <video id="lightbox-video" controls></video>
+        </div>
+    </body>
+</html>
