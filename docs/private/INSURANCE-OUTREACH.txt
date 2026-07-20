@@ -1,0 +1,94 @@
+ASAP NJ — INSURANCE OUTREACH KIT
+Who to chase first (fastest path to paid flights)
+================================================
+
+PRIORITY TARGETS (not "State Farm HQ cold email")
+-------------------------------------------------
+1. Independent adjusters (IAs) in South Jersey / NJ
+2. Public adjusters
+3. Roofing companies that work insurance claims
+4. Restoration / mitigation companies
+5. Property managers (commercial)
+6. Then: TPA / carrier preferred-vendor lists
+
+Why: IAs and roofers assign work daily. Carriers often come later
+via preferred vendor once you have a track record.
+
+
+LINKS TO SEND
+-------------
+Partner page:  https://asap-nj.com/insurance.html
+Main site:     https://asap-nj.com/#insurance
+Portal:        https://asap-nj.com/client/
+Airdata:       https://certificates.airdata.com/BGSepI
+
+
+SHORT TEXT / DM (adjusters & roofers)
+------------------------------------
+Hey [Name] — FAA Part 107 drone inspections out of South Jersey.
+Claims-ready roof & property packages (RGB + thermal when needed).
+Labeled for the file, not a photo dump. Can you use a reliable
+aerial option on hard/steep roofs or commercial sites?
+Link: https://asap-nj.com/insurance.html
+
+
+EMAIL SUBJECT LINES
+-------------------
+- Aerial claim documentation — South Jersey / NJ
+- Part 107 drone roof packages for adjusters
+- Fast roof stills + optional thermal for claims
+
+
+EMAIL BODY (copy/paste)
+-----------------------
+Hi [Name],
+
+I run ASAP NJ Drone Services (FAA Part 107, Airdata safety verified).
+We provide claims-ready aerial roof and property documentation for
+independent adjusters, carriers, and restoration teams in New Jersey.
+
+What you get:
+• Oriented stills of roof and elevations
+• Storm / damage context
+• Optional thermal (moisture, HVAC, solar claims)
+• Claim number on the package when provided
+• Clean delivery — portal or secure link
+
+Assign with claim #, address, access notes, and due date:
+https://asap-nj.com/insurance.html
+
+Happy to do a sample run on a live claim so you can see the package quality.
+
+Thanks,
+Gary Colyer
+ASAP NJ Drone Services
+https://asap-nj.com
+
+
+LINKEDIN / FACEBOOK POST
+------------------------
+FAA Part 107 | South Jersey
+Offering claims-ready drone roof inspections for adjusters and carriers —
+fast packages, optional thermal, labeled for the file.
+https://asap-nj.com/insurance.html
+
+
+THIS WEEK ACTION LIST
+---------------------
+[ ] Share insurance.html with 5 IA / public adjuster contacts
+[ ] Message 5 local roofers who do insurance work
+[ ] Join 1–2 local contractor / adjuster Facebook groups (value first)
+[ ] Save private rate card: private/INSURANCE-RATE-CARD.txt
+[ ] After first paid claim: ask for a one-line referral intro
+[ ] Optional: Stripe Payment Link for deposits (client portal config)
+
+
+SAMPLE DELIVERABLE CHECKLIST (every claim)
+------------------------------------------
+[ ] Claim # in folder name / email subject
+[ ] Address + date on cover note
+[ ] Roof overview + each elevation / slope
+[ ] Damage close-ups where safe/visible
+[ ] Thermal if ordered
+[ ] Short bullet findings (not a novel)
+[ ] Deliver same day or next business day when weather allows

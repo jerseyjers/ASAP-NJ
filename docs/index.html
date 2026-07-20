@@ -1138,9 +1138,64 @@
             margin-top: 1.75rem;
         }
 
+        .ins-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin: 1.75rem 0 0.5rem;
+        }
+
+        .ins-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1rem 1.05rem;
+        }
+
+        .ins-step strong {
+            display: block;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+        }
+
+        .ins-step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .ins-who {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .ins-who span {
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-strong);
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.02);
+        }
+
+        @media (max-width: 900px) {
+            .ins-steps { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 800px) {
             .ins-layout { grid-template-columns: 1fr; }
             .ins-photo { min-height: 240px; }
+        }
+
+        @media (max-width: 520px) {
+            .ins-steps { grid-template-columns: 1fr; }
         }
 
         .img-credit {
@@ -1990,21 +2045,21 @@
                     roofs, building envelopes, and claim sites—plus RTK surveying and aerial docs. Safety-first flight with real field know-how.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#thermal">Thermal capabilities</a>
-                    <a class="btn btn-ghost" href="#solar">Solar O&amp;M</a>
+                    <a class="btn btn-primary" href="#insurance">For insurance &amp; adjusters</a>
+                    <a class="btn btn-ghost" href="#thermal">Thermal capabilities</a>
                 </div>
                 <div class="hero-stats" aria-label="Highlights">
                     <div class="stat">
-                        <strong>Thermal first</strong>
-                        <span>Solar · HVAC · roofs · more</span>
+                        <strong>Claims-ready</strong>
+                        <span>Fast roof &amp; loss docs</span>
                     </div>
                     <div class="stat">
-                        <strong>Claims-ready</strong>
-                        <span>Insurance &amp; adjusters</span>
+                        <strong>Thermal</strong>
+                        <span>HVAC · solar · roofs</span>
                     </div>
                     <div class="stat">
                         <strong>Part 107</strong>
-                        <span>FAA certified pilot</span>
+                        <span>FAA · Airdata verified</span>
                     </div>
                 </div>
             </div>
@@ -2271,15 +2326,44 @@
         <section class="insurance" id="insurance" aria-labelledby="insurance-heading">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-label">For carriers &amp; adjusters</p>
-                    <h2 id="insurance-heading">Insurance inspections, done clean</h2>
+                    <p class="section-label">Insurance partners</p>
+                    <h2 id="insurance-heading">Claims-ready drone inspections—fast</h2>
                     <p>
-                        Carriers, independent adjusters, TPAs, and restoration partners—use ASAP NJ when you need
-                        fast, professional aerial documentation without guessing from the ground.
-                        Tell us the claim need; we deliver imagery and notes your file can actually use.
+                        Built for carriers, independent adjusters, TPAs, public adjusters, and restoration crews who need
+                        <strong style="color:var(--text)">clean documentation, not a phone dump of random photos</strong>.
+                        South Jersey / NJ based. We mobilize for claim sites—quote includes travel when it makes sense.
                     </p>
                 </div>
-                <div class="ins-layout">
+
+                <div class="ins-who" aria-label="Who we serve">
+                    <span>Independent adjusters</span>
+                    <span>Carriers / TPAs</span>
+                    <span>Public adjusters</span>
+                    <span>Roofing contractors</span>
+                    <span>Restoration companies</span>
+                    <span>Property managers</span>
+                </div>
+
+                <div class="ins-steps" aria-label="How a claim flight works">
+                    <div class="ins-step">
+                        <strong>1 · Assign</strong>
+                        <p>Send claim #, address, access notes, RGB vs thermal, and due date.</p>
+                    </div>
+                    <div class="ins-step">
+                        <strong>2 · Fly</strong>
+                        <p>Part 107 ops. Roof, elevations, overview—thermal when scoped.</p>
+                    </div>
+                    <div class="ins-step">
+                        <strong>3 · Package</strong>
+                        <p>Labeled stills + short findings. Built for the claim file.</p>
+                    </div>
+                    <div class="ins-step">
+                        <strong>4 · Deliver</strong>
+                        <p>Portal or secure link. Aim for quick turn when weather allows.</p>
+                    </div>
+                </div>
+
+                <div class="ins-layout" style="margin-top:1.5rem">
                     <figure class="ins-photo" role="img" aria-label="Aerial roof photo showing storm debris and damaged shingles for insurance documentation">
                         <figcaption>
                             Claims-ready roof documentation
@@ -2288,29 +2372,34 @@
                     </figure>
                     <div class="ins-grid">
                         <article class="ins-card">
-                            <h3>What we document</h3>
-                            <p>Storm, hail, wind, fire aftermath, roof condition, property overview, hard-to-access elevations, and thermal when heat/moisture clues matter—plus solar on claims when needed.</p>
+                            <h3>What we put in the file</h3>
+                            <p>Organized aerial packages—not 400 unsorted JPEGs. RGB standard; thermal when moisture, heat, or solar matters.</p>
                             <ul class="ins-list">
-                                <li>Roof &amp; envelope (RGB + thermal when scoped)</li>
-                                <li>Storm / catastrophe site overview</li>
-                                <li>Solar damage or underperformance for claims</li>
-                                <li>Pre-loss / post-repair progress records</li>
+                                <li>Roof condition &amp; damage documentation</li>
+                                <li>Storm / wind / hail site overview</li>
+                                <li>Hard or steep elevations without ladder risk</li>
+                                <li>Thermal add-on for wet spots / HVAC / solar claims</li>
+                                <li>Pre-loss or post-repair progress shots</li>
+                                <li>Claim # on package when you provide it</li>
                             </ul>
                         </article>
                         <article class="ins-card">
-                            <h3>How carriers work with us</h3>
-                            <p>One clear point of contact. FAA Part 107. Organized photo sets and short findings—not a dump of unsorted files. Based in NJ; out-of-area only when the job pays.</p>
+                            <h3>Why teams use ASAP NJ</h3>
+                            <p>One point of contact. FAA Part 107 + Airdata safety verified. Clear scope before wheels roll.</p>
                             <ul class="ins-list">
-                                <li>Claim # / site address / access notes in one request</li>
-                                <li>Deliverables labeled for the file</li>
-                                <li>Preferred vendor conversations welcome</li>
+                                <li>South Jersey / NJ focus—travel for paying work</li>
+                                <li>Thermal capability when the claim needs IR</li>
+                                <li>Preferred-vendor / volume conversations welcome</li>
+                                <li>No public rate card—quote per claim complexity</li>
+                                <li>Client portal ready for report delivery</li>
                             </ul>
                         </article>
                     </div>
                 </div>
                 <div class="ins-cta-row">
-                    <a class="btn btn-primary" href="#contact">Request inspection capacity</a>
-                    <a class="btn btn-ghost" href="#services">All services</a>
+                    <a class="btn btn-primary" href="#contact">Request a claim flight</a>
+                    <a class="btn btn-ghost" href="insurance.html">Insurance partner page</a>
+                    <a class="btn btn-ghost" href="client/">Client portal</a>
                 </div>
             </div>
         </section>
@@ -2647,13 +2736,13 @@
                                     <label for="service">Service interest</label>
                                     <select id="service" name="service">
                                         <option value="">Select one…</option>
-                                        <option selected>Thermal drone inspection (general)</option>
+                                        <option selected>Insurance / claims inspection</option>
+                                        <option>Thermal drone inspection (general)</option>
                                         <option>Rooftop HVAC / AC thermal</option>
                                         <option>Solar thermal / PV maintenance</option>
                                         <option>Solar production loss / troubleshooting</option>
                                         <option>Building envelope / roof thermal</option>
                                         <option>Electrical hotspot documentation</option>
-                                        <option>Insurance / claims inspection</option>
                                         <option>RTK surveying / mapping</option>
                                         <option>3D model / photogrammetry</option>
                                         <option>Construction documentation</option>
@@ -2698,7 +2787,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
-            <p class="footer-copy">v3.8.0 · Copyright © 2026 ASAP New Jersey Drone Services · All rights reserved. Showcase photos for marketing.</p>
+            <p class="footer-copy">v3.9.0 · Copyright © 2026 ASAP New Jersey Drone Services · All rights reserved. Showcase photos for marketing.</p>
         </div>
     </footer>
 
