@@ -1,7 +1,11 @@
-﻿# Static marketing site — minimize Jekyll processing
+# Static marketing site on GitHub Pages.
+# Keep all HTML/CSS/JS/images. Only skip internal note files from Markdown conversion.
 theme: null
+plugins: []
 exclude:
-  - graphics
-  - client
-  - tools
-  - "*.md"
+  - "**/*.txt"
+  - "**/BEST-THERMAL.txt"
+  - "**/SOLAR-PHOTO-INVENTORY.txt"
+  - "**/SETUP.txt"
+  - "**/CREDITS.txt"
+  - "**/README.txt"
