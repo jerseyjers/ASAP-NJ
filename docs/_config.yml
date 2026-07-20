@@ -1,0 +1,7 @@
+﻿# Static marketing site — minimize Jekyll processing
+theme: null
+exclude:
+  - graphics
+  - client
+  - tools
+  - "*.md"
