@@ -1,433 +1,3296 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="graphics/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="graphics/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="graphics/icons/favicon-16x16.png">
-        <link rel="manifest" href="graphics/icons/site.webmanifest">
-        <title>Aerial Surveying and Photography</title>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-        <style>
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { font-family: 'Source Sans Pro', arial, sans-serif; background: #000; color: #fff; }
-            .hero { min-height: 65vh; background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('graphics/hero-bg.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 56px 24px; }
-            .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 48px; font-weight: 400; margin-bottom: 8px; }
-            .container { max-width: 1160px; margin: 0 auto; padding: 24px 24px; }
-            h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 38px; text-align: center; margin-bottom: 40px; color: #969696; }
-            .contact-form { max-width: 800px; margin: 0 auto; }
-            .form-group { margin-bottom: 24px; }
-            input, textarea { width: 100%; padding: 16px; background: transparent; border: 1px solid #fff; border-radius: 4px; color: #ababab; font-size: 16px; font-family: inherit; }
-            input::placeholder, textarea::placeholder { color: #ababab; }
-            textarea { resize: vertical; min-height: 120px; }
-            button { background: #969696; color: #000; border: none; padding: 16px 32px; font-size: 14px; font-weight: 700; border-radius: 4px; cursor: pointer; display: block; margin: 24px auto 0; text-transform: uppercase; letter-spacing: 0.071em; }
-            button:hover { background: #ababab; }
-            .checkbox-group { display: flex; align-items: flex-start; gap: 8px; margin: 16px 0; }
-            .checkbox-group input { width: auto; }
-            .checkbox-group label { font-size: 14px; color: #8d8d8d; }
-            footer { text-align: center; padding: 24px; font-size: 12px; color: #969696; border-top: 2px solid #1b1b1b; margin-top: 40px; }
-            .social-links { text-align: center; }
-            .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; transition: transform 0.3s ease; text-decoration: none; margin: 0 8px; }
-            .social-links a:hover { transform: scale(1.1); }
-            .social-links svg { width: 44px; height: 44px; }
-        </style>
-        <!-- PhotoSwipe CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
-    </head>
-    <body>
-        <section class="hero">
-            <div>
-                <h1>We Elevate Your Vision</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASAP NJ Drone Services | Thermal Drone Inspections, Solar &amp; Insurance</title>
+    <meta name="description" content="Thermal drone inspections in New Jersey: solar arrays, rooftop HVAC/AC units, roofs, building envelopes, electrical hotspots, and insurance claims—plus RTK survey and aerial docs. FAA Part 107.">
+    <meta name="keywords" content="thermal drone inspection New Jersey, rooftop HVAC thermal, AC unit drone inspection, solar thermal PV NJ, roof thermal, building envelope IR, insurance drone, FAA Part 107">
+    <meta name="author" content="ASAP NJ Drone Services">
+    <meta name="theme-color" content="#0a0c10">
+    <link rel="canonical" href="https://asap-nj.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asap-nj.com/">
+    <meta property="og:title" content="ASAP NJ Drone Services | Thermal Drone, Solar &amp; Insurance">
+    <meta property="og:description" content="Thermal drone for solar, rooftop HVAC/AC, roofs, envelopes, and claims—plus survey and aerial docs. FAA Part 107, New Jersey.">
+    <meta property="og:image" content="https://asap-nj.com/graphics/hero-bg.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="ASAP NJ Drone Services">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ASAP NJ Drone Services">
+    <meta name="twitter:description" content="Thermal drone inspections: solar, HVAC, roofs, envelopes, insurance—based in New Jersey.">
+    <meta name="twitter:image" content="https://asap-nj.com/graphics/hero-bg.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="graphics/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="graphics/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="graphics/icons/favicon-16x16.png">
+    <link rel="manifest" href="graphics/icons/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
+
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --bg-elevated: #12151c;
+            --bg-card: #161a23;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.14);
+            --text: #f3f5f7;
+            --text-muted: #9aa3b2;
+            --text-dim: #6b7382;
+            --accent: #3ec4e8;
+            --accent-soft: rgba(62, 196, 232, 0.14);
+            --accent-hover: #6ad4f0;
+            --solar: #f0a020;
+            --solar-soft: rgba(240, 160, 32, 0.14);
+            --solar-hot: #ff6b2c;
+            --gold: #d4b06a;
+            --radius: 14px;
+            --radius-sm: 10px;
+            --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+            --max: 1120px;
+            --nav-h: 72px;
+            --font: 'DM Sans', system-ui, sans-serif;
+            --display: 'Instrument Serif', Georgia, serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent-hover); }
+        button, input, textarea, select { font: inherit; }
+
+        .container {
+            width: min(100% - 2.5rem, var(--max));
+            margin-inline: auto;
+        }
+
+        /* —— Nav —— */
+        .site-header {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 1000;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-header.scrolled {
+            background: rgba(10, 12, 16, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom-color: var(--border);
+        }
+
+        .nav-inner {
+            width: min(100% - 2rem, var(--max));
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            color: var(--text);
+            text-decoration: none;
+            line-height: 1.15;
+        }
+
+        .logo:hover { color: var(--text); }
+        .logo-mark {
+            font-family: var(--display);
+            font-size: 1.45rem;
+            letter-spacing: 0.02em;
+        }
+        .logo-sub {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.15rem 1.35rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.35rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn:active { transform: translateY(1px); }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #041018;
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            color: #041018;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--border-strong);
+        }
+        .btn-ghost:hover {
+            border-color: var(--text-muted);
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .nav-cta { padding: 0.65rem 1.1rem; font-size: 0.86rem; }
+
+        .nav-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            position: relative;
+        }
+        .nav-toggle span::before,
+        .nav-toggle span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+        }
+        .nav-toggle span::before { top: -6px; }
+        .nav-toggle span::after { top: 6px; }
+
+        /* —— Hero —— */
+        .hero {
+            position: relative;
+            min-height: min(100vh, 900px);
+            display: flex;
+            align-items: flex-end;
+            padding: calc(var(--nav-h) + 2rem) 0 4.5rem;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(10, 12, 16, 0.45) 0%, rgba(10, 12, 16, 0.55) 40%, rgba(10, 12, 16, 0.97) 100%),
+                linear-gradient(90deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.35) 55%, rgba(10, 12, 16, 0.55) 100%),
+                url('graphics/showcase/gen-drone-hero.jpg') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.1rem;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .hero h1 {
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: clamp(2.75rem, 6.5vw, 4.6rem);
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.15rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-lead {
+            font-size: clamp(1.05rem, 2vw, 1.22rem);
+            color: var(--text-muted);
+            max-width: 34em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 2.25rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .stat span {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* —— Sections —— */
+        section { padding: 5.5rem 0; }
+
+        .section-head {
+            max-width: 640px;
+            margin-bottom: 2.75rem;
+        }
+
+        .section-head.center {
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: clamp(2rem, 4vw, 2.85rem);
+            line-height: 1.15;
+            margin-bottom: 0.9rem;
+        }
+
+        .section-head p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* —— Trust strip —— */
+        .trust {
+            padding: 1.75rem 0;
+            border-block: 1px solid var(--border);
+            background: var(--bg-elevated);
+        }
+
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem 2.5rem;
+        }
+
+        .trust-row a {
+            display: block;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .trust-row a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .trust-row img {
+            height: 72px;
+            width: auto;
+            max-width: min(100%, 320px);
+            object-fit: contain;
+        }
+
+        .trust-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 0.65rem 1rem;
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+
+        .trust-social:hover {
+            color: var(--text);
+            border-color: var(--text-dim);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .trust-social svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+        /* —— Services —— */
+        .services { background: var(--bg); }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.15rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0;
+            overflow: hidden;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: rgba(62, 196, 232, 0.35);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card-photo {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-card-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 40%, rgba(10, 12, 16, 0.55));
+        }
+
+        .service-card-body {
+            padding: 1.25rem 1.35rem 1.45rem;
+            flex: 1;
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            display: grid;
+            place-items: center;
+            margin-bottom: 0.85rem;
+        }
+
+        .service-icon svg { width: 20px; height: 20px; }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 650;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .service-card {
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            font: inherit;
+            color: inherit;
+        }
+
+        .service-card .tap-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.02em;
+        }
+
+        .service-card:hover .tap-hint { color: var(--accent-hover); }
+
+        .solar-shot {
+            cursor: pointer;
+        }
+
+        /* —— Examples modal —— */
+        .ex-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            padding: 1.25rem;
+            overflow-y: auto;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .ex-modal.open { display: flex; }
+
+        .ex-modal-panel {
+            width: min(960px, 100%);
+            margin: 2rem auto 3rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-strong);
+            border-radius: calc(var(--radius) + 4px);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .ex-modal-head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.25rem 1.35rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(18, 21, 28, 0.96);
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+
+        .ex-modal-head h3 {
+            font-family: var(--display);
+            font-size: 1.55rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .ex-modal-head p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            max-width: 40em;
+        }
+
+        .ex-close {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--border-strong);
+            background: transparent;
+            color: var(--text);
+            font-size: 1.35rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .ex-close:hover { background: rgba(255,255,255,0.06); }
+
+        .ex-modal-body { padding: 1.15rem 1.35rem 1.5rem; }
+
+        .ex-main {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: #0a0c10;
+            margin-bottom: 0.85rem;
+        }
+
+        .ex-thumbs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 0.5rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .ex-thumbs button {
+            border: 2px solid transparent;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #111;
+            aspect-ratio: 1;
+        }
+
+        .ex-thumbs button.active {
+            border-color: var(--accent);
+        }
+
+        .ex-thumbs img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ex-bullets {
+            list-style: none;
+            display: grid;
+            gap: 0.45rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .ex-bullets li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .ex-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .ex-modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+
+        body.modal-open { overflow: hidden; }
+
+        /* —— Thermal pillar —— */
+        .thermal-pillar {
+            background:
+                radial-gradient(ellipse 55% 50% at 100% 30%, rgba(255, 107, 44, 0.12), transparent 55%),
+                radial-gradient(ellipse 40% 40% at 0% 80%, rgba(62, 196, 232, 0.08), transparent 50%),
+                var(--bg);
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .thermal-pillar .section-label { color: var(--solar-hot); }
+
+        .thermal-use-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .thermal-use {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            text-align: left;
+            padding: 0;
+            font: inherit;
+            color: inherit;
+            width: 100%;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .thermal-use:hover {
+            border-color: rgba(255, 107, 44, 0.45);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .thermal-use-photo {
+            height: 130px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .thermal-use-photo::after {
+            content: 'THERMAL';
+            position: absolute;
+            top: 0.55rem;
+            left: 0.55rem;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            padding: 0.25rem 0.45rem;
+            border-radius: 999px;
+            background: rgba(240, 160, 32, 0.92);
+            color: #1a0e02;
+        }
+
+        .thermal-use-body {
+            padding: 1rem 1.1rem 1.15rem;
+        }
+
+        .thermal-use-body h3 {
+            font-size: 1.02rem;
+            font-weight: 650;
+            margin-bottom: 0.4rem;
+        }
+
+        .thermal-use-body p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .thermal-use-body .tap-hint {
+            display: inline-block;
+            margin-top: 0.65rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--solar);
+        }
+
+        .thermal-lead {
+            max-width: 720px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.08rem;
+        }
+
+        @media (max-width: 960px) {
+            .thermal-use-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 560px) {
+            .thermal-use-grid { grid-template-columns: 1fr; }
+        }
+
+        /* —— Solar flagship —— */
+        .solar {
+            background:
+                radial-gradient(ellipse 70% 60% at 0% 50%, rgba(240, 160, 32, 0.12), transparent 55%),
+                radial-gradient(ellipse 50% 50% at 100% 0%, rgba(255, 107, 44, 0.08), transparent 50%),
+                var(--bg-elevated);
+            border-block: 1px solid var(--border);
+            padding: 5.5rem 0;
+        }
+
+        .solar .section-label { color: var(--solar); }
+
+        .solar-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .solar-intro p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .solar-intro .lead-strong {
+            color: var(--text);
+            font-size: 1.12rem;
+            font-weight: 500;
+        }
+
+        .solar-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.35rem 0 1.75rem;
+        }
+
+        .solar-pill {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            background: var(--solar-soft);
+            color: #f5c56a;
+            border: 1px solid rgba(240, 160, 32, 0.28);
+        }
+
+        .solar-steps {
+            display: grid;
+            gap: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .solar-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.9rem;
+            padding: 1rem 1.1rem;
+            background: rgba(0, 0, 0, 0.22);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+
+        .solar-step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--solar), var(--solar-hot));
+            color: #1a0e02;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .solar-step h4 {
+            font-size: 0.98rem;
+            font-weight: 650;
+            margin-bottom: 0.2rem;
+        }
+
+        .solar-step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .solar-panel {
+            background: var(--bg-card);
+            border: 1px solid rgba(240, 160, 32, 0.22);
+            border-radius: calc(var(--radius) + 4px);
+            padding: 1.65rem 1.55rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solar-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--solar), var(--solar-hot), var(--accent));
+        }
+
+        .solar-panel h3 {
+            font-family: var(--display);
+            font-size: 1.55rem;
+            font-weight: 400;
+            margin-bottom: 0.35rem;
+        }
+
+        .solar-panel > .panel-sub {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .solar-deliverables {
+            list-style: none;
+            display: grid;
+            gap: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .solar-deliverables li {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 0.7rem;
+            align-items: start;
+            font-size: 0.94rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        .solar-deliverables strong {
+            color: var(--text);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .solar-check {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--solar-soft);
+            color: var(--solar);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .solar-check svg { width: 15px; height: 15px; }
+
+        .solar-trust-note {
+            padding: 0.95rem 1rem;
+            border-radius: var(--radius-sm);
+            background: rgba(62, 196, 232, 0.08);
+            border: 1px solid rgba(62, 196, 232, 0.18);
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+        }
+
+        .solar-trust-note strong { color: var(--text); }
+
+        .solar-panel .btn-primary {
+            width: 100%;
+            background: linear-gradient(135deg, var(--solar), #e07818);
+            color: #1a0e02;
+        }
+
+        .solar-panel .btn-primary:hover {
+            background: linear-gradient(135deg, #f5b040, var(--solar));
+            color: #1a0e02;
+        }
+
+        .solar-panel .btn-ghost {
+            width: 100%;
+            margin-top: 0.65rem;
+        }
+
+        .solar-gallery {
+            margin-top: 3rem;
+        }
+
+        .solar-gallery-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .solar-gallery-head h3 {
+            font-family: var(--display);
+            font-size: 1.65rem;
+            font-weight: 400;
+        }
+
+        .solar-gallery-head p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 36em;
+        }
+
+        .solar-shot-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.75rem;
+        }
+
+        .solar-shot {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: #0e1118;
+            min-height: 180px;
+        }
+
+        .solar-shot.wide {
+            grid-row: span 2;
+            min-height: 100%;
+        }
+
+        .solar-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            min-height: 180px;
+            transition: transform 0.35s ease;
+        }
+
+        .solar-shot.wide img { min-height: 420px; }
+
+        .solar-shot:hover img { transform: scale(1.03); }
+
+        .solar-shot figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1.5rem 0.85rem 0.75rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-size: 0.8rem;
+            color: #e8ecf2;
+            font-weight: 600;
+        }
+
+        .solar-shot figcaption span {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.65);
+            margin-top: 0.15rem;
+        }
+
+        .solar-shot .badge-th {
+            position: absolute;
+            top: 0.6rem;
+            left: 0.6rem;
+            background: rgba(240, 160, 32, 0.92);
+            color: #1a0e02;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.28rem 0.5rem;
+            border-radius: 999px;
+        }
+
+        @media (max-width: 800px) {
+            .solar-shot-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .solar-shot.wide {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            .solar-shot.wide img { min-height: 240px; }
+        }
+
+        @media (max-width: 520px) {
+            .solar-shot-grid { grid-template-columns: 1fr; }
+            .solar-shot.wide { grid-column: span 1; }
+        }
+
+        /* —— Insurance —— */
+        .insurance {
+            background: var(--bg);
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ins-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 1.5rem;
+            align-items: stretch;
+            margin-top: 0.5rem;
+        }
+
+        .ins-photo {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            min-height: 320px;
+            background: #111 url('graphics/showcase/gen-insurance-roof.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .ins-photo figcaption {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 1.5rem 1rem 0.9rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .ins-photo figcaption span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.2rem;
+        }
+
+        .ins-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .ins-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.45rem 1.4rem;
+        }
+
+        .ins-card h3 {
+            font-size: 1.08rem;
+            font-weight: 650;
+            margin-bottom: 0.45rem;
+        }
+
+        .ins-card p {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            line-height: 1.55;
+        }
+
+        .ins-list {
+            list-style: none;
+            display: grid;
+            gap: 0.55rem;
+            margin: 1.25rem 0 0;
+        }
+
+        .ins-list li {
+            display: flex;
+            gap: 0.65rem;
+            align-items: flex-start;
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .ins-list li::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        .ins-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.75rem;
+        }
+
+        @media (max-width: 800px) {
+            .ins-layout { grid-template-columns: 1fr; }
+            .ins-photo { min-height: 240px; }
+        }
+
+        .img-credit {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* —— About / Why —— */
+        .about {
+            background:
+                radial-gradient(ellipse 60% 50% at 90% 20%, rgba(62, 196, 232, 0.08), transparent 60%),
+                var(--bg-elevated);
+            border-block: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-copy p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 1.02rem;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .about-list li {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        .about-list li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 4px var(--accent-soft);
+        }
+
+        .about-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: calc(var(--radius) + 4px);
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .about-panel h3 {
+            font-family: var(--display);
+            font-size: 1.65rem;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+        }
+
+        .panel-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .panel-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .panel-row span { color: var(--text-dim); }
+        .panel-row strong { color: var(--text); font-weight: 600; text-align: right; }
+
+        /* —— Gallery —— */
+        .gallery-section { background: var(--bg); }
+
+        #featured-container {
+            margin-bottom: 1.75rem;
+        }
+
+        #featured-image {
+            display: block;
+            overflow: hidden;
+            border-radius: calc(var(--radius) + 2px);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+            background: var(--bg-card);
+        }
+
+        #featured-image img {
+            width: 100%;
+            height: clamp(260px, 42vw, 480px);
+            object-fit: cover;
+            transition: opacity 0.5s ease, transform 0.6s ease;
+        }
+
+        #featured-image:hover img { transform: scale(1.02); }
+
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.55rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .category-tab {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-strong);
+            padding: 0.6rem 1.05rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border-radius: 999px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s ease;
+        }
+
+        .category-tab:hover {
+            color: var(--text);
+            border-color: var(--text-dim);
+        }
+
+        .category-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #041018;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .gallery-grid a:hover {
+            transform: translateY(-3px);
+            border-color: rgba(62, 196, 232, 0.4);
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: rgba(10, 12, 16, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(6px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+            pointer-events: none;
+            padding-left: 3px;
+        }
+
+        .gallery-empty {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 2.5rem 1rem;
+            border: 1px dashed var(--border-strong);
+            border-radius: var(--radius);
+        }
+
+        /* —— Panel failure playground —— */
+        .playground {
+            background: var(--bg);
+            padding: 5.5rem 0;
+        }
+
+        .playground .section-label { color: var(--solar); }
+
+        .pg-shell {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .pg-controls,
+        .pg-board-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.35rem;
+        }
+
+        .pg-controls h3,
+        .pg-board-wrap h3 {
+            font-size: 1rem;
+            font-weight: 650;
+            margin-bottom: 1rem;
+        }
+
+        .pg-field {
+            margin-bottom: 0.85rem;
+        }
+
+        .pg-field label {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .pg-field label span {
+            color: var(--solar);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pg-field input[type="range"] {
+            width: 100%;
+            accent-color: var(--solar);
+            cursor: pointer;
+        }
+
+        .pg-field select,
+        .pg-field input[type="number"] {
+            width: 100%;
+            padding: 0.65rem 0.75rem;
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+        }
+
+        .pg-hint {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+            margin-top: 0.35rem;
+            margin-bottom: 1rem;
+        }
+
+        .pg-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .pg-actions .btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 0.7rem 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        .pg-board-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .pg-board-head h3 { margin: 0; }
+
+        .pg-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .pg-legend i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            margin-right: 0.35rem;
+            vertical-align: -1px;
+        }
+
+        .pg-legend .ok { background: linear-gradient(135deg, #1a8f5a, #2ecc71); }
+        .pg-legend .fail { background: linear-gradient(135deg, #b33a1a, #ff6b2c); }
+        .pg-legend .dead { background: #2a2f3a; border: 1px solid #555; }
+
+        .pg-strings {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .pg-string {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.65rem;
+            background: rgba(0, 0, 0, 0.18);
+        }
+
+        .pg-string-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.45rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pg-string-label em {
+            font-style: normal;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .pg-string-label em.bad { color: var(--solar-hot); }
+
+        .pg-panels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .pg-panel {
+            width: 44px;
+            height: 56px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: linear-gradient(160deg, #1f9d64 0%, #157a4c 55%, #0f5c3a 100%);
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.12s, box-shadow 0.12s, filter 0.12s;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .pg-panel::after {
+            content: '';
+            position: absolute;
+            inset: 6px 5px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 2px;
+            background:
+                linear-gradient(90deg, transparent 32%, rgba(0,0,0,0.15) 33%, transparent 34%, transparent 65%, rgba(0,0,0,0.15) 66%),
+                linear-gradient(0deg, transparent 48%, rgba(0,0,0,0.12) 49%, transparent 51%);
+            pointer-events: none;
+        }
+
+        .pg-panel:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+        }
+
+        .pg-panel:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .pg-panel.failed {
+            background: linear-gradient(160deg, #e85a2a 0%, #a83212 100%);
+            border-color: rgba(255, 140, 80, 0.45);
+            animation: pg-pulse 1.4s ease-in-out infinite;
+        }
+
+        .pg-panel.string-dead {
+            background: #222733;
+            border-color: #3a4150;
+            filter: grayscale(0.4);
+            opacity: 0.75;
+        }
+
+        .pg-panel.string-dead.failed {
+            background: linear-gradient(160deg, #6a2a18 0%, #3a1a10 100%);
+            opacity: 1;
+        }
+
+        @keyframes pg-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 44, 0.35); }
+            50% { box-shadow: 0 0 0 6px rgba(255, 107, 44, 0); }
+        }
+
+        .pg-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin-top: 1.15rem;
+        }
+
+        .pg-stat {
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 0.9rem;
+        }
+
+        .pg-stat .k {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.25rem;
+        }
+
+        .pg-stat .v {
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            color: var(--text);
+        }
+
+        .pg-stat .v.alert { color: var(--solar-hot); }
+        .pg-stat .s {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        .pg-story {
+            margin-top: 1rem;
+            padding: 1rem 1.1rem;
+            border-radius: var(--radius-sm);
+            background: var(--solar-soft);
+            border: 1px solid rgba(240, 160, 32, 0.25);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+
+        .pg-story strong { color: var(--text); }
+        .pg-story a { font-weight: 600; }
+
+        .pg-disclaimer {
+            margin-top: 0.85rem;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+        }
+
+        @media (max-width: 960px) {
+            .pg-shell { grid-template-columns: 1fr; }
+            .pg-stats { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 520px) {
+            .pg-stats { grid-template-columns: 1fr; }
+            .pg-panel { width: 38px; height: 48px; }
+        }
+
+        /* —— Area / CTA band —— */
+        .area {
+            background:
+                linear-gradient(180deg, rgba(62, 196, 232, 0.08), transparent 70%),
+                var(--bg-elevated);
+            border-block: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .area .section-head { margin-bottom: 1.5rem; }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.55rem;
+            margin-bottom: 2rem;
+        }
+
+        .chip {
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-strong);
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* —— Contact —— */
+        .contact { background: var(--bg); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .contact-card > p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
+        }
+
+        .contact-meta {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact-meta li {
+            display: grid;
+            gap: 0.15rem;
+        }
+
+        .contact-meta .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        .contact-meta a, .contact-meta span {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .form-group { margin-bottom: 1rem; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input::placeholder, textarea::placeholder { color: var(--text-dim); }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: rgba(62, 196, 232, 0.55);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        textarea { resize: vertical; min-height: 130px; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-card .btn-primary {
+            width: 100%;
+            margin-top: 0.35rem;
+            border: none;
+        }
+
+        .form-note {
+            margin-top: 0.85rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        /* —— Footer —— */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 0 2.25rem;
+            background: #07090c;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .footer-brand {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .footer-brand strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.25rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            font-size: 0.88rem;
+        }
+
+        .footer-links a:hover { color: var(--text-muted); }
+
+        .footer-copy {
+            width: 100%;
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* —— Video lightbox —— */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.94);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .video-lightbox.active { display: flex; }
+
+        .video-lightbox video {
+            max-width: min(1100px, 100%);
+            max-height: 85vh;
+            border-radius: var(--radius-sm);
+            background: #000;
+        }
+
+        .video-lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: background 0.2s;
+        }
+
+        .video-lightbox-close:hover { background: rgba(255, 255, 255, 0.2); }
+
+        /* —— Responsive —— */
+        @media (max-width: 960px) {
+            .service-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid, .contact-grid, .solar-layout, .ins-layout { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        @media (max-width: 760px) {
+            .nav-toggle { display: inline-flex; }
+
+            .nav-links {
+                position: fixed;
+                inset: var(--nav-h) 0 auto 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 0.75rem 1.25rem 1.25rem;
+                background: rgba(10, 12, 16, 0.96);
+                backdrop-filter: blur(16px);
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open { display: flex; }
+
+            .nav-links li { border-bottom: 1px solid var(--border); }
+            .nav-links a {
+                display: block;
+                padding: 0.9rem 0.25rem;
+                color: var(--text);
+            }
+            .nav-links .nav-cta-wrap {
+                border-bottom: none;
+                padding-top: 0.85rem;
+            }
+            .nav-links .nav-cta { width: 100%; }
+
+            .service-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .trust-row img { height: 58px; }
+            section { padding: 4rem 0; }
+            .hero { min-height: 88vh; padding-bottom: 3rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ASAP NJ Drone Services",
+      "alternateName": "ASAP New Jersey Drone Services",
+      "url": "https://asap-nj.com/",
+      "image": "https://asap-nj.com/graphics/hero-bg.jpg",
+      "description": "FAA Part 107 thermal drone inspections in New Jersey: solar PV, rooftop HVAC and AC units, roofs, building envelopes, electrical hotspots, insurance claims, RTK surveying, and aerial documentation.",
+      "areaServed": {
+        "@type": "State",
+        "name": "New Jersey"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Thermal, solar, insurance, and aerial services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thermal drone inspection",
+              "description": "Aerial infrared for solar arrays, rooftop HVAC/AC units, roofs, building envelopes, moisture clues, and electrical hotspots."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Insurance aerial & thermal inspection",
+              "description": "Roof, property, storm, and loss documentation for insurance carriers, adjusters, and TPAs—clear imagery and thermal when needed."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Solar thermal drone inspection",
+              "description": "Thermal mapping of solar arrays to locate underperforming modules, estimate energy and revenue loss, and support electrical troubleshooting."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "RTK aerial surveying"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/asap_nj_drone_services/"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="nav-inner">
+            <a class="logo" href="#top" aria-label="ASAP NJ Drone Services home">
+                <span class="logo-mark">ASAP NJ</span>
+                <span class="logo-sub">Drone Services</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#thermal">Thermal</a></li>
+                <li><a href="#solar">Solar</a></li>
+                <li><a href="#insurance">Insurance</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#playground">Try it</a></li>
+                <li><a href="#work">Examples</a></li>
+                <li class="nav-cta-wrap"><a class="btn btn-primary nav-cta" href="#contact">Get a Quote</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-bg" role="img" aria-label="Aerial photography of landscape"></div>
+            <div class="container hero-content">
+                <p class="eyebrow">FAA Part 107 · Thermal drone · New Jersey</p>
+                <h1>We elevate <em>your vision</em></h1>
+                <p class="hero-lead">
+                    Thermal drone inspections that show heat you can’t see from the ground—solar arrays, rooftop AC and HVAC,
+                    roofs, building envelopes, and claim sites—plus RTK surveying and aerial docs. Safety-first flight with real field know-how.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#thermal">Thermal capabilities</a>
+                    <a class="btn btn-ghost" href="#solar">Solar O&amp;M</a>
+                </div>
+                <div class="hero-stats" aria-label="Highlights">
+                    <div class="stat">
+                        <strong>Thermal first</strong>
+                        <span>Solar · HVAC · roofs · more</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Claims-ready</strong>
+                        <span>Insurance &amp; adjusters</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Part 107</strong>
+                        <span>FAA certified pilot</span>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="badge">
-            <div style="text-align: center">
-                <a href='https://certificates.airdata.com/BGSepI' target='_blank'><img align="left" alt='Airdata UAV|Drone Safety Verified Badge' src='https://certificates.airdata.com/badge?i=BGSepI&r=xJkJ&t=5&m=3&size=11&c=1' style='width:379px;height:100px;border:0;image-rendering: optimizequality;image-rendering: smooth;'></a>
-                <a class="container social-links" href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <div class="trust">
+            <div class="container trust-row">
+                <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener noreferrer">
+                    <img
+                        alt="Airdata UAV drone safety verified badge"
+                        src="https://certificates.airdata.com/badge?i=BGSepI&r=xJkJ&t=5&m=3&size=11&c=1"
+                        width="379"
+                        height="100"
+                        loading="lazy">
+                </a>
+                <a class="trust-social" href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer" aria-label="Follow ASAP NJ on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <defs>
-                            <radialGradient id="instagram-gradient" cx="30%" cy="107%" r="150%">
+                            <radialGradient id="ig" cx="30%" cy="107%" r="150%">
                                 <stop offset="0%" style="stop-color:#fdf497" />
-                                <stop offset="5%" style="stop-color:#fdf497" />
                                 <stop offset="45%" style="stop-color:#fd5949" />
                                 <stop offset="60%" style="stop-color:#d6249f" />
                                 <stop offset="90%" style="stop-color:#285AEB" />
                             </radialGradient>
                         </defs>
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#instagram-gradient)"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#ig)"/>
                     </svg>
+                    @asap_nj_drone_services
                 </a>
-                <a href='https://certificates.airdata.com/BGSepI' target='_blank'><img align="right" alt='FAA Part 107 Logo' src='graphics/FAA-Certified-Banner.png' style='width:379px;height:100px;border:0;image-rendering: optimizequality;image-rendering: smooth;'></a>
-            </div>
-        </section>
-        <section id="gallery-section">
-            <h2>Our Work, Our Passion</h2>
-            <!-- Featured rotating hero image -->
-            <div id="featured-container">
-                <a id="featured-image" href="" data-pswp-width="1920" data-pswp-height="1080">
-                    <img src="" alt="" loading="eager">
+                <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener noreferrer">
+                    <img
+                        alt="FAA Part 107 certified banner"
+                        src="graphics/FAA-Certified-Banner.png"
+                        width="379"
+                        height="100"
+                        loading="lazy">
                 </a>
             </div>
-            <!-- Thumbnail grid -->
-            <div id="gallery" class="gallery-grid"></div>
-        </section>
-        <style>
-            #featured-container {
-                max-width: 1160px;
-                margin: 0 auto 2rem;
-                padding: 0 1rem;
-            }
-
-            #featured-image {
-                display: block;
-                overflow: hidden;
-                border-radius: 12px;
-                box-shadow: 0 8px 24px rgba(255,255,255,0.1);
-                transition: transform 0.3s ease;
-            }
-
-            #featured-image:hover {
-                transform: scale(1.02);
-            }
-
-            #featured-image img {
-                width: 100%;
-                height: 500px;
-                object-fit: cover;
-                display: block;
-                transition: opacity 0.5s ease;
-            }
-
-            .gallery-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .gallery-grid a {
-                display: block;
-                overflow: hidden;
-                border-radius: 8px;
-                transition: transform 0.2s;
-            }
-
-            .gallery-grid a:hover {
-                transform: scale(1.05);
-            }
-
-            .gallery-grid img {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                display: block;
-            }
-            .category-tabs {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 12px;
-                margin: 2rem 0;
-                padding: 0 1rem;
-            }
-
-            .category-tab {
-                background: transparent;
-                color: #969696;
-                border: 1px solid #969696;
-                padding: 12px 24px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 4px;
-                cursor: pointer;
-                margin: 0 8px 8px 0;
-                text-transform: uppercase;
-                letter-spacing: 0.071em;
-                transition: all 0.3s ease;
-            }
-
-            .category-tab:hover {
-                background: #969696;
-                color: #000;
-            }
-
-            .category-tab.active {
-                background: #969696;
-                color: #000;
-            }
-
-            .video-play-icon {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 60px;
-                height: 60px;
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 24px;
-                color: #000;
-                pointer-events: none;
-            }
-
-            .gallery-grid a {
-                position: relative;
-            }
-            /* Custom video lightbox */
-            .video-lightbox {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.95);
-                z-index: 9999;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .video-lightbox.active {
-                display: flex;
-            }
-
-            .video-lightbox video {
-                max-width: 90%;
-                max-height: 90vh;
-                border-radius: 8px;
-            }
-
-            .video-lightbox-close {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                width: 44px;
-                height: 44px;
-                background: rgba(255, 255, 255, 0.1);
-                border: none;
-                border-radius: 50%;
-                color: #fff;
-                font-size: 24px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: background 0.3s;
-            }
-
-            .video-lightbox-close:hover {
-                background: rgba(255, 255, 255, 0.2);
-            }
-        </style>
-        <div class="contact-form">
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/xldpaodl" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email*" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Message"></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
         </div>
-        <footer>
-            <p>v2.0.1 - Copyright © 2025 ASAP New Jersey Drone Services - Professional Aerial Solutions - All Rights Reserved.</p>
-        </footer>
-        <script type="module">
-            import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
-            import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js';
 
-            // Load gallery data from JSON
-            fetch('./gallery-data.json')
-                .then(response => response.json())
-                .then(data => {
-                    if (!data.categories || Object.keys(data.categories).length === 0) {
-                        console.log('No images found in gallery');
-                        document.getElementById('gallery').innerHTML = '<p style="text-align: center; color: #969696; padding: 2rem; font-size: 18px;">Gallery coming soon! Check back later for stunning aerial photography.</p>';
-                        return;
-                    }
+        <section class="thermal-pillar" id="thermal" aria-labelledby="thermal-heading">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Thermal drone · big deal</p>
+                    <h2 id="thermal-heading">If it runs hot, we can fly it</h2>
+                </div>
+                <p class="thermal-lead">
+                    A thermal camera on a drone isn’t just a solar toy. We use infrared to find heat signatures on
+                    <strong style="color:var(--text)">rooftops, HVAC/AC gear, solar, buildings, and claim sites</strong>—
+                    without climbing every ladder or guessing from the ground. Click any card for photo examples.
+                </p>
+                <div class="thermal-use-grid">
+                    <button type="button" class="thermal-use" data-examples="thermal-hvac">
+                        <div class="thermal-use-photo" style="background-image:url('graphics/showcase/gen-thermal-hvac.jpg')"></div>
+                        <div class="thermal-use-body">
+                            <h3>Rooftop AC &amp; HVAC units</h3>
+                            <p>Spot overheating compressors, blocked coils, and unit stress across whole commercial roofs in one pass.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="solar">
+                        <div class="thermal-use-photo" style="background-image:url('graphics/showcase/gen-thermal-array.jpg')"></div>
+                        <div class="thermal-use-body">
+                            <h3>Solar arrays (PV)</h3>
+                            <p>Hot modules, string patterns, and underperformance—map the array, then talk loss and next steps.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="thermal">
+                        <div class="thermal-use-photo" style="background-image:url('graphics/showcase/gen-insurance-roof.jpg')"></div>
+                        <div class="thermal-use-body">
+                            <h3>Roofs &amp; moisture clues</h3>
+                            <p>Thermal + visual on flat and pitched roofs for wet spots, insulation gaps, and repair priorities.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="thermal-envelope">
+                        <div class="thermal-use-photo" style="background-image:url('graphics/showcase/ex-building-1.jpg')"></div>
+                        <div class="thermal-use-body">
+                            <h3>Building envelopes</h3>
+                            <p>Heat loss, air leakage patterns, and façade anomalies for facilities, owners, and energy work.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="thermal-electrical">
+                        <div class="thermal-use-photo" style="background-image:url('graphics/showcase/ex-electrical-1.jpg')"></div>
+                        <div class="thermal-use-body">
+                            <h3>Electrical hotspots</h3>
+                            <p>Transformers, service equipment, and outdoor gear that run hotter than they should—document for follow-up.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="insurance">
+                        <div class="thermal-use-photo" style="background-image:url('graphics/showcase/gen-insurance-roof.jpg')"></div>
+                        <div class="thermal-use-body">
+                            <h3>Insurance &amp; loss sites</h3>
+                            <p>Storm, fire aftermath, and hard-to-access elevations—RGB plus thermal when heat tells the story.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="ins-cta-row" style="justify-content:center">
+                    <a class="btn btn-primary" href="#contact">Book a thermal flight</a>
+                    <a class="btn btn-ghost" href="#solar">Solar deep-dive</a>
+                </div>
+            </div>
+        </section>
 
-                    const gallery = document.getElementById('gallery');
-                    const featuredLink = document.getElementById('featured-image');
-                    const featuredImg = featuredLink.querySelector('img');
+        <section class="solar" id="solar" aria-labelledby="solar-heading">
+            <div class="container">
+                <div class="solar-layout">
+                    <div class="solar-intro">
+                        <p class="section-label">Flagship service</p>
+                        <h2 id="solar-heading">Solar maintenance &amp; thermal diagnostics</h2>
+                        <p class="lead-strong">
+                            Your array can look fine from the ground and still bleed production.
+                            We fly thermal to map what’s wrong—then turn heat signatures into clear findings, loss estimates, and a path to fix.
+                        </p>
+                        <p>
+                            Built on a deep solar electrical background, pro tools for field work, and licensed electrician backing
+                            when circuit troubleshooting and corrective electrical work need a licensed hand.
+                        </p>
+                        <div class="solar-pills" aria-label="Service highlights">
+                            <span class="solar-pill">Thermal drone mapping</span>
+                            <span class="solar-pill">Module &amp; string issues</span>
+                            <span class="solar-pill">$ production loss insight</span>
+                            <span class="solar-pill">Circuit troubleshooting</span>
+                            <span class="solar-pill">Maintenance planning</span>
+                        </div>
+                        <div class="solar-steps" aria-label="How it works">
+                            <div class="solar-step">
+                                <span class="solar-step-num">1</span>
+                                <div>
+                                    <h4>Fly &amp; capture</h4>
+                                    <p>Thermal + visual survey of the array under proper conditions so anomalies actually show up.</p>
+                                </div>
+                            </div>
+                            <div class="solar-step">
+                                <span class="solar-step-num">2</span>
+                                <div>
+                                    <h4>Map what’s failing</h4>
+                                    <p>Hot spots, underperforming modules, string-level patterns, soiling, diode/bypass issues, and other thermal tells.</p>
+                                </div>
+                            </div>
+                            <div class="solar-step">
+                                <span class="solar-step-num">3</span>
+                                <div>
+                                    <h4>Estimate what it’s costing</h4>
+                                    <p>Turn findings into practical production-loss and dollar-impact <em>estimates</em> so repair vs. wait is an informed call—not a guess in the dark.</p>
+                                </div>
+                            </div>
+                            <div class="solar-step">
+                                <span class="solar-step-num">4</span>
+                                <div>
+                                    <h4>Troubleshoot &amp; next steps</h4>
+                                    <p>Electrical-minded diagnosis—including circuit troubleshooting support—with licensed electrician backup when required.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="solar-panel" aria-label="What you get">
+                        <h3>What you walk away with</h3>
+                        <p class="panel-sub">Actionable solar intelligence—not just pretty heat maps.</p>
+                        <ul class="solar-deliverables">
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Annotated thermal map</strong>
+                                    Problem modules and zones called out so your team knows exactly where to go.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Loss &amp; priority insight</strong>
+                                    Which issues are costing the most—and what to fix first for the best return.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Electrical troubleshooting path</strong>
+                                    Circuit-level thinking from someone who lives solar—not a “fly and email a folder of JPGs” vendor.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Maintenance-ready findings</strong>
+                                    Clear notes your O&amp;M, owner, or electrician can act on—repairs, replacements, or deeper testing.
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="solar-trust-note">
+                            <strong>Licensed electrician backing.</strong>
+                            Aerial thermal finds the story; electrical expertise finishes it. When corrective electrical work needs a license, we work with licensed support so the job stays compliant.
+                        </p>
+                        <a class="btn btn-primary" href="#contact">Book a solar thermal inspection</a>
+                        <button type="button" class="btn btn-ghost" data-examples="solar">See more examples</button>
+                    </aside>
+                </div>
 
-                    // Flatten all items from all categories for hero rotation
-                    const allItems = [];
-                    Object.keys(data.categories).forEach(category => {
-                        data.categories[category].forEach(item => {
-                            allItems.push({...item, category: category});
-                        });
-                    });
+                <div class="solar-gallery" id="solar-gallery">
+                    <div class="solar-gallery-head">
+                        <div>
+                            <h3>What customers hire us to see</h3>
+                            <p>
+                                Thermal that spots problem areas, farm-scale arrays, rooftop systems—clear marketing of the service.
+                                Your job gets real photos of <em>your</em> site.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="solar-shot-grid">
+                        <figure class="solar-shot wide">
+                            <span class="badge-th">Thermal</span>
+                            <img src="graphics/showcase/gen-thermal-array.jpg" alt="Thermal map of commercial rooftop solar with hot modules highlighted" width="1600" height="900" loading="lazy">
+                            <figcaption>
+                                Thermal finds problem modules
+                                <span>Hot spots stand out before anyone climbs</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <img src="graphics/showcase/gen-solar-farm.jpg" alt="Aerial large ground-mount solar farm" width="1600" height="900" loading="lazy">
+                            <figcaption>
+                                Utility &amp; commercial scale
+                                <span>Big arrays, clear documentation</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <img src="graphics/showcase/solar-rooftop.jpg" alt="Solar panel rows in a field" width="1600" height="1067" loading="lazy">
+                            <figcaption>
+                                Production assets that need care
+                                <span>O&amp;M · loss estimates · next steps</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <img src="graphics/showcase/solar-field.jpg" alt="Solar panels renewable energy field" width="1600" height="1067" loading="lazy">
+                            <figcaption>
+                                Field &amp; ground-mount systems
+                                <span>When boots-on-ground is slow</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <img src="graphics/showcase/solar-farm.jpg" alt="Solar farm landscape" width="1600" height="1067" loading="lazy">
+                            <figcaption>
+                                Portfolio-ready deliverables
+                                <span>Maps, notes, and dollar context</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p class="img-credit">Showcase imagery for marketing; project work is captured on your site.</p>
+                </div>
+            </div>
+        </section>
 
-                    if (allItems.length === 0) {
-                        console.log('No items to display');
-                        return;
-                    }
+        <section class="insurance" id="insurance" aria-labelledby="insurance-heading">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-label">For carriers &amp; adjusters</p>
+                    <h2 id="insurance-heading">Insurance inspections, done clean</h2>
+                    <p>
+                        Carriers, independent adjusters, TPAs, and restoration partners—use ASAP NJ when you need
+                        fast, professional aerial documentation without guessing from the ground.
+                        Tell us the claim need; we deliver imagery and notes your file can actually use.
+                    </p>
+                </div>
+                <div class="ins-layout">
+                    <figure class="ins-photo" role="img" aria-label="Aerial roof photo showing storm debris and damaged shingles for insurance documentation">
+                        <figcaption>
+                            Claims-ready roof documentation
+                            <span>Storm debris, missing shingles—clear from above</span>
+                        </figcaption>
+                    </figure>
+                    <div class="ins-grid">
+                        <article class="ins-card">
+                            <h3>What we document</h3>
+                            <p>Storm, hail, wind, fire aftermath, roof condition, property overview, hard-to-access elevations, and thermal when heat/moisture clues matter—plus solar on claims when needed.</p>
+                            <ul class="ins-list">
+                                <li>Roof &amp; envelope (RGB + thermal when scoped)</li>
+                                <li>Storm / catastrophe site overview</li>
+                                <li>Solar damage or underperformance for claims</li>
+                                <li>Pre-loss / post-repair progress records</li>
+                            </ul>
+                        </article>
+                        <article class="ins-card">
+                            <h3>How carriers work with us</h3>
+                            <p>One clear point of contact. FAA Part 107. Organized photo sets and short findings—not a dump of unsorted files. Based in NJ; out-of-area only when the job pays.</p>
+                            <ul class="ins-list">
+                                <li>Claim # / site address / access notes in one request</li>
+                                <li>Deliverables labeled for the file</li>
+                                <li>Preferred vendor conversations welcome</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="ins-cta-row">
+                    <a class="btn btn-primary" href="#contact">Request inspection capacity</a>
+                    <a class="btn btn-ghost" href="#services">All services</a>
+                </div>
+            </div>
+        </section>
 
-                    let currentIndex = 0;
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Full service list</p>
+                    <h2>Aerial solutions that work on the ground</h2>
+                    <p><strong style="color:var(--text)">Thermal is core</strong>—solar, HVAC, roofs, envelopes—plus survey, mapping, and docs. <strong style="color:var(--text-muted);font-weight:600">Click any card</strong> for examples.</p>
+                </div>
+                <div class="service-grid" id="service-grid">
+                    <button type="button" class="service-card" data-examples="thermal">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/gen-thermal-hvac.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Thermal drone inspections</h3>
+                            <p>Full thermal menu: rooftop AC/HVAC, solar, roofs, building envelopes, electrical hotspots, and claim sites. <a href="#thermal" onclick="event.stopPropagation()">Overview →</a></p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="solar">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/gen-thermal-array.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Solar thermal &amp; PV maintenance</h3>
+                            <p>Array thermal mapping, underperforming modules, production-loss context, and electrical troubleshooting support.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="insurance">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/gen-insurance-roof.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Insurance &amp; claims inspections</h3>
+                            <p>Aerial and thermal documentation for carriers, adjusters, and TPAs—roof, storm, property, and solar claims.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="survey">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/survey-land.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>RTK aerial surveying</h3>
+                            <p>High-accuracy mapping and ground control support for site layout, volumes, as-builts, and engineering deliverables.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="mapping">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/mapping.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>3D mapping &amp; models</h3>
+                            <p>Photogrammetry and 3D outputs that turn flights into clear visuals—progress tracking, planning, and client presentations.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="thermal-hvac">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/ex-hvac-1.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Rooftop HVAC / AC thermal</h3>
+                            <p>Commercial roof units, RTUs, and heat signatures that mean service calls—not ladder roulette across every unit.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="construction">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/construction.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Construction &amp; site documentation</h3>
+                            <p>Progress flights, orthomosaics, and aerial overviews so owners and GCs stay aligned without a tower climb.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="realestate">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/city-aerial.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Real estate &amp; marketing</h3>
+                            <p>Clean stills and short cinematic clips that show property scale, access, and surroundings.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="coastal">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/coastal.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Coastal &amp; hard-to-reach sites</h3>
+                            <p>Marsh, shoreline, and restricted-access properties where ground surveys are slow, risky, or incomplete.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                </div>
+                <p class="img-credit">Click a service for a multi-photo example set. Showcase imagery for marketing.</p>
+            </div>
+        </section>
 
-                    // Function to update featured image/video
-                    function updateFeatured(index) {
-                        const item = allItems[index];
-                        featuredImg.style.opacity = '0';
+        <section class="about" id="about">
+            <div class="container about-grid">
+                <div class="about-copy">
+                    <p class="section-label">Why ASAP NJ</p>
+                    <h2>Built for real jobs—not just pretty flyovers</h2>
+                    <p>
+                        ASAP NJ Drone Services is a New Jersey–based partner for aerial work that has to hold up on site and in a claim file:
+                        solar thermal diagnostics, insurance documentation, accurate mapping, and imagery crews can act on.
+                    </p>
+                    <p>
+                        Thermal is a big part of the toolkit—solar, rooftop HVAC, roofs, and envelopes—backed by real electrical depth
+                        and licensed electrician support when work needs a license. Every flight is FAA Part 107 with Airdata-tracked safety.
+                    </p>
+                    <ul class="about-list">
+                        <li>Thermal drone for solar, AC units, roofs, and more</li>
+                        <li>Solar O&amp;M that connects heat maps to money and maintenance</li>
+                        <li>Insurance-ready deliverables for carriers and adjusters</li>
+                        <li>Clear scopes, labeled packages, and direct communication</li>
+                    </ul>
+                </div>
+                <aside class="about-panel" aria-label="At a glance">
+                    <h3>At a glance</h3>
+                    <div class="panel-row">
+                        <span>Certification</span>
+                        <strong>FAA Part 107</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Safety</span>
+                        <strong>Airdata verified</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Flagship</span>
+                        <strong>Thermal drone</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Also core</span>
+                        <strong>Solar · Insurance</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Support</span>
+                        <strong>Licensed electrician</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Coverage</span>
+                        <strong>New Jersey (primary)</strong>
+                    </div>
+                </aside>
+            </div>
+        </section>
 
-                        setTimeout(() => {
-                            if (item.type === 'video') {
-                                // Use video preview image for hero
-                                featuredLink.href = item.preview;
-                                featuredImg.src = item.preview;
-                                featuredImg.alt = item.filename;
-                            } else {
-                                // Use full image for hero
-                                featuredLink.href = item.full;
-                                featuredImg.src = item.full;
-                                featuredImg.alt = item.filename;
-                            }
-                            featuredImg.style.opacity = '1';
-                        }, 250);
-                    }
+        <section class="gallery-section" id="work">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Examples</p>
+                    <h2>From the air—every service line</h2>
+                    <p>Click any tile to open more sample photos for that service. Showcase imagery for marketing.</p>
+                </div>
+                <div class="solar-shot-grid">
+                    <figure class="solar-shot wide" data-examples="thermal" tabindex="0" role="button" aria-label="Open thermal examples">
+                        <img src="graphics/showcase/gen-thermal-hvac.jpg" alt="Thermal view of rooftop HVAC units" width="1600" height="900" loading="lazy">
+                        <figcaption>Thermal drone<span>HVAC · solar · roofs · more — click</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="solar" tabindex="0" role="button">
+                        <img src="graphics/showcase/gen-solar-farm.jpg" alt="Large solar farm aerial" width="1600" height="900" loading="lazy">
+                        <figcaption>Solar O&amp;M<span>Click for examples</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="thermal-hvac" tabindex="0" role="button">
+                        <img src="graphics/showcase/ex-hvac-1.jpg" alt="HVAC equipment" width="1400" height="933" loading="lazy">
+                        <figcaption>Rooftop AC / HVAC<span>Click for examples</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="insurance" tabindex="0" role="button">
+                        <img src="graphics/showcase/gen-insurance-roof.jpg" alt="Aerial insurance roof documentation" width="1600" height="1200" loading="lazy">
+                        <figcaption>Insurance claims<span>Click for examples</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="construction" tabindex="0" role="button">
+                        <img src="graphics/showcase/gen-construction-aerial.jpg" alt="Construction site aerial documentation" width="1600" height="900" loading="lazy">
+                        <figcaption>Construction docs<span>Click for examples</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-                    // Initialize first featured item
-                    updateFeatured(0);
+        <section class="playground" id="playground" aria-labelledby="playground-heading">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Interactive</p>
+                    <h2 id="playground-heading">What if a panel fails?</h2>
+                    <p>
+                        Build a simple array, click panels to “kill” them, and watch production and dollar impact change.
+                        Fun demo—real inspections go deeper with thermal data and electrical troubleshooting.
+                    </p>
+                </div>
 
-                    // Rotate featured item every 4 seconds
-                    setInterval(() => {
-                        currentIndex = (currentIndex + 1) % allItems.length;
-                        updateFeatured(currentIndex);
-                    }, 4000);
+                <div class="pg-shell">
+                    <div class="pg-controls">
+                        <h3>Your array</h3>
+                        <div class="pg-field">
+                            <label for="pg-watts">Panel size <span id="pg-watts-val">400 W</span></label>
+                            <input id="pg-watts" type="range" min="250" max="600" step="10" value="400">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-per-string">Panels per string <span id="pg-per-string-val">10</span></label>
+                            <input id="pg-per-string" type="range" min="4" max="20" step="1" value="10">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-strings">Number of strings <span id="pg-strings-val">3</span></label>
+                            <input id="pg-strings" type="range" min="1" max="12" step="1" value="3">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-rate">Electric rate <span id="pg-rate-val">$0.18 / kWh</span></label>
+                            <input id="pg-rate" type="range" min="0.08" max="0.45" step="0.01" value="0.18">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-sun">Peak sun hours / day <span id="pg-sun-val">4.2</span></label>
+                            <input id="pg-sun" type="range" min="3.0" max="6.0" step="0.1" value="4.2">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-mode">If a panel fails…</label>
+                            <select id="pg-mode">
+                                <option value="bypass">Bypass diode kicks in (typical) — lose ~1 panel on that string</option>
+                                <option value="open">Open / string drops — that whole string goes offline</option>
+                            </select>
+                            <p class="pg-hint">Real arrays vary by inverter type, optimizers, and wiring. This is a teaching model, not a utility bill guarantee.</p>
+                        </div>
+                        <div class="pg-actions">
+                            <button type="button" class="btn btn-ghost" id="pg-fail-one">Fail 1 random</button>
+                            <button type="button" class="btn btn-ghost" id="pg-fail-two">Fail 2 random</button>
+                            <button type="button" class="btn btn-primary" id="pg-reset">Reset all OK</button>
+                        </div>
+                    </div>
 
-                    // Create category tabs
-                    const categoriesContainer = document.createElement('div');
-                    categoriesContainer.className = 'category-tabs';
-                    categoriesContainer.innerHTML = '<button class="category-tab active" data-category="all">All</button>';
+                    <div class="pg-board-wrap">
+                        <div class="pg-board-head">
+                            <h3>Click panels to toggle failed</h3>
+                            <div class="pg-legend">
+                                <span><i class="ok"></i>Healthy</span>
+                                <span><i class="fail"></i>Failed</span>
+                                <span><i class="dead"></i>String offline</span>
+                            </div>
+                        </div>
+                        <div id="pg-board" class="pg-strings" aria-live="polite"></div>
+                        <div class="pg-stats">
+                            <div class="pg-stat">
+                                <div class="k">System size</div>
+                                <div class="v" id="pg-size">—</div>
+                                <div class="s" id="pg-count">—</div>
+                            </div>
+                            <div class="pg-stat">
+                                <div class="k">Still producing</div>
+                                <div class="v" id="pg-live">—</div>
+                                <div class="s" id="pg-live-pct">—</div>
+                            </div>
+                            <div class="pg-stat">
+                                <div class="k">Est. annual loss</div>
+                                <div class="v alert" id="pg-kwh">—</div>
+                                <div class="s">kWh / year (approx.)</div>
+                            </div>
+                            <div class="pg-stat">
+                                <div class="k">Est. $ left on table</div>
+                                <div class="v alert" id="pg-money">—</div>
+                                <div class="s" id="pg-money-sub">per year</div>
+                            </div>
+                        </div>
+                        <div class="pg-story" id="pg-story"></div>
+                        <p class="pg-disclaimer">
+                            Educational estimate only (simple DC model × peak sun hours × 0.80 system factor).
+                            Thermal inspections find which modules are actually hot/underperforming; electrical troubleshooting confirms the root cause.
+                            NJ sun hours vary by site and season.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    Object.keys(data.categories).sort().forEach(category => {
-                        const button = document.createElement('button');
-                        button.className = 'category-tab';
-                        button.dataset.category = category;
-                        button.textContent = category;
-                        categoriesContainer.appendChild(button);
-                    });
+        <section class="area" id="area">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Service area</p>
+                    <h2>Based in New Jersey. Built for local work.</h2>
+                    <p>
+                        Home base is South Jersey / NJ for solar O&amp;M, insurance inspections, thermal, survey, and aerial docs.
+                        Out-of-state or long-haul jobs are considered case-by-case when scope and pay make the trip worth it—not a standing travel market.
+                    </p>
+                </div>
+                <div class="chip-row" aria-label="Common project types">
+                    <span class="chip">Solar farms &amp; rooftop PV</span>
+                    <span class="chip">Insurance / claims sites</span>
+                    <span class="chip">Commercial properties</span>
+                    <span class="chip">Construction sites</span>
+                    <span class="chip">Residential arrays</span>
+                    <span class="chip">South Jersey · NJ</span>
+                </div>
+                <a class="btn btn-primary" href="#contact">Discuss your site</a>
+            </div>
+        </section>
 
-                    gallery.parentNode.insertBefore(categoriesContainer, gallery);
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-label">Contact</p>
+                    <h2>Tell us about the job</h2>
+                    <p>Solar, insurance claim, survey, or aerial docs—share the site, goals, and timeline. We’ll follow up with next steps and a clear quote path.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>How to reach us</h3>
+                        <p>Fastest path is the form. Solar: size, inverter, production drop. Insurance: claim #, carrier/adjuster, address, and what you need documented.</p>
+                        <ul class="contact-meta">
+                            <li>
+                                <span class="label">Website</span>
+                                <span>asap-nj.com</span>
+                            </li>
+                            <li>
+                                <span class="label">Instagram</span>
+                                <a href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer">@asap_nj_drone_services</a>
+                            </li>
+                            <li>
+                                <span class="label">Credentials</span>
+                                <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener noreferrer">Airdata safety certificate</a>
+                            </li>
+                            <li>
+                                <span class="label">Typical needs</span>
+                                <span>Insurance · Solar thermal · Survey · Docs</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-card">
+                        <form action="https://formspree.io/f/xldpaodl" method="POST">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" name="name" placeholder="Your name" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                    <input id="phone" type="tel" name="phone" placeholder="(xxx) xxx-xxxx" autocomplete="tel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">Service interest</label>
+                                    <select id="service" name="service">
+                                        <option value="">Select one…</option>
+                                        <option selected>Thermal drone inspection (general)</option>
+                                        <option>Rooftop HVAC / AC thermal</option>
+                                        <option>Solar thermal / PV maintenance</option>
+                                        <option>Solar production loss / troubleshooting</option>
+                                        <option>Building envelope / roof thermal</option>
+                                        <option>Electrical hotspot documentation</option>
+                                        <option>Insurance / claims inspection</option>
+                                        <option>RTK surveying / mapping</option>
+                                        <option>3D model / photogrammetry</option>
+                                        <option>Construction documentation</option>
+                                        <option>Real estate / marketing</option>
+                                        <option>Other / not sure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company / carrier <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                <input id="company" type="text" name="company" placeholder="Insurance carrier, TPA, GC, or property owner" autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Project location</label>
+                                <input id="location" type="text" name="location" placeholder="City / township, NJ" autocomplete="address-level2">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Project details</label>
+                                <textarea id="message" name="message" placeholder="Claim #? Array size? Roof type? Access notes? Timeline?" required></textarea>
+                            </div>
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+                            <button class="btn btn-primary" type="submit">Send message</button>
+                            <p class="form-note">We typically respond during business hours. No spam—ever.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                    // Populate thumbnail grid
-                    function populateGallery(filterCategory = 'all') {
-                        gallery.innerHTML = '';
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>ASAP NJ Drone Services</strong><br>
+                Thermal · Solar · Insurance · Aerial
+            </div>
+            <ul class="footer-links">
+                <li><a href="#thermal">Thermal</a></li>
+                <li><a href="#solar">Solar</a></li>
+                <li><a href="#insurance">Insurance</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+            <p class="footer-copy">v3.7.0 · Copyright © 2026 ASAP New Jersey Drone Services · All rights reserved. Showcase photos for marketing.</p>
+        </div>
+    </footer>
 
-                        Object.keys(data.categories).sort().forEach(category => {
-                            if (filterCategory !== 'all' && filterCategory !== category) return;
+    <div id="video-lightbox" class="video-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+        <button class="video-lightbox-close" type="button" onclick="closeVideoLightbox()" aria-label="Close video">×</button>
+        <video id="lightbox-video" controls playsinline></video>
+    </div>
 
-                            data.categories[category].forEach(item => {
-                                const link = document.createElement('a');
+    <div id="ex-modal" class="ex-modal" role="dialog" aria-modal="true" aria-labelledby="ex-title" hidden>
+        <div class="ex-modal-panel">
+            <div class="ex-modal-head">
+                <div>
+                    <h3 id="ex-title">Examples</h3>
+                    <p id="ex-desc"></p>
+                </div>
+                <button type="button" class="ex-close" id="ex-close" aria-label="Close examples">×</button>
+            </div>
+            <div class="ex-modal-body">
+                <img id="ex-main" class="ex-main" src="" alt="">
+                <div id="ex-thumbs" class="ex-thumbs"></div>
+                <ul id="ex-bullets" class="ex-bullets"></ul>
+                <div class="ex-modal-actions">
+                    <a class="btn btn-primary" id="ex-cta" href="#contact">Request this service</a>
+                    <button type="button" class="btn btn-ghost" id="ex-close-2">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                if (item.type === 'video') {
-                                    // For videos, open in custom lightbox
-                                    link.href = '#';
-                                    link.dataset.videoUrl = item.video;
-                                    link.classList.add('video-link');
+    <script>
+        (function () {
+            const header = document.getElementById('site-header');
+            const toggle = document.getElementById('nav-toggle');
+            const links = document.getElementById('nav-links');
 
-                                    link.addEventListener('click', (e) => {
-                                        e.preventDefault();
-                                        openVideoLightbox(item.video);
-                                    });
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 20);
+            }
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
 
-                                    // Add video play icon overlay
-                                    const playIcon = document.createElement('div');
-                                    playIcon.className = 'video-play-icon';
-                                    playIcon.innerHTML = '▶';
-                                    link.appendChild(playIcon);
-                                } else {
-                                    // Images use PhotoSwipe normally
-                                    link.href = item.full;
-                                    link.dataset.pswpWidth = 1920;
-                                    link.dataset.pswpHeight = 1080;
-                                }
+            toggle.addEventListener('click', () => {
+                const open = links.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
 
-                                const thumb = document.createElement('img');
-                                thumb.src = item.thumbnail;
-                                thumb.alt = item.filename;
-                                thumb.loading = 'lazy';
-
-                                link.appendChild(thumb);
-                                gallery.appendChild(link);
-                            });
-                        });
-                    }
-
-                    // Initial gallery population
-                    populateGallery('all');
-
-                    // Category tab filtering
-                    document.querySelectorAll('.category-tab').forEach(tab => {
-                        tab.addEventListener('click', () => {
-                            document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-                            tab.classList.add('active');
-                            populateGallery(tab.dataset.category);
-                        });
-                    });
-
-                    // Initialize PhotoSwipe (exclude video links)
-                    const lightbox = new PhotoSwipeLightbox({
-                        gallery: '#gallery-section',
-                        children: 'a:not(.video-link)',  // Exclude videos
-                        pswpModule: PhotoSwipe,
-                        preload: [1, 2]
-                    });
-
-                    lightbox.init();
-                })
-                .catch(error => {
-                    console.error('Error loading gallery:', error);
-                    document.getElementById('gallery').innerHTML = '<p style="text-align: center; color: #969696; padding: 2rem; font-size: 18px;">Gallery coming soon! Check back later for stunning aerial photography.</p>';
-                    // Hide the featured image container too
-                    document.getElementById('featured-container').style.display = 'none';
+            links.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    links.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.setAttribute('aria-label', 'Open menu');
                 });
+            });
+        })();
 
-            // Video lightbox functions
-            window.openVideoLightbox = function(videoUrl) {
-                const lightbox = document.getElementById('video-lightbox');
-                const video = document.getElementById('lightbox-video');
-                video.src = videoUrl;
-                lightbox.classList.add('active');
-                video.play();
+        /* Service / portfolio example galleries */
+        (function () {
+            const EXAMPLES = {
+                solar: {
+                    title: 'Solar thermal & PV maintenance',
+                    desc: 'How we market the work: thermal that shows problem areas, farm and rooftop arrays, clear O&M storytelling.',
+                    bullets: [
+                        'Thermal maps that highlight hot / underperforming zones',
+                        'Farm-scale and rooftop documentation',
+                        'Production-loss conversation starters for owners & O&M',
+                        'Path to electrical troubleshooting (licensed support when needed)'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal map of solar array with hotspots' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Close thermal of hot solar modules' },
+                        { src: 'graphics/showcase/gen-solar-farm.jpg', alt: 'Aerial large solar farm' },
+                        { src: 'graphics/showcase/solar-rooftop.jpg', alt: 'Solar panel rows' },
+                        { src: 'graphics/showcase/solar-field.jpg', alt: 'Field solar installation' },
+                        { src: 'graphics/showcase/ex-solar-1.jpg', alt: 'Solar panels close view' },
+                        { src: 'graphics/showcase/ex-solar-2.jpg', alt: 'Solar array another angle' }
+                    ]
+                },
+                insurance: {
+                    title: 'Insurance & claims inspections',
+                    desc: 'Claims-ready aerial documentation for roofs, storm damage, and property condition—easy for adjusters to use.',
+                    bullets: [
+                        'Overhead roof condition & debris documentation',
+                        'Storm / wind / hail site context',
+                        'Hard-to-reach elevations without ladder risk',
+                        'Organized photo packages for the claim file'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-insurance-roof.jpg', alt: 'Storm damaged roof aerial' },
+                        { src: 'graphics/showcase/ex-roof-1.jpg', alt: 'Roof aerial inspection' },
+                        { src: 'graphics/showcase/ex-roof-2.jpg', alt: 'Rooftop documentation' },
+                        { src: 'graphics/showcase/roof-aerial.jpg', alt: 'Residential property aerial' },
+                        { src: 'graphics/showcase/ex-house-1.jpg', alt: 'Home exterior for claims context' },
+                        { src: 'graphics/showcase/ex-house-2.jpg', alt: 'Property overview' }
+                    ]
+                },
+                survey: {
+                    title: 'RTK aerial surveying',
+                    desc: 'Survey-minded aerial capture for layout, volumes, and engineering support.',
+                    bullets: [
+                        'High-accuracy mission planning with RTK-ready workflow',
+                        'Site layout and volume-friendly coverage',
+                        'As-built and progress mapping support',
+                        'Deliverables that talk to engineers and GCs'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/survey-land.jpg', alt: 'Open land survey landscape' },
+                        { src: 'graphics/showcase/ex-land-1.jpg', alt: 'Terrain aerial' },
+                        { src: 'graphics/showcase/ex-land-2.jpg', alt: 'Landscape mapping view' },
+                        { src: 'graphics/showcase/ex-drone-1.jpg', alt: 'Drone for survey work' },
+                        { src: 'graphics/showcase/gen-construction-aerial.jpg', alt: 'Site from above for layout' }
+                    ]
+                },
+                mapping: {
+                    title: '3D mapping & models',
+                    desc: 'Photogrammetry-style coverage that becomes models, orthos, and client-ready visuals.',
+                    bullets: [
+                        'Dense photo capture for 3D reconstruction',
+                        'Orthomosaic-style overviews',
+                        'Progress and presentation assets',
+                        'Great for owners, planners, and sales decks'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/mapping.jpg', alt: 'Mapping and data visualization' },
+                        { src: 'graphics/showcase/city-aerial.jpg', alt: 'Dense aerial mapping view' },
+                        { src: 'graphics/showcase/ex-build-2.jpg', alt: 'Built environment aerial' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial site aerial' },
+                        { src: 'graphics/showcase/ex-industrial-1.jpg', alt: 'Facility overview' }
+                    ]
+                },
+                thermal: {
+                    title: 'Thermal drone inspections',
+                    desc: 'Infrared from the air—solar, HVAC, roofs, envelopes, electrical gear, and claim sites. Heat tells the story RGB misses.',
+                    bullets: [
+                        'Rooftop AC / HVAC unit heat signatures',
+                        'Solar module & string thermal mapping',
+                        'Roof wet spots, insulation, and repair priorities',
+                        'Building envelope heat-loss context',
+                        'Outdoor electrical / equipment hotspots',
+                        'Insurance loss documentation with thermal when it matters'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-thermal-hvac.jpg', alt: 'Thermal rooftop HVAC units' },
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal solar array' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Thermal hotspot detail' },
+                        { src: 'graphics/showcase/gen-insurance-roof.jpg', alt: 'Roof overhead' },
+                        { src: 'graphics/showcase/ex-hvac-1.jpg', alt: 'HVAC equipment' },
+                        { src: 'graphics/showcase/ex-building-1.jpg', alt: 'Commercial building' },
+                        { src: 'graphics/showcase/ex-electrical-1.jpg', alt: 'Electrical infrastructure' }
+                    ]
+                },
+                'thermal-hvac': {
+                    title: 'Rooftop AC & HVAC thermal',
+                    desc: 'Commercial roofs full of RTUs and condensers—thermal finds units working too hard before you climb every curb.',
+                    bullets: [
+                        'Scan whole rooftops of packaged units in one flight',
+                        'Highlight overheating compressors / blocked airflow clues',
+                        'Pair with visual photos for maintenance tickets',
+                        'Great for facilities, property managers, and service contractors'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-thermal-hvac.jpg', alt: 'Thermal HVAC rooftop' },
+                        { src: 'graphics/showcase/ex-hvac-1.jpg', alt: 'HVAC technician context' },
+                        { src: 'graphics/showcase/ex-hvac-2.jpg', alt: 'Mechanical systems' },
+                        { src: 'graphics/showcase/ex-industrial-1.jpg', alt: 'Industrial roof plant' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Facility exterior' },
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal roof context' }
+                    ]
+                },
+                'thermal-envelope': {
+                    title: 'Building envelope thermal',
+                    desc: 'Where the building is leaking heat or showing façade anomalies—useful for energy, owners, and facility teams.',
+                    bullets: [
+                        'Heat-loss patterns on walls and rooflines',
+                        'Support for energy and retrofit conversations',
+                        'Document large façades without scaffolding',
+                        'Complements roof and HVAC thermal flights'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/ex-building-1.jpg', alt: 'Tall commercial building' },
+                        { src: 'graphics/showcase/city-aerial.jpg', alt: 'Urban building fabric' },
+                        { src: 'graphics/showcase/ex-house-1.jpg', alt: 'Residential envelope context' },
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal inspection style' },
+                        { src: 'graphics/showcase/roof-aerial.jpg', alt: 'Property aerial' }
+                    ]
+                },
+                'thermal-electrical': {
+                    title: 'Electrical & equipment hotspots',
+                    desc: 'Outdoor gear that runs hotter than it should—document for licensed electrical follow-up.',
+                    bullets: [
+                        'Transformers, service equipment, outdoor gear',
+                        'Visual + thermal package for the file',
+                        'Supports solar combiner / equipment checks',
+                        'Corrective electrical work stays with licensed pros'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/ex-electrical-1.jpg', alt: 'Power infrastructure' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial equipment' },
+                        { src: 'graphics/showcase/ex-industrial-1.jpg', alt: 'Facility equipment' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Thermal hotspot style' },
+                        { src: 'graphics/showcase/gen-thermal-hvac.jpg', alt: 'Hot equipment thermal' }
+                    ]
+                },
+                construction: {
+                    title: 'Construction & site documentation',
+                    desc: 'Progress flights so everyone sees the same site reality—owners, GCs, and stakeholders.',
+                    bullets: [
+                        'Weekly / milestone progress overviews',
+                        'Stockpile and open-site context',
+                        'Shareable stills for meetings and RFIs',
+                        'Less “guessing from the ground”'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-construction-aerial.jpg', alt: 'Construction site aerial' },
+                        { src: 'graphics/showcase/construction.jpg', alt: 'Active construction' },
+                        { src: 'graphics/showcase/ex-build-1.jpg', alt: 'Building construction' },
+                        { src: 'graphics/showcase/ex-build-2.jpg', alt: 'Structure aerial' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial construction context' }
+                    ]
+                },
+                realestate: {
+                    title: 'Real estate & marketing',
+                    desc: 'Cinematic stills that sell scale, access, and surroundings for listings and brands.',
+                    bullets: [
+                        'Property context and neighborhood feel',
+                        'Clean vertical marketing assets',
+                        'Optional short clips from the same mission',
+                        'Looks premium without a full film crew'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/ex-house-1.jpg', alt: 'Attractive home exterior' },
+                        { src: 'graphics/showcase/ex-house-2.jpg', alt: 'Luxury home aerial feel' },
+                        { src: 'graphics/showcase/city-aerial.jpg', alt: 'Neighborhood aerial' },
+                        { src: 'graphics/showcase/gen-drone-hero.jpg', alt: 'Drone over homes at sunset' },
+                        { src: 'graphics/showcase/coastal.jpg', alt: 'Lifestyle coastal property vibe' }
+                    ]
+                },
+                coastal: {
+                    title: 'Coastal & hard-to-reach sites',
+                    desc: 'Shoreline, marsh, and restricted access—where drones beat wet boots and incomplete maps.',
+                    bullets: [
+                        'Coastal and marsh documentation',
+                        'Hard-to-reach property edges',
+                        'Insurance + survey overlap on waterfront jobs',
+                        'Safer than scrambling unstable banks'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/coastal.jpg', alt: 'Coastal beach aerial' },
+                        { src: 'graphics/showcase/ex-coast-1.jpg', alt: 'Shoreline view' },
+                        { src: 'graphics/showcase/ex-coast-2.jpg', alt: 'Ocean coast aerial' },
+                        { src: 'graphics/showcase/ex-land-1.jpg', alt: 'Natural terrain aerial' },
+                        { src: 'graphics/showcase/survey-land.jpg', alt: 'Open landscape' }
+                    ]
+                }
             };
 
-            window.closeVideoLightbox = function() {
-                const lightbox = document.getElementById('video-lightbox');
-                const video = document.getElementById('lightbox-video');
-                video.pause();
-                video.src = '';
-                lightbox.classList.remove('active');
-            };
+            const modal = document.getElementById('ex-modal');
+            const titleEl = document.getElementById('ex-title');
+            const descEl = document.getElementById('ex-desc');
+            const mainEl = document.getElementById('ex-main');
+            const thumbsEl = document.getElementById('ex-thumbs');
+            const bulletsEl = document.getElementById('ex-bullets');
+            let lastFocus = null;
 
-            // Close on escape key
+            function openExamples(key) {
+                const data = EXAMPLES[key];
+                if (!data) return;
+                lastFocus = document.activeElement;
+                titleEl.textContent = data.title;
+                descEl.textContent = data.desc;
+                bulletsEl.innerHTML = data.bullets.map((b) => '<li>' + b + '</li>').join('');
+                thumbsEl.innerHTML = '';
+                data.images.forEach((img, i) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = i === 0 ? 'active' : '';
+                    btn.setAttribute('aria-label', 'Show example ' + (i + 1));
+                    const thumb = document.createElement('img');
+                    thumb.src = img.src;
+                    thumb.alt = '';
+                    thumb.loading = 'lazy';
+                    btn.appendChild(thumb);
+                    btn.addEventListener('click', () => {
+                        mainEl.src = img.src;
+                        mainEl.alt = img.alt;
+                        thumbsEl.querySelectorAll('button').forEach((b) => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                    thumbsEl.appendChild(btn);
+                });
+                mainEl.src = data.images[0].src;
+                mainEl.alt = data.images[0].alt;
+                modal.hidden = false;
+                modal.classList.add('open');
+                document.body.classList.add('modal-open');
+                document.getElementById('ex-close').focus();
+            }
+
+            function closeExamples() {
+                modal.classList.remove('open');
+                modal.hidden = true;
+                document.body.classList.remove('modal-open');
+                if (lastFocus && lastFocus.focus) lastFocus.focus();
+            }
+
+            document.getElementById('ex-close').addEventListener('click', closeExamples);
+            document.getElementById('ex-close-2').addEventListener('click', closeExamples);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeExamples();
+            });
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    closeVideoLightbox();
-                }
+                if (e.key === 'Escape' && modal.classList.contains('open')) closeExamples();
             });
 
-            // Close on background click
-            document.getElementById('video-lightbox').addEventListener('click', (e) => {
-                if (e.target.id === 'video-lightbox') {
-                    closeVideoLightbox();
-                }
+            document.querySelectorAll('[data-examples]').forEach((el) => {
+                const key = el.getAttribute('data-examples');
+                const open = () => openExamples(key);
+                el.addEventListener('click', open);
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        open();
+                    }
+                });
             });
-        </script>
-        <!-- Video lightbox -->
-        <div id="video-lightbox" class="video-lightbox">
-            <button class="video-lightbox-close" onclick="closeVideoLightbox()">×</button>
-            <video id="lightbox-video" controls></video>
-        </div>
-    </body>
+
+            // Solar gallery figures inside #solar also open solar examples when clicked
+            document.querySelectorAll('#solar-gallery .solar-shot').forEach((fig) => {
+                fig.setAttribute('data-examples', 'solar');
+                fig.setAttribute('tabindex', '0');
+                fig.setAttribute('role', 'button');
+                fig.addEventListener('click', () => openExamples('solar'));
+                fig.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openExamples('solar');
+                    }
+                });
+            });
+
+            // Insurance photo block
+            const insPhoto = document.querySelector('.ins-photo');
+            if (insPhoto) {
+                insPhoto.style.cursor = 'pointer';
+                insPhoto.setAttribute('tabindex', '0');
+                insPhoto.setAttribute('role', 'button');
+                insPhoto.setAttribute('aria-label', 'Open insurance examples');
+                const openIns = () => openExamples('insurance');
+                insPhoto.addEventListener('click', openIns);
+                insPhoto.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openIns();
+                    }
+                });
+            }
+        })();
+
+        /* Customer panel-failure playground */
+        (function () {
+            const board = document.getElementById('pg-board');
+            if (!board) return;
+
+            const el = {
+                watts: document.getElementById('pg-watts'),
+                perString: document.getElementById('pg-per-string'),
+                strings: document.getElementById('pg-strings'),
+                rate: document.getElementById('pg-rate'),
+                sun: document.getElementById('pg-sun'),
+                mode: document.getElementById('pg-mode'),
+                wattsVal: document.getElementById('pg-watts-val'),
+                perStringVal: document.getElementById('pg-per-string-val'),
+                stringsVal: document.getElementById('pg-strings-val'),
+                rateVal: document.getElementById('pg-rate-val'),
+                sunVal: document.getElementById('pg-sun-val'),
+                size: document.getElementById('pg-size'),
+                count: document.getElementById('pg-count'),
+                live: document.getElementById('pg-live'),
+                livePct: document.getElementById('pg-live-pct'),
+                kwh: document.getElementById('pg-kwh'),
+                money: document.getElementById('pg-money'),
+                moneySub: document.getElementById('pg-money-sub'),
+                story: document.getElementById('pg-story')
+            };
+
+            /** @type {boolean[][]} failed[string][panel] */
+            let failed = [];
+            const SYSTEM_FACTOR = 0.80;
+
+            function nStrings() { return Number(el.strings.value); }
+            function nPerString() { return Number(el.perString.value); }
+            function watts() { return Number(el.watts.value); }
+            function rate() { return Number(el.rate.value); }
+            function sun() { return Number(el.sun.value); }
+
+            function ensureGrid() {
+                const s = nStrings();
+                const p = nPerString();
+                const next = [];
+                for (let i = 0; i < s; i++) {
+                    const row = [];
+                    for (let j = 0; j < p; j++) {
+                        row.push(failed[i] && failed[i][j] ? true : false);
+                    }
+                    next.push(row);
+                }
+                failed = next;
+            }
+
+            function money(n) {
+                return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+            }
+
+            function fmtKw(w) {
+                if (w >= 1000) return (w / 1000).toFixed(2) + ' kW';
+                return Math.round(w) + ' W';
+            }
+
+            function compute() {
+                const s = nStrings();
+                const p = nPerString();
+                const w = watts();
+                const totalPanels = s * p;
+                const nameplateW = totalPanels * w;
+                const mode = el.mode.value;
+                let liveW = 0;
+                let failedCount = 0;
+                let deadStrings = 0;
+
+                for (let i = 0; i < s; i++) {
+                    const fails = failed[i].filter(Boolean).length;
+                    failedCount += fails;
+                    if (mode === 'open' && fails > 0) {
+                        deadStrings += 1;
+                        // whole string offline
+                    } else {
+                        const healthy = p - fails;
+                        liveW += healthy * w;
+                    }
+                }
+
+                const lostW = nameplateW - liveW;
+                const annualLostKwh = (lostW / 1000) * sun() * 365 * SYSTEM_FACTOR;
+                const annualMoney = annualLostKwh * rate();
+                const livePct = nameplateW > 0 ? (liveW / nameplateW) * 100 : 100;
+
+                return {
+                    totalPanels, nameplateW, liveW, lostW, failedCount, deadStrings,
+                    annualLostKwh, annualMoney, livePct, mode, p, s, w
+                };
+            }
+
+            function renderLabels() {
+                el.wattsVal.textContent = watts() + ' W';
+                el.perStringVal.textContent = String(nPerString());
+                el.stringsVal.textContent = String(nStrings());
+                el.rateVal.textContent = '$' + rate().toFixed(2) + ' / kWh';
+                el.sunVal.textContent = sun().toFixed(1);
+            }
+
+            function renderBoard() {
+                ensureGrid();
+                const mode = el.mode.value;
+                const s = nStrings();
+                const p = nPerString();
+                board.innerHTML = '';
+
+                for (let i = 0; i < s; i++) {
+                    const fails = failed[i].filter(Boolean).length;
+                    const stringDead = mode === 'open' && fails > 0;
+                    const wrap = document.createElement('div');
+                    wrap.className = 'pg-string';
+
+                    const label = document.createElement('div');
+                    label.className = 'pg-string-label';
+                    const status = stringDead
+                        ? '<em class="bad">string offline</em>'
+                        : fails
+                            ? '<em class="bad">' + fails + ' failed</em>'
+                            : '<em>healthy</em>';
+                    label.innerHTML = '<span>String ' + (i + 1) + '</span>' + status;
+                    wrap.appendChild(label);
+
+                    const row = document.createElement('div');
+                    row.className = 'pg-panels';
+
+                    for (let j = 0; j < p; j++) {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'pg-panel';
+                        if (failed[i][j]) btn.classList.add('failed');
+                        if (stringDead) btn.classList.add('string-dead');
+                        btn.setAttribute('aria-pressed', failed[i][j] ? 'true' : 'false');
+                        btn.setAttribute('aria-label', 'String ' + (i + 1) + ' panel ' + (j + 1) + (failed[i][j] ? ' failed' : ' healthy'));
+                        btn.addEventListener('click', () => {
+                            failed[i][j] = !failed[i][j];
+                            render();
+                        });
+                        row.appendChild(btn);
+                    }
+                    wrap.appendChild(row);
+                    board.appendChild(wrap);
+                }
+            }
+
+            function renderStats() {
+                const c = compute();
+                el.size.textContent = fmtKw(c.nameplateW);
+                el.count.textContent = c.totalPanels + ' panels · ' + c.s + ' × ' + c.p;
+                el.live.textContent = fmtKw(c.liveW);
+                el.livePct.textContent = c.livePct.toFixed(0) + '% of nameplate';
+                el.kwh.textContent = c.failedCount === 0 ? '0' : Math.round(c.annualLostKwh).toLocaleString();
+                el.money.textContent = c.failedCount === 0 ? '$0' : money(c.annualMoney);
+                el.moneySub.textContent = c.failedCount === 0 ? 'nothing failed yet' : 'per year (rough)';
+
+                if (c.failedCount === 0) {
+                    el.story.innerHTML = '<strong>All green.</strong> Click a panel (or hit “Fail 1 random”) to see how one weak module can quietly cost real money over a year. Then <a href="#contact">book a thermal inspection</a> to find the real ones.';
+                } else if (c.mode === 'open' && c.deadStrings) {
+                    el.story.innerHTML = '<strong>' + c.failedCount + ' failed panel' + (c.failedCount > 1 ? 's' : '') + ' took down ' + c.deadStrings + ' string' + (c.deadStrings > 1 ? 's' : '') + '.</strong> In an open-string scenario you’re missing about <strong>' + fmtKw(c.lostW) + '</strong> of DC capacity—roughly <strong>' + money(c.annualMoney) + '/yr</strong> at your rate. Thermal + electrical work finds whether it’s a module, connector, fuse, or something else. <a href="#contact">Get it checked</a>.';
+                } else {
+                    el.story.innerHTML = '<strong>' + c.failedCount + ' panel' + (c.failedCount > 1 ? 's' : '') + ' out.</strong> With typical bypass behavior you’re still online but down ~<strong>' + fmtKw(c.lostW) + '</strong> (~' + (100 - c.livePct).toFixed(0) + '%). That’s about <strong>' + money(c.annualMoney) + ' a year</strong> left on the table—before dirt, shade, and inverter clipping. Real arrays hide these until someone flies thermal. <a href="#solar">How we inspect</a> · <a href="#contact">Request a quote</a>.';
+                }
+            }
+
+            function render() {
+                renderLabels();
+                renderBoard();
+                renderStats();
+            }
+
+            function failRandom(n) {
+                ensureGrid();
+                const slots = [];
+                for (let i = 0; i < failed.length; i++) {
+                    for (let j = 0; j < failed[i].length; j++) {
+                        if (!failed[i][j]) slots.push([i, j]);
+                    }
+                }
+                for (let k = 0; k < n && slots.length; k++) {
+                    const idx = Math.floor(Math.random() * slots.length);
+                    const [i, j] = slots.splice(idx, 1)[0];
+                    failed[i][j] = true;
+                }
+                render();
+            }
+
+            ['input', 'change'].forEach((evt) => {
+                [el.watts, el.perString, el.strings, el.rate, el.sun, el.mode].forEach((node) => {
+                    node.addEventListener(evt, render);
+                });
+            });
+
+            document.getElementById('pg-fail-one').addEventListener('click', () => failRandom(1));
+            document.getElementById('pg-fail-two').addEventListener('click', () => failRandom(2));
+            document.getElementById('pg-reset').addEventListener('click', () => {
+                failed = [];
+                render();
+            });
+
+            render();
+        })();
+    </script>
+
+    <script>
+        window.openVideoLightbox = function (videoUrl) {
+            const box = document.getElementById('video-lightbox');
+            const video = document.getElementById('lightbox-video');
+            if (!box || !video) return;
+            video.src = videoUrl;
+            box.classList.add('active');
+            video.play().catch(() => {});
+        };
+
+        window.closeVideoLightbox = function () {
+            const box = document.getElementById('video-lightbox');
+            const video = document.getElementById('lightbox-video');
+            if (!box || !video) return;
+            video.pause();
+            video.src = '';
+            box.classList.remove('active');
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeVideoLightbox();
+        });
+
+        const vlb = document.getElementById('video-lightbox');
+        if (vlb) {
+            vlb.addEventListener('click', (e) => {
+                if (e.target.id === 'video-lightbox') closeVideoLightbox();
+            });
+        }
+    </script>
+</body>
 </html>

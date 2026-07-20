@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ASAP Field Tools · Internal</title>
+  <link rel="stylesheet" href="tools.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div>
+        <div class="brand">ASAP Field Tools</div>
+        <div class="sub">Internal · not customer-facing · v1.0</div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button type="button" class="tab active" data-panel="loss">Loss estimator</button>
+        <button type="button" class="tab" data-panel="string">String helper</button>
+        <button type="button" class="tab" data-panel="flight">Flight checklist</button>
+        <button type="button" class="tab" data-panel="report">Field report</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="banner">
+      Use these on jobs so deliverables match the website pitch: map issues → estimate loss → troubleshoot path → clear notes.
+      Numbers are engineering estimates—always state assumptions on the client report.
+    </p>
+
+    <!-- LOSS ESTIMATOR -->
+    <section class="panel active" id="panel-loss">
+      <h1>Production loss estimator</h1>
+      <p class="lead">Turn “X bad modules / Y weak strings” into kWh and $ estimates for the client conversation.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>System</h2>
+          <label>Nameplate DC (kW) <input id="loss-kw" type="number" min="0.5" step="0.1" value="10"></label>
+          <label>Module count <input id="loss-modules" type="number" min="1" step="1" value="25"></label>
+          <label>Module wattage (W) <input id="loss-w" type="number" min="100" step="5" value="400"></label>
+          <label>Peak sun hours / day <input id="loss-sun" type="number" min="2" max="7" step="0.1" value="4.2"></label>
+          <label>System performance factor <input id="loss-pr" type="number" min="0.5" max="1" step="0.01" value="0.80"></label>
+          <label>Utility rate ($/kWh) <input id="loss-rate" type="number" min="0.05" max="1" step="0.01" value="0.18"></label>
+        </div>
+        <div class="card">
+          <h2>Findings from thermal / field</h2>
+          <label>Failed / bypassed modules (count) <input id="loss-fail-mod" type="number" min="0" step="1" value="2"></label>
+          <label>Fully offline strings (count) <input id="loss-fail-str" type="number" min="0" step="1" value="0"></label>
+          <label>Modules per offline string <input id="loss-str-size" type="number" min="1" step="1" value="10"></label>
+          <label>Extra derate from soiling / mismatch (%) <input id="loss-extra" type="number" min="0" max="50" step="0.5" value="0"></label>
+          <label>Notes (saved in browser)
+            <textarea id="loss-notes" rows="3" placeholder="e.g. SE string 2 mid-row hotspot ΔT ~22°C; connector discoloration"></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="card results">
+        <h2>Estimate summary</h2>
+        <div class="stat-row">
+          <div class="stat"><span>Lost capacity</span><strong id="loss-out-w">—</strong></div>
+          <div class="stat"><span>Annual kWh lost</span><strong id="loss-out-kwh">—</strong></div>
+          <div class="stat"><span>Annual $</span><strong id="loss-out-money">—</strong></div>
+          <div class="stat"><span>% of nameplate</span><strong id="loss-out-pct">—</strong></div>
+        </div>
+        <pre class="report-blurb" id="loss-blurb"></pre>
+        <div class="row-actions">
+          <button type="button" class="btn" id="loss-copy">Copy blurb</button>
+          <button type="button" class="btn ghost" id="loss-save">Save to browser</button>
+        </div>
+        <p class="fine">Assumes offline strings = full string nameplate loss; failed modules = 1× module watt each (bypass-style). Adjust for optimizers/microinverters in notes.</p>
+      </div>
+    </section>
+
+    <!-- STRING HELPER -->
+    <section class="panel" id="panel-string">
+      <h1>String / Voc helper</h1>
+      <p class="lead">Quick cold-temperature Voc check so you don’t look lost when someone asks “will this string over-voltage the inverter?”</p>
+      <div class="grid-2">
+        <div class="card">
+          <h2>Module</h2>
+          <label>Voc at STC (V) <input id="str-voc" type="number" step="0.1" value="49.5"></label>
+          <label>Temp coefficient of Voc (%/°C) <input id="str-coeff" type="number" step="0.01" value="-0.27"></label>
+          <label>Modules in series <input id="str-count" type="number" min="1" step="1" value="10"></label>
+          <label>Record cold design temp (°C) <input id="str-cold" type="number" step="1" value="-15"></label>
+          <label>Inverter max DC input (V) <input id="str-max" type="number" step="1" value="600"></label>
+        </div>
+        <div class="card results">
+          <h2>Results</h2>
+          <div class="stat-row">
+            <div class="stat"><span>ΔT from 25°C</span><strong id="str-dt">—</strong></div>
+            <div class="stat"><span>Voc cold / module</span><strong id="str-voc-mod">—</strong></div>
+            <div class="stat"><span>String Voc cold</span><strong id="str-voc-str">—</strong></div>
+            <div class="stat"><span>Headroom</span><strong id="str-head">—</strong></div>
+          </div>
+          <p class="story" id="str-story"></p>
+          <p class="fine">STC reference = 25°C. Formula: Voc_cold ≈ Voc_stc × [1 + (coeff/100) × (T_cold − 25)]. Verify with datasheet; this is a field sanity check only.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLIGHT CHECKLIST -->
+    <section class="panel" id="panel-flight">
+      <h1>Solar thermal flight checklist</h1>
+      <p class="lead">Don’t launch a useless thermal job. Tick through this before and after.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h2>Before launch</h2>
+          <ul class="checks" id="chk-before"></ul>
+        </div>
+        <div class="card">
+          <h2>On site / after</h2>
+          <ul class="checks" id="chk-after"></ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row-actions">
+          <button type="button" class="btn ghost" id="chk-reset">Reset checklist</button>
+          <span class="fine" id="chk-progress"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIELD REPORT -->
+    <section class="panel" id="panel-report">
+      <h1>Field report builder</h1>
+      <p class="lead">Fill this while it’s fresh. Copy into email/PDF so the client gets a professional write-up, not a dump of JPEGs.</p>
+      <div class="card">
+        <div class="grid-2">
+          <label>Client / site <input id="rep-client" type="text" placeholder="Smith residence / Acme warehouse"></label>
+          <label>Date <input id="rep-date" type="date"></label>
+          <label>System size / type <input id="rep-system" type="text" placeholder="10 kW roof, string inverter"></label>
+          <label>Weather / irradiance notes <input id="rep-wx" type="text" placeholder="Clear, ~800 W/m², ambient 28°C"></label>
+        </div>
+        <label>Thermal findings
+          <textarea id="rep-thermal" rows="4" placeholder="Module locations, ΔT, pattern (single cell, whole module, string edge…)"></textarea>
+        </label>
+        <label>Electrical / troubleshooting notes
+          <textarea id="rep-elec" rows="3" placeholder="IV curve, string Voc/Isc, connectors, fuses, ground faults…"></textarea>
+        </label>
+        <label>Loss estimate (paste from Loss tab)
+          <textarea id="rep-loss" rows="2" placeholder="~X kWh/yr · ~$Y/yr · assumptions…"></textarea>
+        </label>
+        <label>Recommended next steps
+          <textarea id="rep-next" rows="3" placeholder="Replace modules A12/A13; re-torque MC4; schedule licensed electrician for combiner…"></textarea>
+        </label>
+        <div class="row-actions">
+          <button type="button" class="btn" id="rep-build">Build report text</button>
+          <button type="button" class="btn ghost" id="rep-copy">Copy report</button>
+        </div>
+        <pre class="report-blurb" id="rep-out"></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    ASAP NJ · Field tools for solar thermal &amp; aerial jobs · Keep this URL private if you don’t want clients poking around
+  </footer>
+
+  <script src="tools.js"></script>
+</body>
+</html>
