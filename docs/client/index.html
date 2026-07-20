@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client login · ASAP NJ Drone Services</title>
+  <meta name="description" content="Client portal for ASAP NJ Drone Services — view inspection reports and pay invoices.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" sizes="32x32" href="../graphics/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="login">
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="../index.html">
+        <strong>ASAP NJ</strong>
+        <span>Client portal</span>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-ghost btn-sm" href="../index.html">← Main site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div id="demo-banner" class="demo-banner hidden">
+        <strong>Demo mode on.</strong> Sign in with any email and password <code>demo</code> to preview reports &amp; pay UI.
+        Flip to live auth in <code>config.js</code> when ready.
+      </div>
+      <h1>Client login</h1>
+      <p class="lead">View inspection reports and pay open balances securely.</p>
+
+      <form id="login-form">
+        <label for="email">Email
+          <input id="email" name="email" type="email" autocomplete="username" required placeholder="you@company.com">
+        </label>
+        <label for="password">Password
+          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••">
+        </label>
+        <button class="btn btn-primary" type="submit">Sign in</button>
+        <p id="auth-msg" class="auth-msg" role="status"></p>
+      </form>
+
+      <div class="auth-foot">
+        Need access? Request a login below — we’ll set you up after the job is booked.
+      </div>
+
+      <form id="access-form" style="margin-top:1rem">
+        <label for="access-email">Work email
+          <input id="access-email" type="email" required placeholder="you@company.com">
+        </label>
+        <label for="access-note">Job / claim notes (optional)
+          <textarea id="access-note" rows="2" placeholder="Site address, claim #, company name…"></textarea>
+        </label>
+        <button class="btn btn-ghost" type="submit" style="width:100%">Request portal access</button>
+        <p id="access-msg" class="auth-msg" role="status"></p>
+      </form>
+      <p class="fine">Payments use Stripe when configured. Reports are private to your login.</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="portal.js"></script>
+</body>
+</html>

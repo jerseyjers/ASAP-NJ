@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My reports · ASAP NJ Client Portal</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="../graphics/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="dashboard">
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="./dashboard.html">
+        <strong>ASAP NJ</strong>
+        <span>Client portal</span>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-ghost btn-sm" href="../index.html">Main site</a>
+        <button type="button" class="btn btn-ghost btn-sm" id="logout-btn">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap dash">
+    <div id="demo-banner" class="demo-banner hidden">
+      Demo mode — sample reports only. Connect Supabase + Stripe (see SETUP.md) for real client files and payments.
+    </div>
+
+    <div class="dash-head">
+      <div>
+        <h1>Your jobs</h1>
+        <p>Signed in as <strong id="dash-greet">…</strong></p>
+      </div>
+      <div class="top-actions">
+        <a id="pay-all" class="btn btn-pay hidden" href="#" target="_blank" rel="noopener">Pay open balance</a>
+        <a id="stripe-portal" class="btn btn-ghost hidden" href="#" target="_blank" rel="noopener">Billing portal</a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="k">Packages</div>
+        <div class="v" id="stat-reports">—</div>
+      </div>
+      <div class="stat">
+        <div class="k">Ready</div>
+        <div class="v ok" id="stat-ready">—</div>
+      </div>
+      <div class="stat">
+        <div class="k">Balance due</div>
+        <div class="v" id="stat-due">—</div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-h">
+        <h2>Reports &amp; deliverables</h2>
+        <span class="fine" style="margin:0">Open items: <strong id="stat-open">—</strong></span>
+      </div>
+      <div id="report-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-h"><h2>Need something else?</h2></div>
+      <div class="pay-box">
+        <p>Questions about a report, re-flight, or invoice? Email us and reference your report ID.</p>
+        <div class="top-actions">
+          <a class="btn btn-primary" id="support-mail" href="mailto:hello@asap-nj.com">Email support</a>
+          <a class="btn btn-ghost" href="../index.html#contact">Contact form</a>
+        </div>
+        <p class="fine">When live: PDF reports upload to your account after each job. Payments process through Stripe.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var cfg = window.ASAP_PORTAL || {};
+      var a = document.getElementById('support-mail');
+      if (a && cfg.supportEmail) a.href = 'mailto:' + cfg.supportEmail;
+    });
+  </script>
+  <script src="portal.js"></script>
+</body>
+</html>
