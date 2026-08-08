@@ -1,0 +1,4295 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thermal Drone Inspections in New Jersey | ASAP NJ Drone Services</title>
+    <meta name="description" content="FAA Part 107 thermal drone inspections in New Jersey—solar, HVAC, roofs, insurance claims—plus fixed-base NTRIP RTK near Toms River for any NTRIP client. Free starter seats, Pro upgrades, on-site RTK quoted.">
+    <meta name="author" content="ASAP NJ Drone Services">
+    <meta name="theme-color" content="#0a0c10">
+    <link rel="canonical" href="https://asap-nj.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asap-nj.com/">
+    <meta property="og:title" content="Thermal Drone Inspections in New Jersey | ASAP NJ">
+    <meta property="og:description" content="Thermal drone for solar, rooftop HVAC/AC, roofs, envelopes, and claims—plus survey and aerial docs. FAA Part 107. South Jersey based.">
+    <meta property="og:image" content="https://asap-nj.com/graphics/hero-bg.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="ASAP NJ Drone Services">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thermal Drone Inspections in New Jersey | ASAP NJ">
+    <meta name="twitter:description" content="Solar, HVAC, roofs, envelopes &amp; insurance thermal drone work—FAA Part 107, New Jersey.">
+    <meta name="twitter:image" content="https://asap-nj.com/graphics/hero-bg.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="graphics/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="graphics/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="graphics/icons/favicon-16x16.png">
+    <link rel="manifest" href="graphics/icons/site.webmanifest">
+    <link rel="preload" as="image" href="graphics/showcase/gen-drone-hero.jpg" fetchpriority="high">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=optional" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
+
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --bg-elevated: #12151c;
+            --bg-card: #161a23;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.14);
+            --text: #f3f5f7;
+            --text-muted: #9aa3b2;
+            --text-dim: #6b7382;
+            --accent: #3ec4e8;
+            --accent-soft: rgba(62, 196, 232, 0.14);
+            --accent-hover: #6ad4f0;
+            --solar: #f0a020;
+            --solar-soft: rgba(240, 160, 32, 0.14);
+            --solar-hot: #ff6b2c;
+            --gold: #d4b06a;
+            --radius: 14px;
+            --radius-sm: 10px;
+            --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+            --max: 1120px;
+            --nav-h: 72px;
+            --font: 'DM Sans', system-ui, sans-serif;
+            --display: 'Instrument Serif', Georgia, serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent-hover); }
+        button, input, textarea, select { font: inherit; }
+
+        .container {
+            width: min(100% - 2.5rem, var(--max));
+            margin-inline: auto;
+        }
+
+        /* —— Nav —— */
+        .site-header {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 1000;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-header.scrolled {
+            background: rgba(10, 12, 16, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom-color: var(--border);
+        }
+
+        .nav-inner {
+            width: min(100% - 2rem, var(--max));
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            color: var(--text);
+            text-decoration: none;
+            line-height: 1.15;
+        }
+
+        .logo:hover { color: var(--text); }
+        .logo-mark {
+            font-family: var(--display);
+            font-size: 1.45rem;
+            letter-spacing: 0.02em;
+        }
+        .logo-sub {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.15rem 1.35rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.35rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn:active { transform: translateY(1px); }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #041018;
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            color: #041018;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--border-strong);
+        }
+        .btn-ghost:hover {
+            border-color: var(--text-muted);
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .nav-cta { padding: 0.65rem 1.1rem; font-size: 0.86rem; }
+
+        .nav-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            position: relative;
+        }
+        .nav-toggle span::before,
+        .nav-toggle span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+        }
+        .nav-toggle span::before { top: -6px; }
+        .nav-toggle span::after { top: 6px; }
+
+        /* Money packages under hero */
+        .packages { padding: 3rem 0 2.5rem; }
+        .pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+        @media (max-width: 900px) {
+            .pkg-grid { grid-template-columns: 1fr; }
+        }
+        .pkg {
+            background: var(--bg-card, #161a23);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.35rem 1.25rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .pkg-featured {
+            border-color: rgba(62, 196, 232, 0.45);
+            box-shadow: 0 0 0 1px rgba(62, 196, 232, 0.12), 0 16px 40px rgba(0, 0, 0, 0.35);
+        }
+        .pkg-tag {
+            position: absolute;
+            top: 0.85rem;
+            right: 0.85rem;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: rgba(62, 196, 232, 0.18);
+            color: var(--accent);
+            padding: 0.25rem 0.55rem;
+            border-radius: 999px;
+        }
+        .pkg h3 { font-size: 1.15rem; margin-bottom: 0.3rem; padding-right: 4.5rem; }
+        .pkg-who { color: var(--text-dim); font-size: 0.82rem; margin-bottom: 0.75rem; }
+        .pkg-price {
+            font-family: var(--display);
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 0.15rem;
+        }
+        .pkg-price span { font-family: var(--font); font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+        .pkg-from { color: var(--text-dim); font-size: 0.78rem; margin-bottom: 0.85rem; }
+        .pkg ul { list-style: none; margin: 0 0 1.15rem; flex: 1; padding: 0; }
+        .pkg li {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 0.28rem 0 0.28rem 1.1rem;
+            position: relative;
+        }
+        .pkg li::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 0.7rem;
+            width: 0.4rem; height: 0.4rem;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.7;
+        }
+        .pkg .btn { width: 100%; margin-top: auto; text-align: center; justify-content: center; }
+        .pkg-note {
+            margin-top: 1.15rem;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-dim);
+            font-size: 0.88rem;
+        }
+        .pkg-note strong { color: var(--text-muted); }
+        .money-bar {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 90;
+            display: none;
+            gap: 0.55rem;
+            justify-content: center;
+            padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom));
+            background: rgba(10, 12, 16, 0.94);
+            border-top: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+        .money-bar .btn { flex: 1; max-width: 200px; justify-content: center; }
+        @media (max-width: 720px) {
+            .money-bar { display: flex; }
+            body { padding-bottom: 4.75rem; }
+        }
+
+        /* Quiet conversion strip under hero — paths, not a sales banner */
+        .path-strip {
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, rgba(22, 26, 35, 0.95), var(--bg));
+        }
+        .path-strip-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        .path-strip-inner a {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            padding: 1rem 1.1rem;
+            text-decoration: none;
+            color: var(--text);
+            border-right: 1px solid var(--border);
+            transition: background 0.2s, color 0.2s;
+        }
+        .path-strip-inner a:last-child { border-right: none; }
+        .path-strip-inner a:hover {
+            background: rgba(62, 196, 232, 0.08);
+            color: var(--accent);
+        }
+        .path-strip-inner strong {
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+        .path-strip-inner span {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+        @media (max-width: 800px) {
+            .path-strip-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+            .path-strip-inner a:nth-child(2n) { border-right: none; }
+            .path-strip-inner a { border-bottom: 1px solid var(--border); }
+        }
+        /* Mobile job bar — soft, not spammy */
+        .mobile-job-bar {
+            display: none;
+            position: fixed;
+            left: 0; right: 0; bottom: 0;
+            z-index: 40;
+            padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom));
+            background: rgba(10, 12, 16, 0.94);
+            border-top: 1px solid rgba(62, 196, 232, 0.25);
+            backdrop-filter: blur(10px);
+        }
+        .mobile-job-bar a {
+            display: block;
+            text-align: center;
+            padding: 0.75rem 1rem;
+            border-radius: 999px;
+            background: var(--accent);
+            color: #041016;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 720px) {
+            .mobile-job-bar { display: block; }
+            body { padding-bottom: 4.5rem; }
+        }
+
+        /* —— Hero —— */
+        .hero {
+            position: relative;
+            min-height: min(100vh, 900px);
+            display: flex;
+            align-items: flex-end;
+            padding: calc(var(--nav-h) + 2rem) 0 4.5rem;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(10, 12, 16, 0.45) 0%, rgba(10, 12, 16, 0.55) 40%, rgba(10, 12, 16, 0.97) 100%),
+                linear-gradient(90deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.35) 55%, rgba(10, 12, 16, 0.55) 100%),
+                url('graphics/showcase/gen-drone-hero.jpg') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            contain: layout;
+            z-index: 1;
+            max-width: 720px;
+        `n            contain: layout;}
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.1rem;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .hero h1 {
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: clamp(2.75rem, 6.5vw, 4.6rem);
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.15rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-lead {
+            font-size: clamp(1.05rem, 2vw, 1.22rem);
+            color: var(--text-muted);
+            max-width: 34em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 2.25rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .stat span {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* —— Sections —— */
+        section { padding: 5.5rem 0; }
+
+        .section-head {
+            max-width: 640px;
+            margin-bottom: 2.75rem;
+        }
+
+        .section-head.center {
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: clamp(2rem, 4vw, 2.85rem);
+            line-height: 1.15;
+            margin-bottom: 0.9rem;
+        }
+
+        .section-head p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* —— Trust strip —— */
+        .trust {
+            padding: 1.75rem 0;
+            border-block: 1px solid var(--border);
+            background: var(--bg-elevated);
+        }
+
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem 2.5rem;
+        }
+
+        .trust-row a {
+            display: block;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .trust-row a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .trust-row img {
+            height: 72px;
+            width: auto;
+            max-width: min(100%, 320px);
+            object-fit: contain;
+        }
+
+        .trust-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 0.65rem 1rem;
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+
+        .trust-social:hover {
+            color: var(--text);
+            border-color: var(--text-dim);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .trust-social svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+        /* —— Services —— */
+        .services { background: var(--bg); }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.15rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0;
+            overflow: hidden;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: rgba(62, 196, 232, 0.35);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card-photo {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-card-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 40%, rgba(10, 12, 16, 0.55));
+        }
+
+        .service-card-body {
+            padding: 1.25rem 1.35rem 1.45rem;
+            flex: 1;
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            display: grid;
+            place-items: center;
+            margin-bottom: 0.85rem;
+        }
+
+        .service-icon svg { width: 20px; height: 20px; }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 650;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .service-card {
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            font: inherit;
+            color: inherit;
+        }
+
+        .service-card .tap-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.02em;
+        }
+
+        .service-card:hover .tap-hint { color: var(--accent-hover); }
+
+        .solar-shot {
+            cursor: pointer;
+        }
+
+        /* —— Examples modal —— */
+        .ex-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            padding: 1.25rem;
+            overflow-y: auto;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .ex-modal.open { display: flex; }
+
+        .ex-modal-panel {
+            width: min(960px, 100%);
+            margin: 2rem auto 3rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-strong);
+            border-radius: calc(var(--radius) + 4px);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .ex-modal-head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.25rem 1.35rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(18, 21, 28, 0.96);
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+
+        .ex-modal-head h3 {
+            font-family: var(--display);
+            font-size: 1.55rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .ex-modal-head p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            max-width: 40em;
+        }
+
+        .ex-close {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--border-strong);
+            background: transparent;
+            color: var(--text);
+            font-size: 1.35rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .ex-close:hover { background: rgba(255,255,255,0.06); }
+
+        .ex-modal-body { padding: 1.15rem 1.35rem 1.5rem; }
+
+        .ex-main {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: #0a0c10;
+            margin-bottom: 0.85rem;
+        }
+
+        .ex-thumbs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 0.5rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .ex-thumbs button {
+            border: 2px solid transparent;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #111;
+            aspect-ratio: 1;
+        }
+
+        .ex-thumbs button.active {
+            border-color: var(--accent);
+        }
+
+        .ex-thumbs img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ex-bullets {
+            list-style: none;
+            display: grid;
+            gap: 0.45rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .ex-bullets li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .ex-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .ex-modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+
+        body.modal-open { overflow: hidden; }
+
+        /* —— Thermal pillar —— */
+        .thermal-pillar {
+            background:
+                radial-gradient(ellipse 55% 50% at 100% 30%, rgba(255, 107, 44, 0.12), transparent 55%),
+                radial-gradient(ellipse 40% 40% at 0% 80%, rgba(62, 196, 232, 0.08), transparent 50%),
+                var(--bg);
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .thermal-pillar .section-label { color: var(--solar-hot); }
+
+        .thermal-use-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .thermal-use {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            text-align: left;
+            padding: 0;
+            font: inherit;
+            color: inherit;
+            width: 100%;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .thermal-use:hover {
+            border-color: rgba(255, 107, 44, 0.45);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .thermal-use-photo {
+            height: 130px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Only show a badge when data-badge is set — never stamp IR on RGB photos */
+        .thermal-use-photo[data-badge]::after {
+            content: attr(data-badge);
+            position: absolute;
+            top: 0.55rem;
+            left: 0.55rem;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            padding: 0.25rem 0.45rem;
+            border-radius: 999px;
+            background: rgba(240, 160, 32, 0.92);
+            color: #1a0e02;
+            text-transform: uppercase;
+        }
+        .thermal-use-photo[data-badge="RGB"]::after,
+        .thermal-use-photo[data-badge="VISUAL"]::after {
+            background: rgba(62, 196, 232, 0.92);
+            color: #041018;
+        }
+        .thermal-use-photo[data-badge="RGB + IR"]::after {
+            background: linear-gradient(90deg, rgba(62, 196, 232, 0.95), rgba(240, 160, 32, 0.95));
+            color: #041018;
+        }
+
+        .thermal-use-body {
+            padding: 1rem 1.1rem 1.15rem;
+        }
+
+        .thermal-use-body h3 {
+            font-size: 1.02rem;
+            font-weight: 650;
+            margin-bottom: 0.4rem;
+        }
+
+        .thermal-use-body p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .thermal-use-body .tap-hint {
+            display: inline-block;
+            margin-top: 0.65rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--solar);
+        }
+
+        .thermal-lead {
+            max-width: 720px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.08rem;
+        }
+
+        @media (max-width: 960px) {
+            .thermal-use-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 560px) {
+            .thermal-use-grid { grid-template-columns: 1fr; }
+        }
+
+        /* —— Solar flagship —— */
+        .solar {
+            background:
+                radial-gradient(ellipse 70% 60% at 0% 50%, rgba(240, 160, 32, 0.12), transparent 55%),
+                radial-gradient(ellipse 50% 50% at 100% 0%, rgba(255, 107, 44, 0.08), transparent 50%),
+                var(--bg-elevated);
+            border-block: 1px solid var(--border);
+            padding: 5.5rem 0;
+        }
+
+        .solar .section-label { color: var(--solar); }
+
+        .solar-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .solar-intro p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .solar-intro .lead-strong {
+            color: var(--text);
+            font-size: 1.12rem;
+            font-weight: 500;
+        }
+
+        .solar-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.35rem 0 1.75rem;
+        }
+
+        .solar-pill {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            background: var(--solar-soft);
+            color: #f5c56a;
+            border: 1px solid rgba(240, 160, 32, 0.28);
+        }
+
+        .solar-steps {
+            display: grid;
+            gap: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .solar-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.9rem;
+            padding: 1rem 1.1rem;
+            background: rgba(0, 0, 0, 0.22);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+
+        .solar-step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--solar), var(--solar-hot));
+            color: #1a0e02;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .solar-step h4 {
+            font-size: 0.98rem;
+            font-weight: 650;
+            margin-bottom: 0.2rem;
+        }
+
+        .solar-step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .solar-panel {
+            background: var(--bg-card);
+            border: 1px solid rgba(240, 160, 32, 0.22);
+            border-radius: calc(var(--radius) + 4px);
+            padding: 1.65rem 1.55rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solar-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--solar), var(--solar-hot), var(--accent));
+        }
+
+        .solar-panel h3 {
+            font-family: var(--display);
+            font-size: 1.55rem;
+            font-weight: 400;
+            margin-bottom: 0.35rem;
+        }
+
+        .solar-panel > .panel-sub {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .solar-deliverables {
+            list-style: none;
+            display: grid;
+            gap: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .solar-deliverables li {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 0.7rem;
+            align-items: start;
+            font-size: 0.94rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        .solar-deliverables strong {
+            color: var(--text);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .solar-check {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--solar-soft);
+            color: var(--solar);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .solar-check svg { width: 15px; height: 15px; }
+
+        .solar-trust-note {
+            padding: 0.95rem 1rem;
+            border-radius: var(--radius-sm);
+            background: rgba(62, 196, 232, 0.08);
+            border: 1px solid rgba(62, 196, 232, 0.18);
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+        }
+
+        .solar-trust-note strong { color: var(--text); }
+
+        .solar-panel .btn-primary {
+            width: 100%;
+            background: linear-gradient(135deg, var(--solar), #e07818);
+            color: #1a0e02;
+        }
+
+        .solar-panel .btn-primary:hover {
+            background: linear-gradient(135deg, #f5b040, var(--solar));
+            color: #1a0e02;
+        }
+
+        .solar-panel .btn-ghost {
+            width: 100%;
+            margin-top: 0.65rem;
+        }
+
+        .solar-gallery {
+            margin-top: 3rem;
+        }
+
+        .solar-gallery-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .solar-gallery-head h3 {
+            font-family: var(--display);
+            font-size: 1.65rem;
+            font-weight: 400;
+        }
+
+        .solar-gallery-head p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 36em;
+        }
+
+        .solar-shot-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.75rem;
+        }
+
+        .solar-shot {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: #0e1118;
+            min-height: 180px;
+        }
+
+        .solar-shot.wide {
+            grid-row: span 2;
+            min-height: 100%;
+        }
+
+        .solar-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            min-height: 180px;
+            transition: transform 0.35s ease;
+        }
+
+        .solar-shot.wide img { min-height: 420px; }
+
+        .solar-shot:hover img { transform: scale(1.03); }
+
+        .solar-shot figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1.5rem 0.85rem 0.75rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-size: 0.8rem;
+            color: #e8ecf2;
+            font-weight: 600;
+        }
+
+        .solar-shot figcaption span {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.65);
+            margin-top: 0.15rem;
+        }
+
+        .solar-shot .badge-th {
+            position: absolute;
+            top: 0.6rem;
+            left: 0.6rem;
+            z-index: 2;
+            background: rgba(240, 160, 32, 0.92);
+            color: #1a0e02;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.28rem 0.5rem;
+            border-radius: 999px;
+        }
+        .solar-shot .badge-th.badge-rgb {
+            background: rgba(62, 196, 232, 0.92);
+            color: #041018;
+        }
+
+        @media (max-width: 800px) {
+            .solar-shot-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .solar-shot.wide {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            .solar-shot.wide img { min-height: 240px; }
+        }
+
+        @media (max-width: 520px) {
+            .solar-shot-grid { grid-template-columns: 1fr; }
+            .solar-shot.wide { grid-column: span 1; }
+        }
+
+        /* —— Insurance —— */
+        .insurance {
+            background: var(--bg);
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ins-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 1.5rem;
+            align-items: stretch;
+            margin-top: 0.5rem;
+        }
+
+        .ins-photo {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            min-height: 320px;
+            background: #111 url('graphics/showcase/gen-insurance-roof.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .ins-photo figcaption {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 1.5rem 1rem 0.9rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .ins-photo figcaption span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.2rem;
+        }
+
+        .ins-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .ins-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.45rem 1.4rem;
+        }
+
+        .ins-card h3 {
+            font-size: 1.08rem;
+            font-weight: 650;
+            margin-bottom: 0.45rem;
+        }
+
+        .ins-card p {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            line-height: 1.55;
+        }
+
+        .ins-list {
+            list-style: none;
+            display: grid;
+            gap: 0.55rem;
+            margin: 1.25rem 0 0;
+        }
+
+        .ins-list li {
+            display: flex;
+            gap: 0.65rem;
+            align-items: flex-start;
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .ins-list li::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        .ins-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.75rem;
+        }
+
+        .ins-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin: 1.75rem 0 0.5rem;
+        }
+
+        .ins-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1rem 1.05rem;
+        }
+
+        .ins-step strong {
+            display: block;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+        }
+
+        .ins-step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .ins-who {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .ins-who span {
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-strong);
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.02);
+        }
+
+        @media (max-width: 900px) {
+            .ins-steps { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 800px) {
+            .ins-layout { grid-template-columns: 1fr; }
+            .ins-photo { min-height: 240px; }
+        }
+
+        @media (max-width: 520px) {
+            .ins-steps { grid-template-columns: 1fr; }
+        }
+
+        .img-credit {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* —— About / Why —— */
+        .about {
+            background:
+                radial-gradient(ellipse 60% 50% at 90% 20%, rgba(62, 196, 232, 0.08), transparent 60%),
+                var(--bg-elevated);
+            border-block: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-copy p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 1.02rem;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .about-list li {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        .about-list li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 4px var(--accent-soft);
+        }
+
+        .about-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: calc(var(--radius) + 4px);
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .about-panel h3 {
+            font-family: var(--display);
+            font-size: 1.65rem;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+        }
+
+        .panel-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .panel-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .panel-row span { color: var(--text-dim); }
+        .panel-row strong { color: var(--text); font-weight: 600; text-align: right; }
+
+        /* —— Gallery —— */
+        .gallery-section { background: var(--bg); }
+
+        #featured-container {
+            margin-bottom: 1.75rem;
+        }
+
+        #featured-image {
+            display: block;
+            overflow: hidden;
+            border-radius: calc(var(--radius) + 2px);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+            background: var(--bg-card);
+        }
+
+        #featured-image img {
+            width: 100%;
+            height: clamp(260px, 42vw, 480px);
+            object-fit: cover;
+            transition: opacity 0.5s ease, transform 0.6s ease;
+        }
+
+        #featured-image:hover img { transform: scale(1.02); }
+
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.55rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .category-tab {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-strong);
+            padding: 0.6rem 1.05rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border-radius: 999px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s ease;
+        }
+
+        .category-tab:hover {
+            color: var(--text);
+            border-color: var(--text-dim);
+        }
+
+        .category-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #041018;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .gallery-grid a:hover {
+            transform: translateY(-3px);
+            border-color: rgba(62, 196, 232, 0.4);
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: rgba(10, 12, 16, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(6px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+            pointer-events: none;
+            padding-left: 3px;
+        }
+
+        .gallery-empty {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 2.5rem 1rem;
+            border: 1px dashed var(--border-strong);
+            border-radius: var(--radius);
+        }
+
+        /* —— Panel failure playground —— */
+        .playground {
+            background: var(--bg);
+            padding: 5.5rem 0;
+        }
+
+        .playground .section-label { color: var(--solar); }
+
+        .pg-shell {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .pg-controls,
+        .pg-board-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.35rem;
+        }
+
+        .pg-controls h3,
+        .pg-board-wrap h3 {
+            font-size: 1rem;
+            font-weight: 650;
+            margin-bottom: 1rem;
+        }
+
+        .pg-field {
+            margin-bottom: 0.85rem;
+        }
+
+        .pg-field label {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .pg-field label span {
+            color: var(--solar);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pg-field input[type="range"] {
+            width: 100%;
+            accent-color: var(--solar);
+            cursor: pointer;
+        }
+
+        .pg-field select,
+        .pg-field input[type="number"] {
+            width: 100%;
+            padding: 0.65rem 0.75rem;
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+        }
+
+        .pg-hint {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+            margin-top: 0.35rem;
+            margin-bottom: 1rem;
+        }
+
+        .pg-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .pg-actions .btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 0.7rem 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        .pg-board-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .pg-board-head h3 { margin: 0; }
+
+        .pg-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .pg-legend i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            margin-right: 0.35rem;
+            vertical-align: -1px;
+        }
+
+        .pg-legend .ok { background: linear-gradient(135deg, #1a8f5a, #2ecc71); }
+        .pg-legend .fail { background: linear-gradient(135deg, #b33a1a, #ff6b2c); }
+        .pg-legend .dead { background: #2a2f3a; border: 1px solid #555; }
+
+        .pg-strings {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .pg-string {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.65rem;
+            background: rgba(0, 0, 0, 0.18);
+        }
+
+        .pg-string-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.45rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pg-string-label em {
+            font-style: normal;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .pg-string-label em.bad { color: var(--solar-hot); }
+
+        .pg-panels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .pg-panel {
+            width: 44px;
+            height: 56px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: linear-gradient(160deg, #1f9d64 0%, #157a4c 55%, #0f5c3a 100%);
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.12s, box-shadow 0.12s, filter 0.12s;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .pg-panel::after {
+            content: '';
+            position: absolute;
+            inset: 6px 5px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 2px;
+            background:
+                linear-gradient(90deg, transparent 32%, rgba(0,0,0,0.15) 33%, transparent 34%, transparent 65%, rgba(0,0,0,0.15) 66%),
+                linear-gradient(0deg, transparent 48%, rgba(0,0,0,0.12) 49%, transparent 51%);
+            pointer-events: none;
+        }
+
+        .pg-panel:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+        }
+
+        .pg-panel:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .pg-panel.failed {
+            background: linear-gradient(160deg, #e85a2a 0%, #a83212 100%);
+            border-color: rgba(255, 140, 80, 0.45);
+            animation: pg-pulse 1.4s ease-in-out infinite;
+        }
+
+        .pg-panel.string-dead {
+            background: #222733;
+            border-color: #3a4150;
+            filter: grayscale(0.4);
+            opacity: 0.75;
+        }
+
+        .pg-panel.string-dead.failed {
+            background: linear-gradient(160deg, #6a2a18 0%, #3a1a10 100%);
+            opacity: 1;
+        }
+
+        @keyframes pg-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 44, 0.35); }
+            50% { box-shadow: 0 0 0 6px rgba(255, 107, 44, 0); }
+        }
+
+        .pg-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin-top: 1.15rem;
+        }
+
+        .pg-stat {
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 0.9rem;
+        }
+
+        .pg-stat .k {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.25rem;
+        }
+
+        .pg-stat .v {
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            color: var(--text);
+        }
+
+        .pg-stat .v.alert { color: var(--solar-hot); }
+        .pg-stat .s {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        .pg-story {
+            margin-top: 1rem;
+            padding: 1rem 1.1rem;
+            border-radius: var(--radius-sm);
+            background: var(--solar-soft);
+            border: 1px solid rgba(240, 160, 32, 0.25);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+
+        .pg-story strong { color: var(--text); }
+        .pg-story a { font-weight: 600; }
+
+        .pg-disclaimer {
+            margin-top: 0.85rem;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+        }
+
+        @media (max-width: 960px) {
+            .pg-shell { grid-template-columns: 1fr; }
+            .pg-stats { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 520px) {
+            .pg-stats { grid-template-columns: 1fr; }
+            .pg-panel { width: 38px; height: 48px; }
+        }
+
+        /* —— Area / CTA band —— */
+        .area {
+            background:
+                linear-gradient(180deg, rgba(62, 196, 232, 0.08), transparent 70%),
+                var(--bg-elevated);
+            border-block: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .area .section-head { margin-bottom: 1.5rem; }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.55rem;
+            margin-bottom: 2rem;
+        }
+
+        .chip {
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-strong);
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* —— Contact —— */
+        .contact { background: var(--bg); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .contact-card > p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
+        }
+
+        .contact-meta {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact-meta li {
+            display: grid;
+            gap: 0.15rem;
+        }
+
+        .contact-meta .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        .contact-meta a, .contact-meta span {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .form-group { margin-bottom: 1rem; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input::placeholder, textarea::placeholder { color: var(--text-dim); }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: rgba(62, 196, 232, 0.55);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        textarea { resize: vertical; min-height: 130px; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-card .btn-primary {
+            width: 100%;
+            margin-top: 0.35rem;
+            border: none;
+        }
+
+        .form-note {
+            margin-top: 0.85rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        /* —— RTK corrections —— */
+        .rtk {
+            padding: 5rem 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 8% 0%, rgba(62, 196, 232, 0.11), transparent 55%),
+                radial-gradient(ellipse 55% 40% at 92% 100%, rgba(240, 160, 32, 0.07), transparent 50%),
+                var(--bg);
+        }
+        .rtk-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: rgba(61, 214, 140, 0.12);
+            color: #3dd68c;
+            border: 1px solid rgba(61, 214, 140, 0.35);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+        .rtk-badge::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3dd68c;
+            box-shadow: 0 0 10px #3dd68c;
+        }
+        .rtk-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 2rem;
+            align-items: start;
+            margin-bottom: 2.25rem;
+        }
+        .rtk-lead {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+        .rtk-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.15rem 0 1.35rem;
+        }
+        .rtk-pills span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+        }
+        .rtk-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .rtk-side {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.35rem 1.4rem;
+            box-shadow: var(--shadow);
+        }
+        .rtk-side h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.9rem;
+        }
+        .rtk-spec {
+            display: grid;
+            gap: 0;
+            font-size: 0.9rem;
+        }
+        .rtk-spec div {
+            display: grid;
+            grid-template-columns: 6.5rem 1fr;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .rtk-spec div:last-child { border-bottom: 0; }
+        .rtk-spec dt { color: var(--text-dim); font-weight: 500; }
+        .rtk-spec dd {
+            color: var(--text);
+            font-family: ui-monospace, Consolas, monospace;
+            font-size: 0.84rem;
+            word-break: break-word;
+        }
+        .rtk-side-note {
+            margin-top: 1rem;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+        }
+        .rtk-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0 2.25rem;
+        }
+        .rtk-step {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1.25rem 1.3rem;
+        }
+        .rtk-step .num {
+            font-family: var(--display);
+            font-size: 1.75rem;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.45rem;
+        }
+        .rtk-step strong {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+        .rtk-step p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+        .rtk-work {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2.25rem;
+        }
+        .rtk-work article {
+            background: linear-gradient(160deg, rgba(62, 196, 232, 0.07), transparent 55%), var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.4rem 1.45rem;
+        }
+        .rtk-work h3 {
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .rtk-work ul { list-style: none; }
+        .rtk-work li {
+            position: relative;
+            padding: 0.45rem 0 0.45rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .rtk-work li:last-child { border-bottom: 0; }
+        .rtk-work li::before {
+            content: "\2713"; /* checkmark — CSS escape, encoding-safe */
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.85rem;
+        }
+        .rtk-disclaimer {
+            margin-bottom: 2.5rem;
+            padding: 1rem 1.15rem;
+            border-left: 3px solid var(--solar);
+            background: rgba(240, 160, 32, 0.08);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .rtk-reg {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+        .rtk-reg .form-card h3 {
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: 1.65rem;
+            text-align: center;
+            margin-bottom: 0.35rem;
+        }
+        .rtk-reg .form-intro {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+        .rtk-check {
+            display: flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+            margin: 0.85rem 0 1rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+        .rtk-check input {
+            width: auto;
+            margin-top: 0.25rem;
+            accent-color: var(--accent);
+        }
+        @media (max-width: 900px) {
+            .rtk-layout,
+            .rtk-work,
+            .rtk-steps { grid-template-columns: 1fr; }
+        }
+
+        /* —— Footer —— */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 0 2.25rem;
+            background: #07090c;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .footer-brand {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .footer-brand strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.25rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            font-size: 0.88rem;
+        }
+
+        .footer-links a:hover { color: var(--text-muted); }
+
+        .footer-copy {
+            width: 100%;
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* —— Video lightbox —— */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.94);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .video-lightbox.active { display: flex; }
+
+        .video-lightbox video {
+            max-width: min(1100px, 100%);
+            max-height: 85vh;
+            border-radius: var(--radius-sm);
+            background: #000;
+        }
+
+        .video-lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: background 0.2s;
+        }
+
+        .video-lightbox-close:hover { background: rgba(255, 255, 255, 0.2); }
+
+        /* —— Responsive —— */
+        @media (max-width: 960px) {
+            .service-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid, .contact-grid, .solar-layout, .ins-layout { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        @media (max-width: 760px) {
+            .nav-toggle { display: inline-flex; }
+
+            .nav-links {
+                position: fixed;
+                inset: var(--nav-h) 0 auto 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 0.75rem 1.25rem 1.25rem;
+                background: rgba(10, 12, 16, 0.96);
+                backdrop-filter: blur(16px);
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open { display: flex; }
+
+            .nav-links li { border-bottom: 1px solid var(--border); }
+            .nav-links a {
+                display: block;
+                padding: 0.9rem 0.25rem;
+                color: var(--text);
+            }
+            .nav-links .nav-cta-wrap {
+                border-bottom: none;
+                padding-top: 0.85rem;
+            }
+            .nav-links .nav-cta { width: 100%; }
+
+            .service-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .trust-row img { height: 58px; }
+            section { padding: 4rem 0; }
+            .hero { min-height: 88vh; padding-bottom: 3rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "name": "ASAP NJ Drone Services",
+      "alternateName": ["ASAP New Jersey Drone Services", "ASAP-NJ"],
+      "url": "https://asap-nj.com/",
+      "email": "gary.colyer@asap-nj.com",
+      "image": [
+        "https://asap-nj.com/graphics/hero-bg.jpg",
+        "https://asap-nj.com/graphics/showcase/gen-thermal-array.jpg",
+        "https://asap-nj.com/graphics/showcase/gen-insurance-roof.jpg"
+      ],
+      "logo": "https://asap-nj.com/graphics/icons/android-chrome-512x512.png",
+      "description": "FAA Part 107 thermal drone inspections in New Jersey: solar PV, rooftop HVAC and AC units, roofs, building envelopes, electrical hotspots, insurance claims, RTK surveying, and aerial documentation.",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Invoice, credit card",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.9537,
+        "longitude": -74.1979
+      },
+      "areaServed": [
+        { "@type": "State", "name": "New Jersey", "sameAs": "https://en.wikipedia.org/wiki/New_Jersey" },
+        { "@type": "AdministrativeArea", "name": "South Jersey" },
+        { "@type": "AdministrativeArea", "name": "Ocean County" },
+        { "@type": "City", "name": "Toms River" },
+        { "@type": "City", "name": "Brick" },
+        { "@type": "City", "name": "Lakewood" },
+        { "@type": "City", "name": "Jackson" },
+        { "@type": "City", "name": "Manchester Township" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "gary.colyer@asap-nj.com",
+        "url": "https://asap-nj.com/#contact",
+        "areaServed": "US-NJ",
+        "availableLanguage": ["English"]
+      },
+      "knowsAbout": [
+        "Thermal drone inspection",
+        "Solar PV thermal mapping",
+        "Insurance aerial documentation",
+        "Rooftop HVAC thermal inspection",
+        "RTK / NTRIP corrections",
+        "3D photogrammetry and construction progress",
+        "Thermal deer recovery",
+        "FAA Part 107 drone operations"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Thermal, solar, insurance, and aerial services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thermal drone inspection",
+              "url": "https://asap-nj.com/thermal-drone-inspection-nj.html",
+              "description": "Aerial infrared for solar arrays, rooftop HVAC/AC units, roofs, building envelopes, moisture clues, and electrical hotspots.",
+              "areaServed": { "@type": "State", "name": "New Jersey" },
+              "provider": { "@type": "LocalBusiness", "name": "ASAP NJ Drone Services" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Insurance aerial & thermal inspection",
+              "url": "https://asap-nj.com/insurance.html",
+              "description": "Roof, property, storm, and loss documentation for insurance carriers, adjusters, and TPAs—clear imagery and thermal when needed."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Solar thermal drone inspection",
+              "url": "https://asap-nj.com/solar-thermal-inspection-nj.html",
+              "description": "Thermal mapping of solar arrays to locate underperforming modules, estimate energy and revenue loss, and support electrical troubleshooting."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "RTK / NTRIP corrections",
+              "url": "https://asap-nj.com/#rtk",
+              "description": "Fixed-base NTRIP on the Toms River for any standard NTRIP client: free starter seat, Pro upgrade, optional base RINEX/data packs, and quoted on-site RTK for remote projects."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "3D mapping & construction progress",
+              "url": "https://asap-nj.com/3d-mapping-construction-nj.html",
+              "description": "Field photogrammetry, orthomosaics, 3D models, and progress flights for engineers, GCs, and land development."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thermal deer recovery",
+              "url": "https://asap-nj.com/thermal-deer-recovery-nj.html",
+              "description": "Thermal drone search to help locate legally harvested lost deer in New Jersey woods, with landowner permission."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/asap_nj_drone_services/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ASAP NJ Drone Services",
+      "url": "https://asap-nj.com/",
+      "publisher": {
+        "@type": "LocalBusiness",
+        "name": "ASAP NJ Drone Services"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="nav-inner">
+            <a class="logo" href="#top" aria-label="ASAP NJ Drone Services home">
+                <span class="logo-mark">ASAP NJ</span>
+                <span class="logo-sub">Drone Services</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#thermal">Thermal</a></li>
+                <li><a href="#solar">Solar</a></li>
+                <li><a href="#playground">Panel calc</a></li>
+                <li><a href="#insurance">Insurance</a></li>
+                <li><a href="#rtk">RTK</a></li>
+                <li><a href="airspace.html">Airspace check</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Examples</a></li>
+                <li><a href="client/">Client portal</a></li>
+                <li class="nav-cta-wrap"><a class="btn btn-primary nav-cta" href="#packages">Book inspection</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-bg" role="img" aria-label="Aerial photography of landscape"></div>
+            <div class="container hero-content">
+                <p class="eyebrow">FAA Part 107 · Thermal drone · New Jersey</p>
+                <h1>Book a thermal drone inspection in <em>New Jersey</em></h1>
+                <p class="hero-lead">
+                    Claims-ready roofs, solar loss maps, HVAC heat finds—packaged for adjusters, installers, and property pros.
+                    Clear packages. Fast turnaround. South Jersey based. Part 107 + Airdata verified.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#packages">See packages &amp; from-prices</a>
+                    <a class="btn btn-ghost" href="#contact">Book an inspection</a>
+                </div>
+                <div class="hero-stats" aria-label="Highlights">
+                    <div class="stat">
+                        <strong>From $349</strong>
+                        <span>Claim Day packages</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Thermal + RGB</strong>
+                        <span>Solar · HVAC · roofs</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Part 107</strong>
+                        <span>FAA · Airdata verified</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="packages" id="packages" aria-labelledby="packages-heading">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Packages · transparent from-prices</p>
+                    <h2 id="packages-heading">Pick the job. Get a slot.</h2>
+                    <p><strong>Starting points only</strong> — every flight job is quoted for your site (access, size, rush, thermal add-ons). You pay the agreed invoice, not a blind “standard day.”</p>
+                </div>
+                <div class="pkg-grid">
+                    <article class="pkg pkg-featured">
+                        <span class="pkg-tag">Most booked</span>
+                        <h3>Claim Day</h3>
+                        <p class="pkg-who">Adjusters · PAs · carriers · restoration</p>
+                        <div class="pkg-price">$349<span>+</span></div>
+                        <p class="pkg-from">from · residential claim site</p>
+                        <ul>
+                            <li>Labeled RGB roof &amp; elevations</li>
+                            <li>Claim # on package when provided</li>
+                            <li>Organized file for the claim</li>
+                            <li>Thermal add-on +$150–$250</li>
+                        </ul>
+                        <a class="btn btn-primary" href="#contact">Request Claim Day</a>
+                    </article>
+                    <article class="pkg">
+                        <h3>Solar Thermal Scan</h3>
+                        <p class="pkg-who">Installers · O&amp;M · owners</p>
+                        <div class="pkg-price">$499<span>+</span></div>
+                        <p class="pkg-from">from · residential / small commercial</p>
+                        <ul>
+                            <li>IR map of the array</li>
+                            <li>Hot-module / string notes</li>
+                            <li>RGB context set</li>
+                            <li>Commercial portfolios quoted</li>
+                        </ul>
+                        <a class="btn btn-primary" href="solar-thermal-inspection-nj.html#quote">Request solar scan</a>
+                    </article>
+                    <article class="pkg">
+                        <h3>Thermal Roof / HVAC</h3>
+                        <p class="pkg-who">Roofers · HVAC · property managers</p>
+                        <div class="pkg-price">$449<span>+</span></div>
+                        <p class="pkg-from">from · single building</p>
+                        <ul>
+                            <li>IR + RGB roof / unit scan</li>
+                            <li>Hotspot list for the crew</li>
+                            <li>PDF summary when weather allows</li>
+                            <li>Half-day multi-site rates available</li>
+                        </ul>
+                        <a class="btn btn-ghost" href="#contact">Request thermal scan</a>
+                    </article>
+                </div>
+                <p class="pkg-note">
+                    <strong>Flights / claims / solar / HOA:</strong> always quoted — “from” prices are guidance only.
+                    <strong>RTK seats</strong> (fixed Pro monthly/week): <a href="#rtk-plans">#rtk-plans</a>.
+                    <strong>Pay after quote:</strong> Stripe invoice or a pay link we send for <em>your</em> amount — not a one-size checkout.
+                </p>
+            </div>
+        </section>
+
+        <div class="path-strip" aria-label="Also available">
+            <div class="container path-strip-inner">
+                <a href="#insurance"><strong>Claim site</strong><span>Adjuster / carrier package</span></a>
+                <a href="#solar"><strong>Solar array</strong><span>Loss map + next steps</span></a>
+                <a href="hoa-property-managers-nj.html"><strong>HOA / managers</strong><span>Multi-building · heat-trace</span></a>
+                <a href="airspace.html"><strong>Check a job address</strong><span>Free airspace look</span></a>
+            </div>
+        </div>
+
+        <div class="trust">
+            <div class="container trust-row">
+                <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener noreferrer">
+                    <img
+                        alt="Airdata UAV drone safety verified badge"
+                        src="https://certificates.airdata.com/badge?i=BGSepI&r=xJkJ&t=5&m=3&size=11&c=1"
+                        width="379"
+                        height="100"
+                        loading="lazy">
+                </a>
+                <a class="trust-social" href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer" aria-label="Follow ASAP NJ on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <radialGradient id="ig" cx="30%" cy="107%" r="150%">
+                                <stop offset="0%" style="stop-color:#fdf497" />
+                                <stop offset="45%" style="stop-color:#fd5949" />
+                                <stop offset="60%" style="stop-color:#d6249f" />
+                                <stop offset="90%" style="stop-color:#285AEB" />
+                            </radialGradient>
+                        </defs>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#ig)"/>
+                    </svg>
+                    @asap_nj_drone_services
+                </a>
+                <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener noreferrer">
+                    <img
+                        alt="FAA Part 107 certified banner"
+                        src="graphics/FAA-Certified-Banner.png"
+                        width="379"
+                        height="100"
+                        loading="lazy">
+                </a>
+            </div>
+        </div>
+
+        <section class="thermal-pillar" id="thermal" aria-labelledby="thermal-heading">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Thermal drone · big deal</p>
+                    <h2 id="thermal-heading">If it runs hot, we can fly it</h2>
+                </div>
+                <p class="thermal-lead">
+                    A thermal camera on a drone isn't just a solar toy. We use infrared to find heat signatures on
+                    <strong style="color:var(--text)">rooftops, HVAC/AC gear, solar, buildings, and claim sites</strong>—
+                    without climbing every ladder or guessing from the ground. Click any card for photo examples.
+                </p>
+                <div class="thermal-use-grid">
+                    <button type="button" class="thermal-use" data-examples="thermal-hvac">
+                        <div class="thermal-use-photo" data-badge="IR" style="background-image:url('graphics/showcase/gen-thermal-hvac.jpg')" role="img" aria-label="Infrared rooftop HVAC"></div>
+                        <div class="thermal-use-body">
+                            <h3>Rooftop AC &amp; HVAC units</h3>
+                            <p>Spot overheating compressors, blocked coils, and unit stress across whole commercial roofs in one pass.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="solar">
+                        <div class="thermal-use-photo" data-badge="IR" style="background-image:url('graphics/showcase/gen-thermal-array.jpg')" role="img" aria-label="Infrared solar array"></div>
+                        <div class="thermal-use-body">
+                            <h3>Solar arrays (PV)</h3>
+                            <p>Hot modules, string patterns, and underperformance—map the array, then talk loss and next steps.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="thermal">
+                        <div class="thermal-use-photo" data-badge="IR" style="background-image:url('graphics/showcase/gen-thermal-hotspot.jpg')" role="img" aria-label="Infrared roof hotspot"></div>
+                        <div class="thermal-use-body">
+                            <h3>Roofs &amp; moisture clues</h3>
+                            <p>Thermal + visual on flat and pitched roofs for wet spots, insulation gaps, and repair priorities.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="thermal-envelope">
+                        <div class="thermal-use-photo" data-badge="RGB" style="background-image:url('graphics/showcase/ex-building-1.jpg')" role="img" aria-label="Building exterior RGB"></div>
+                        <div class="thermal-use-body">
+                            <h3>Building envelopes</h3>
+                            <p>Heat loss and facade issues—we fly IR on the job; this card is visual context of the kind of structures we document.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="thermal-electrical">
+                        <div class="thermal-use-photo" data-badge="RGB" style="background-image:url('graphics/showcase/ex-electrical-1.jpg')" role="img" aria-label="Outdoor electrical gear RGB"></div>
+                        <div class="thermal-use-body">
+                            <h3>Electrical hotspots</h3>
+                            <p>Service gear and outdoor equipment we scan with IR on site—visual shows the asset; the report shows the heat.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="thermal-use" data-examples="insurance">
+                        <div class="thermal-use-photo" data-badge="RGB" style="background-image:url('graphics/showcase/gen-insurance-roof.jpg')" role="img" aria-label="Aerial roof documentation RGB"></div>
+                        <div class="thermal-use-body">
+                            <h3>Insurance &amp; loss sites</h3>
+                            <p>Storm and hard-to-access elevations—RGB for the claim file, thermal when heat or moisture matters.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="ins-cta-row" style="justify-content:center">
+                    <a class="btn btn-primary" href="#contact">Plan a thermal flight</a>
+                    <a class="btn btn-ghost" href="#solar">Solar diagnostics</a>
+                    <a class="btn btn-ghost" href="thermal-drone-inspection-nj.html">Full thermal page</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="solar" id="solar" aria-labelledby="solar-heading">
+            <div class="container">
+                <div class="solar-layout">
+                    <div class="solar-intro">
+                        <p class="section-label">Flagship service</p>
+                        <h2 id="solar-heading">Solar maintenance &amp; thermal diagnostics</h2>
+                        <p class="lead-strong">
+                            Your array can look fine from the ground and still bleed production.
+                            We fly thermal to map what's wrong—then turn heat signatures into clear findings, loss estimates, and a path to fix.
+                        </p>
+                        <p>
+                            Built on a deep solar electrical background, pro tools for field work, and licensed electrician backing
+                            when circuit troubleshooting and corrective electrical work need a licensed hand.
+                        </p>
+                        <div class="solar-pills" aria-label="Service highlights">
+                            <span class="solar-pill">Thermal drone mapping</span>
+                            <span class="solar-pill">Module &amp; string issues</span>
+                            <span class="solar-pill">$ production loss insight</span>
+                            <span class="solar-pill">Circuit troubleshooting</span>
+                            <span class="solar-pill">Maintenance planning</span>
+                        </div>
+                        <div class="solar-steps" aria-label="How it works">
+                            <div class="solar-step">
+                                <span class="solar-step-num">1</span>
+                                <div>
+                                    <h4>Fly &amp; capture</h4>
+                                    <p>Thermal + visual survey of the array under proper conditions so anomalies actually show up.</p>
+                                </div>
+                            </div>
+                            <div class="solar-step">
+                                <span class="solar-step-num">2</span>
+                                <div>
+                                    <h4>Map what’s failing</h4>
+                                    <p>Hot spots, underperforming modules, string-level patterns, soiling, diode/bypass issues, and other thermal tells.</p>
+                                </div>
+                            </div>
+                            <div class="solar-step">
+                                <span class="solar-step-num">3</span>
+                                <div>
+                                    <h4>Estimate what it’s costing</h4>
+                                    <p>Turn findings into practical production-loss and dollar-impact <em>estimates</em> so repair vs. wait is an informed call—not a guess in the dark.</p>
+                                </div>
+                            </div>
+                            <div class="solar-step">
+                                <span class="solar-step-num">4</span>
+                                <div>
+                                    <h4>Troubleshoot &amp; next steps</h4>
+                                    <p>Electrical-minded diagnosis—including circuit troubleshooting support—with licensed electrician backup when required.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="solar-panel" aria-label="What you get">
+                        <h3>What you walk away with</h3>
+                        <p class="panel-sub">Actionable solar intelligence—not just pretty heat maps.</p>
+                        <ul class="solar-deliverables">
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Annotated thermal map</strong>
+                                    Problem modules and zones called out so your team knows exactly where to go.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Loss &amp; priority insight</strong>
+                                    Which issues are costing the most—and what to fix first for the best return.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Electrical troubleshooting path</strong>
+                                    Circuit-level thinking from someone who lives solar—not a “fly and email a folder of JPGs” vendor.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="solar-check" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Maintenance-ready findings</strong>
+                                    Clear notes your O&amp;M, owner, or electrician can act on—repairs, replacements, or deeper testing.
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="solar-trust-note">
+                            <strong>Licensed electrician backing.</strong>
+                            Aerial thermal finds the story; electrical expertise finishes it. When corrective electrical work needs a license, we work with licensed support so the job stays compliant.
+                        </p>
+                        <a class="btn btn-primary" href="#contact">Scope a solar thermal flight</a>
+                        <a class="btn btn-ghost" href="#playground">See what a failed panel costs</a>
+                        <a class="btn btn-ghost" href="solar-thermal-inspection-nj.html">Solar service page</a>
+                        <button type="button" class="btn btn-ghost" data-examples="solar">See more examples</button>
+                    </aside>
+                </div>
+
+                <div class="solar-gallery" id="solar-gallery">
+                    <div class="solar-gallery-head">
+                        <div>
+                            <h3>What customers hire us to see</h3>
+                            <p>
+                                Thermal that spots problem areas, farm-scale arrays, rooftop systems—clear marketing of the service.
+                                Your job gets real photos of <em>your</em> site.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="solar-shot-grid">
+                        <figure class="solar-shot wide">
+                            <span class="badge-th">IR</span>
+                            <img src="graphics/showcase/gen-thermal-array.jpg" alt="Infrared thermal map of commercial rooftop solar with hot modules highlighted" width="1600" height="900" loading="lazy">
+                            <figcaption>
+                                Infrared finds problem modules
+                                <span>Hot spots stand out before anyone climbs</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <span class="badge-th badge-rgb">RGB</span>
+                            <img src="graphics/showcase/gen-solar-farm.jpg" alt="Aerial large ground-mount solar farm" width="1600" height="900" loading="lazy">
+                            <figcaption>
+                                Utility &amp; commercial scale
+                                <span>Visual overview · RGB documentation</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <span class="badge-th badge-rgb">RGB</span>
+                            <img src="graphics/showcase/solar-rooftop.jpg" alt="Solar panel rows in a field" width="1600" height="1067" loading="lazy">
+                            <figcaption>
+                                Production assets that need care
+                                <span>O&amp;M · loss estimates · next steps</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <span class="badge-th badge-rgb">RGB</span>
+                            <img src="graphics/showcase/solar-field.jpg" alt="Solar panels renewable energy field" width="1600" height="1067" loading="lazy">
+                            <figcaption>
+                                Field &amp; ground-mount systems
+                                <span>When boots-on-ground is slow</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="solar-shot">
+                            <span class="badge-th badge-rgb">RGB</span>
+                            <img src="graphics/showcase/solar-farm.jpg" alt="Solar farm landscape" width="1600" height="1067" loading="lazy">
+                            <figcaption>
+                                Portfolio-ready deliverables
+                                <span>Maps, notes, and dollar context</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p class="img-credit">Showcase imagery for marketing; project work is captured on your site.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="playground" id="playground" aria-labelledby="playground-heading">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Solar · interactive</p>
+                    <h2 id="playground-heading">What if a panel fails?</h2>
+                    <p>
+                        Pair this with our <a href="#solar">solar thermal inspections</a> above.
+                        Build a simple array, click panels to “kill” them, and watch production and dollar impact change.
+                        Teaching model—real jobs go deeper with thermal mapping and electrical troubleshooting.
+                    </p>
+                </div>
+
+                <div class="pg-shell">
+                    <div class="pg-controls">
+                        <h3>Your array</h3>
+                        <div class="pg-field">
+                            <label for="pg-watts">Panel size <span id="pg-watts-val">400 W</span></label>
+                            <input id="pg-watts" type="range" min="250" max="600" step="10" value="400">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-per-string">Panels per string <span id="pg-per-string-val">10</span></label>
+                            <input id="pg-per-string" type="range" min="4" max="20" step="1" value="10">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-strings">Number of strings <span id="pg-strings-val">3</span></label>
+                            <input id="pg-strings" type="range" min="1" max="12" step="1" value="3">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-rate">Electric rate <span id="pg-rate-val">$0.18 / kWh</span></label>
+                            <input id="pg-rate" type="range" min="0.08" max="0.45" step="0.01" value="0.18">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-sun">Peak sun hours / day <span id="pg-sun-val">4.2</span></label>
+                            <input id="pg-sun" type="range" min="3.0" max="6.0" step="0.1" value="4.2">
+                        </div>
+                        <div class="pg-field">
+                            <label for="pg-mode">If a panel fails…</label>
+                            <select id="pg-mode">
+                                <option value="bypass">Bypass diode kicks in (typical) — lose ~1 panel on that string</option>
+                                <option value="open">Open / string drops — that whole string goes offline</option>
+                            </select>
+                            <p class="pg-hint">Real arrays vary by inverter type, optimizers, and wiring. This is a teaching model, not a utility bill guarantee.</p>
+                        </div>
+                        <div class="pg-actions">
+                            <button type="button" class="btn btn-ghost" id="pg-fail-one">Fail 1 random</button>
+                            <button type="button" class="btn btn-ghost" id="pg-fail-two">Fail 2 random</button>
+                            <button type="button" class="btn btn-primary" id="pg-reset">Reset all OK</button>
+                        </div>
+                    </div>
+
+                    <div class="pg-board-wrap">
+                        <div class="pg-board-head">
+                            <h3>Click panels to toggle failed</h3>
+                            <div class="pg-legend">
+                                <span><i class="ok"></i>Healthy</span>
+                                <span><i class="fail"></i>Failed</span>
+                                <span><i class="dead"></i>String offline</span>
+                            </div>
+                        </div>
+                        <div id="pg-board" class="pg-strings" aria-live="polite"></div>
+                        <div class="pg-stats">
+                            <div class="pg-stat">
+                                <div class="k">System size</div>
+                                <div class="v" id="pg-size">—</div>
+                                <div class="s" id="pg-count">—</div>
+                            </div>
+                            <div class="pg-stat">
+                                <div class="k">Still producing</div>
+                                <div class="v" id="pg-live">—</div>
+                                <div class="s" id="pg-live-pct">—</div>
+                            </div>
+                            <div class="pg-stat">
+                                <div class="k">Est. annual loss</div>
+                                <div class="v alert" id="pg-kwh">—</div>
+                                <div class="s">kWh / year (approx.)</div>
+                            </div>
+                            <div class="pg-stat">
+                                <div class="k">Est. $ left on table</div>
+                                <div class="v alert" id="pg-money">—</div>
+                                <div class="s" id="pg-money-sub">per year</div>
+                            </div>
+                        </div>
+                        <div class="pg-story" id="pg-story"></div>
+                        <p class="pg-disclaimer">
+                            Educational estimate only (simple DC model x peak sun hours x 0.80 system factor).
+                            Thermal inspections find which modules are actually hot/underperforming; electrical troubleshooting confirms the root cause.
+                            NJ sun hours vary by site and season.
+                        </p>
+                        <div class="pg-actions" style="margin-top:1rem;justify-content:flex-start;flex-wrap:wrap;gap:0.5rem">
+                            <a class="btn btn-primary" href="#contact">Get a thermal survey of your array</a>
+                            <a class="btn btn-ghost" href="#solar">Back to solar services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="insurance" id="insurance" aria-labelledby="insurance-heading">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-label">Insurance partners</p>
+                    <h2 id="insurance-heading">Claims-ready drone inspections—fast</h2>
+                    <p>
+                        Built for carriers, independent adjusters, TPAs, public adjusters, and restoration crews who need
+                        <strong style="color:var(--text)">clean documentation, not a phone dump of random photos</strong>.
+                        South Jersey / NJ based. We mobilize for claim sites—quote includes travel when it makes sense.
+                    </p>
+                </div>
+
+                <div class="ins-who" aria-label="Who we serve">
+                    <span>Independent adjusters</span>
+                    <span>Carriers / TPAs</span>
+                    <span>Public adjusters</span>
+                    <span>Roofing contractors</span>
+                    <span>Restoration companies</span>
+                    <span>Property managers</span>
+                </div>
+
+                <div class="ins-steps" aria-label="How a claim flight works">
+                    <div class="ins-step">
+                        <strong>1 · Assign</strong>
+                        <p>Send claim #, address, access notes, RGB vs thermal, and due date.</p>
+                    </div>
+                    <div class="ins-step">
+                        <strong>2 · Fly</strong>
+                        <p>Part 107 ops. Roof, elevations, overview—thermal when scoped.</p>
+                    </div>
+                    <div class="ins-step">
+                        <strong>3 · Package</strong>
+                        <p>Labeled stills + short findings. Built for the claim file.</p>
+                    </div>
+                    <div class="ins-step">
+                        <strong>4 · Deliver</strong>
+                        <p>Portal or secure link. Aim for quick turn when weather allows.</p>
+                    </div>
+                </div>
+
+                <div class="ins-layout" style="margin-top:1.5rem">
+                    <figure class="ins-photo" role="img" aria-label="Aerial roof photo showing storm debris and damaged shingles for insurance documentation">
+                        <figcaption>
+                            Claims-ready roof documentation
+                            <span>Storm debris, missing shingles—clear from above</span>
+                        </figcaption>
+                    </figure>
+                    <div class="ins-grid">
+                        <article class="ins-card">
+                            <h3>What we put in the file</h3>
+                            <p>Organized aerial packages—not 400 unsorted JPEGs. RGB standard; thermal when moisture, heat, or solar matters.</p>
+                            <ul class="ins-list">
+                                <li>Roof condition &amp; damage documentation</li>
+                                <li>Storm / wind / hail site overview</li>
+                                <li>Hard or steep elevations without ladder risk</li>
+                                <li>Thermal add-on for wet spots / HVAC / solar claims</li>
+                                <li>Pre-loss or post-repair progress shots</li>
+                                <li>Claim # on package when you provide it</li>
+                            </ul>
+                        </article>
+                        <article class="ins-card">
+                            <h3>Why teams use ASAP NJ</h3>
+                            <p>One point of contact. FAA Part 107 + Airdata safety verified. Clear scope before wheels roll.</p>
+                            <ul class="ins-list">
+                                <li>South Jersey / NJ focus—travel for paying work</li>
+                                <li>Thermal capability when the claim needs IR</li>
+                                <li>Preferred-vendor / volume conversations welcome</li>
+                                <li>No public rate card—quote per claim complexity</li>
+                                <li>Client portal ready for report delivery</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="ins-cta-row">
+                    <a class="btn btn-primary" href="#contact">Assign this claim site</a>
+                    <a class="btn btn-ghost" href="insurance.html">Insurance partner page</a>
+                    <a class="btn btn-ghost" href="client/">Client portal</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="rtk" id="rtk" aria-labelledby="rtk-heading">
+            <div class="container">
+                <div class="rtk-layout">
+                    <div>
+                        <p class="section-label">RTK corrections · New Jersey</p>
+                        <span class="rtk-badge">Standard NTRIP · any compatible rover</span>
+                        <h2 id="rtk-heading">Fixed-base RTK on the <em style="font-style:italic;color:var(--accent)">Toms River</em></h2>
+                        <p class="rtk-lead">
+                            ASAP NJ runs a private <strong style="color:var(--text)">NTRIP correction stream</strong> from a
+                            <strong style="color:var(--text)">surveyed-in fixed base on the Toms River</strong>.
+                            Same protocol surveyors and construction crews already use—not a drone-only product.
+                            If your gear speaks NTRIP (ground GNSS, layout rovers, mapping software, or RTK aircraft), you can connect.
+                        </p>
+                        <p class="rtk-lead" style="margin-bottom:0">
+                            <strong style="color:var(--text)">Single-base RTK performs best near the base.</strong>
+                            Built for work within practical range of our Toms River station—
+                            not a statewide free CORS network.
+                            Outside that range, ASAP NJ can quote
+                            <strong style="color:var(--text)">on-site RTK</strong> when we’re engaged on the project.
+                        </p>
+                        <div class="rtk-pills" aria-label="Highlights">
+                            <span>Standard NTRIP / RTCM</span>
+                            <span>Survey &amp; construction</span>
+                            <span>Ground GNSS rovers</span>
+                            <span>RTK aircraft (any brand)</span>
+                            <span>Nearby Toms River base</span>
+                        </div>
+                        <div class="rtk-actions">
+                            <a class="btn btn-primary" href="#rtk-register">Get free seat</a>
+                            <a class="btn btn-ghost" href="#rtk-plans">Plans &amp; pricing</a>
+                            <a class="btn btn-ghost" href="rtk-setup.html">Connection guide</a>
+                        </div>
+                    </div>
+                    <aside class="rtk-side" aria-label="Connection overview">
+                        <h3>What we provide</h3>
+                        <dl class="rtk-spec">
+                            <div>
+                                <dt>Live NTRIP</dt>
+                                <dd>RTCM corrections · mount ASAP-NJ</dd>
+                            </div>
+                            <div>
+                                <dt>Public host</dt>
+                                <dd>rtk.asap-nj.com <span style="color:var(--text-dim)">(or 67.205.128.14)</span></dd>
+                            </div>
+                            <div>
+                                <dt>Port</dt>
+                                <dd>2101</dd>
+                            </div>
+                            <div>
+                                <dt>Who can connect</dt>
+                                <dd>Any standard NTRIP client</dd>
+                            </div>
+                            <div>
+                                <dt>Login</dt>
+                                <dd>Unique at signup · auto-enabled</dd>
+                            </div>
+                            <div>
+                                <dt>Free starter</dt>
+                                <dd>Fair-use (~2 h/day · 1 device)</dd>
+                            </div>
+                            <div>
+                                <dt>Pro seat</dt>
+                                <dd>Workday allowance · upgrade same login</dd>
+                            </div>
+                            <div>
+                                <dt>Base data / RINEX</dt>
+                                <dd>Quoted day pack (not on free seats)</dd>
+                            </div>
+                            <div>
+                                <dt>Far jobs</dt>
+                                <dd>On-site RTK quoted per project</dd>
+                            </div>
+                        </dl>
+                        <p class="rtk-side-note">
+                            Brand-agnostic: Emlid, Trimble, Leica, Topcon, Spectra, Carlson, DJI, and other NTRIP gear.
+                            Never a shared public password. Local fixed base near Toms River—not statewide free CORS.
+                        </p>
+                    </aside>
+                </div>
+
+                <div class="section-head" id="rtk-how" style="margin-bottom:1rem">
+                    <p class="section-label">Service model</p>
+                    <h2 style="font-size:clamp(1.6rem,3vw,2.1rem)">Fixed base or on-site</h2>
+                    <p>Standard NTRIP near our Toms River station—or a dedicated local base when the project requires it.</p>
+                </div>
+                <div class="rtk-steps">
+                    <article class="rtk-step">
+                        <div class="num">1</div>
+                        <strong>Introduce your crew</strong>
+                        <p>Who you are, where you work, and what rover/client you use—survey stick, machine control, or aircraft.</p>
+                    </article>
+                    <article class="rtk-step">
+                        <div class="num">2</div>
+                        <strong>Get your login instantly</strong>
+                        <p>Choose a username/password or we generate one. Seat enables automatically—yours only, never a shared public password.</p>
+                    </article>
+                    <article class="rtk-step">
+                        <div class="num">3</div>
+                        <strong>Connect any NTRIP client</strong>
+                        <p>Host <strong style="color:var(--text)">rtk.asap-nj.com</strong> · port <strong style="color:var(--text)">2101</strong> · mount <strong style="color:var(--text)">ASAP-NJ</strong>. Same fields as any professional caster. <a href="rtk-setup.html">Setup by gear type</a>.</p>
+                    </article>
+                </div>
+
+                <div class="rtk-work">
+                    <article>
+                        <h3>Who this is for</h3>
+                        <ul>
+                            <li><strong style="color:var(--text)">Survey &amp; engineering</strong> — GNSS poles, base/rover kits, control checks near Toms River</li>
+                            <li><strong style="color:var(--text)">Construction &amp; layout</strong> — grade, stakeout, machine guidance that takes NTRIP</li>
+                            <li><strong style="color:var(--text)">Mapping &amp; GIS</strong> — high-accuracy collection within practical base range</li>
+                            <li><strong style="color:var(--text)">RTK aircraft</strong> — any brand with Custom Network / NTRIP (DJI is one option among many)</li>
+                            <li><strong style="color:var(--text)">Any standard NTRIP client</strong> — if it asks for host, port, mount, user, pass, you’re in</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>What’s included</h3>
+                        <ul>
+                            <li><strong style="color:var(--text)">Live corrections</strong> — NTRIP RTCM from our fixed base (host / port / mount above)</li>
+                            <li><strong style="color:var(--text)">Instant unique seat</strong> — login at signup; free starter with fair-use limits</li>
+                            <li><strong style="color:var(--text)">Pro upgrade</strong> — same username/password, full workday allowance when you need more</li>
+                            <li><strong style="color:var(--text)">Base data / RINEX packs</strong> — day observations for post-process, quoted (not on free seats)</li>
+                            <li><strong style="color:var(--text)">On-site RTK</strong> — we bring a local base when the job is outside practical range</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="rtk-disclaimer">
+                    <strong style="color:var(--gold)">Service scope:</strong>
+                    Live corrections come from our <strong style="color:var(--text-muted)">fixed base on the Toms River</strong>.
+                    Fix quality depends on baseline distance, sky view, constellation, and rover setup.
+                    <strong style="color:var(--text-muted)">Local fixed-base service</strong>—not statewide free CORS.
+                    Free seats are fair-use; Pro is for real workdays. Base raw/RINEX is a separate quoted product.
+                </div>
+
+                <div class="section-head" id="rtk-plans" style="margin:2rem 0 1rem">
+                    <p class="section-label">Access plans</p>
+                    <h2 style="font-size:clamp(1.5rem,3vw,2rem)">Free starter → Pro when you need more</h2>
+                    <p>Same stream and mount for everyone. Limits and extras change by plan.</p>
+                </div>
+                <div class="rtk-plans" style="margin:0 0 1.75rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.85rem">
+                    <article class="rtk-plan" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.15rem">
+                        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-dim);margin:0 0 0.35rem">Starter</p>
+                        <h3 style="font-size:1.05rem;margin:0 0 0.25rem">Free trial seat</h3>
+                        <p style="color:var(--accent);font-weight:700;margin:0 0 0.5rem">Free</p>
+                        <p style="color:var(--text-muted);font-size:0.88rem;margin:0 0 0.65rem">Live NTRIP near Toms River. Fair-use so the stream stays healthy for everyone.</p>
+                        <ul style="margin:0;padding:0 0 0 1.1rem;color:var(--text-muted);font-size:0.84rem">
+                            <li>Instant unique login</li>
+                            <li>~2 hours / day · 1 device</li>
+                            <li>Host · port · mount · any NTRIP client</li>
+                            <li>Setup guide for survey + aircraft</li>
+                        </ul>
+                    </article>
+                    <article class="rtk-plan" style="background:var(--bg-card);border:1px solid rgba(62,196,232,0.35);border-radius:var(--radius);padding:1.1rem 1.15rem">
+                        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);margin:0 0 0.35rem">Pro</p>
+                        <h3 style="font-size:1.05rem;margin:0 0 0.25rem">Pro monthly</h3>
+                        <p style="color:var(--accent);font-weight:700;margin:0 0 0.5rem" id="rtk-price-monthly">$49 / month</p>
+                        <p style="color:var(--text-muted);font-size:0.88rem;margin:0 0 0.65rem">Full workdays for survey, layout, and RTK aircraft. <strong style="color:var(--text)">Same login</strong> as free—we just raise the limits.</p>
+                        <ul style="margin:0 0 0.85rem;padding:0 0 0 1.1rem;color:var(--text-muted);font-size:0.84rem">
+                            <li>Full workday daily allowance</li>
+                            <li>Up to 2 concurrent sessions</li>
+                            <li>Built for paying field crews</li>
+                        </ul>
+                        <a class="btn btn-primary" id="rtk-pay-monthly" href="#rtk-register" style="width:100%;text-align:center">Start free, then upgrade</a>
+                    </article>
+                    <article class="rtk-plan" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.15rem">
+                        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-dim);margin:0 0 0.35rem">Project</p>
+                        <h3 style="font-size:1.05rem;margin:0 0 0.25rem">Pro week pass</h3>
+                        <p style="color:var(--accent);font-weight:700;margin:0 0 0.5rem" id="rtk-price-week">$29 / week</p>
+                        <p style="color:var(--text-muted);font-size:0.88rem;margin:0 0 0.65rem">Heavy project week without a monthly commitment.</p>
+                        <a class="btn btn-ghost" id="rtk-pay-week" href="#rtk-register" style="width:100%;text-align:center;margin-top:0.5rem">Get a seat first</a>
+                    </article>
+                    <article class="rtk-plan" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.15rem">
+                        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-dim);margin:0 0 0.35rem">Office / extras</p>
+                        <h3 style="font-size:1.05rem;margin:0 0 0.25rem">Base data / RINEX pack</h3>
+                        <p style="color:var(--accent);font-weight:700;margin:0 0 0.5rem">Quoted</p>
+                        <p style="color:var(--text-muted);font-size:0.88rem;margin:0 0 0.65rem">Day observations from our base for post-processing or QA—not included on free seats.</p>
+                        <ul style="margin:0 0 0.85rem;padding:0 0 0 1.1rem;color:var(--text-muted);font-size:0.84rem">
+                            <li>Request by date / window</li>
+                            <li>For survey office workflows</li>
+                            <li>On-site RTK still separate</li>
+                        </ul>
+                        <a class="btn btn-ghost" href="#contact" style="width:100%;text-align:center">Request a data pack</a>
+                    </article>
+                </div>
+                <p style="color:var(--text-dim);font-size:0.85rem;margin:0 0 1.5rem;text-align:center">
+                    Hit a free-seat limit? Upgrade to Pro—we flip your existing seat (no new password).
+                    Connection steps: <a href="rtk-setup.html">rtk-setup.html</a>. Remote jobs: on-site RTK quote via contact.
+                </p>
+
+                <div class="rtk-reg" id="rtk-register">
+                    <div class="form-card">
+                        <h3>Get free stream access</h3>
+                        <p class="form-intro">
+                            Private NTRIP seat near our Toms River base—for <strong style="color:var(--text)">any standard NTRIP client</strong>, not one brand.
+                            About <strong style="color:var(--text)">30 seconds</strong>.
+                            <strong style="color:var(--text)">Login on the next screen</strong> (free starter · fair-use). Upgrade anytime when you need more time.
+                        </p>
+                        <form id="rtk-register-form" data-lead-form="rtk_register" action="https://formsubmit.co/gary.colyer@asap-nj.com" method="POST">
+                            <input type="hidden" name="_subject" value="RTK NTRIP auto-seat — ASAP-NJ">
+                            <input type="hidden" name="_autoresponse" value="Thanks for registering for ASAP NJ RTK. Your unique username and password were shown on the website after submit — save them. Connection guide: https://asap-nj.com/rtk-setup.html — host rtk.asap-nj.com port 2101 mount ASAP-NJ. Seat activates within about a minute. Do not share your login. — ASAP NJ · gary.colyer@asap-nj.com">
+                            <input type="hidden" name="_next" value="https://asap-nj.com/rtk-setup.html?ok=1">
+                            <input type="hidden" name="form_type" value="RTK NTRIP Access Registration">
+                            <input type="hidden" name="service" value="RTK / NTRIP correction stream access">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rtk-name">Name</label>
+                                    <input id="rtk-name" type="text" name="name" placeholder="Your name" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rtk-email">Email</label>
+                                    <input id="rtk-email" type="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rtk-company">Company / crew <span style="color:var(--text-dim);font-weight:500">(or “solo”)</span></label>
+                                    <input id="rtk-company" type="text" name="company" placeholder="Company or solo" required autocomplete="organization">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rtk-phone">Phone <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                    <input id="rtk-phone" type="tel" name="phone" placeholder="(xxx) xxx-xxxx" autocomplete="tel">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rtk-area">Work area (city / county)</label>
+                                    <input id="rtk-area" type="text" name="work_area" placeholder="e.g. Toms River, Ocean County" required autocomplete="address-level2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rtk-gear">Primary gear / client</label>
+                                    <select id="rtk-gear" name="gear" required>
+                                        <option value="">Select…</option>
+                                        <option>Ground GNSS / survey rover (Emlid, Trimble, Leica, etc.)</option>
+                                        <option>Construction layout / machine control</option>
+                                        <option>Mapping / GIS collector with NTRIP</option>
+                                        <option>RTK aircraft — DJI (Pilot 2 Custom Network)</option>
+                                        <option>RTK aircraft — other brand / NTRIP</option>
+                                        <option>Other NTRIP client</option>
+                                        <option>Not sure yet</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rtk-pref-user">Preferred username <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                    <input id="rtk-pref-user" type="text" name="preferred_username" placeholder="Leave blank — we generate one" autocomplete="username" maxlength="24" pattern="[A-Za-z0-9._\-]{0,24}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rtk-pref-pass">Preferred password <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                    <input id="rtk-pref-pass" type="text" name="preferred_password" placeholder="Leave blank — we generate one" autocomplete="new-password" minlength="8" maxlength="48">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rtk-message">Anything else? <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                <textarea id="rtk-message" name="message" rows="2" placeholder="Use case, remote job needs on-site RTK, etc."></textarea>
+                            </div>
+                            <label class="rtk-check">
+                                <input type="checkbox" name="agree_partner" value="yes" required>
+                                <span>I understand this is a <strong style="color:var(--text-muted)">local fixed-base stream near Toms River</strong> (not free statewide), I get a <strong style="color:var(--text-muted)">unique login I won’t share</strong>, and far-site RTK is a separate quoted service.</span>
+                            </label>
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+                            <button class="btn btn-primary" type="submit">Get free seat now</button>
+                            <p class="form-note">Login appears right after submit. Free starter limits apply. Upgrade to Pro when you need a full workday.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Full service list</p>
+                    <h2>Aerial solutions that work on the ground</h2>
+                    <p><strong style="color:var(--text)">Thermal is core</strong>—solar, HVAC, roofs, envelopes—plus <a href="3d-mapping-construction-nj.html">3D / progress for engineers</a>, survey, and <a href="thermal-deer-recovery-nj.html">woods recovery</a>. <strong style="color:var(--text-muted);font-weight:600">Click any card</strong> for examples.</p>
+                </div>
+                <div class="service-grid" id="service-grid">
+                    <button type="button" class="service-card" data-examples="thermal">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/gen-thermal-hvac.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Thermal drone inspections</h3>
+                            <p>Full thermal menu: rooftop AC/HVAC, solar, roofs, building envelopes, electrical hotspots, and claim sites. <a href="#thermal" onclick="event.stopPropagation()">Overview →</a></p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="solar">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/gen-thermal-array.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Solar thermal &amp; PV maintenance</h3>
+                            <p>Array thermal mapping, underperforming modules, production-loss context, and electrical troubleshooting support.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="insurance">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/gen-insurance-roof.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Insurance &amp; claims inspections</h3>
+                            <p>Aerial and thermal documentation for carriers, adjusters, and TPAs—roof, storm, property, and solar claims.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="survey">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/survey-land.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>RTK / NTRIP corrections</h3>
+                            <p>Standard NTRIP for survey, construction, mapping, and RTK aircraft near Toms River—or <strong style="color:var(--text)">quoted on-site RTK</strong> farther out. <a href="#rtk" onclick="event.stopPropagation()">Stream access →</a></p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="mapping">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/mapping.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>3D mapping &amp; models</h3>
+                            <p>Field capture for engineers—photogrammetry, orthos, 3D. Layout the job, then refly as it changes. <a href="3d-mapping-construction-nj.html" onclick="event.stopPropagation()">Service page →</a></p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="thermal-hvac">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/ex-hvac-1.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Rooftop HVAC / AC thermal</h3>
+                            <p>Commercial roof units, RTUs, and heat signatures that mean service calls—not ladder roulette across every unit.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="construction">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/construction.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Construction &amp; land development</h3>
+                            <p>Progress flights as dirt moves and buildings rise—same loop for developers, GCs, and engineers. <a href="3d-mapping-construction-nj.html" onclick="event.stopPropagation()">How it works →</a></p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="deer">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/coastal.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Thermal deer recovery</h3>
+                            <p>Lost a legal deer in the woods? Thermal search when the trail dies. Landowner permission required. <a href="thermal-deer-recovery-nj.html" onclick="event.stopPropagation()">Recovery page →</a></p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="realestate">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/city-aerial.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Real estate &amp; marketing</h3>
+                            <p>Clean stills and short cinematic clips that show property scale, access, and surroundings.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                    <button type="button" class="service-card" data-examples="coastal">
+                        <div class="service-card-photo" style="background-image:url('graphics/showcase/coastal.jpg')"></div>
+                        <div class="service-card-body">
+                            <h3>Coastal &amp; hard-to-reach sites</h3>
+                            <p>Marsh, shoreline, and restricted-access properties where ground surveys are slow, risky, or incomplete.</p>
+                            <span class="tap-hint">See examples →</span>
+                        </div>
+                    </button>
+                </div>
+                <p class="img-credit">Click a service for a multi-photo example set. Showcase imagery for marketing.</p>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container about-grid">
+                <div class="about-copy">
+                    <p class="section-label">Why ASAP NJ</p>
+                    <h2>Built for real jobs—not just pretty flyovers</h2>
+                    <p>
+                        We got into drones nearly two decades ago to be the field guy: get the data, send it to engineers so they can lay out the job,
+                        then fly back and forth as construction and land development progress. That loop still sits next to thermal, insurance, and RTK.
+                    </p>
+                    <p>
+                        ASAP NJ is a New Jersey–based partner for aerial work that has to hold up on site and in a claim file—
+                        solar thermal, insurance packages, 3D/progress for the office, and yes, thermal help finding a legally harvested deer in the woods.
+                        Every flight is FAA Part 107 with Airdata-tracked safety.
+                    </p>
+                    <ul class="about-list">
+                        <li>3D / progress data for engineers, GCs, and developers</li>
+                        <li>Thermal for solar, AC units, roofs—and woods recovery</li>
+                        <li>Insurance-ready deliverables for carriers and adjusters</li>
+                        <li>Clear scopes, labeled packages, and direct communication</li>
+                    </ul>
+                </div>
+                <aside class="about-panel" aria-label="At a glance">
+                    <h3>At a glance</h3>
+                    <div class="panel-row">
+                        <span>Certification</span>
+                        <strong>FAA Part 107</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Safety</span>
+                        <strong>Airdata verified</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Flagship</span>
+                        <strong>Thermal drone</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Also core</span>
+                        <strong>Solar · Insurance</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Support</span>
+                        <strong>Licensed electrician</strong>
+                    </div>
+                    <div class="panel-row">
+                        <span>Coverage</span>
+                        <strong>New Jersey (primary)</strong>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="work">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Examples</p>
+                    <h2>From the air—every service line</h2>
+                    <p>Click a tile for sample photos. When your site is next, <a href="#contact">send the address and goal</a>—we scope RGB, thermal, or both.</p>
+                </div>
+                <div class="solar-shot-grid">
+                    <figure class="solar-shot wide" data-examples="thermal" tabindex="0" role="button" aria-label="Open thermal examples">
+                        <span class="badge-th">IR</span>
+                        <img src="graphics/showcase/gen-thermal-hvac.jpg" alt="Infrared thermal view of rooftop HVAC units" width="1600" height="900" loading="lazy">
+                        <figcaption>Infrared thermal<span>HVAC · solar · roofs · more — click</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="solar" tabindex="0" role="button">
+                        <span class="badge-th badge-rgb">RGB</span>
+                        <img src="graphics/showcase/gen-solar-farm.jpg" alt="Large solar farm aerial" width="1600" height="900" loading="lazy">
+                        <figcaption>Solar O&amp;M<span>Visual · click for examples</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="thermal-hvac" tabindex="0" role="button">
+                        <span class="badge-th badge-rgb">RGB</span>
+                        <img src="graphics/showcase/ex-hvac-1.jpg" alt="HVAC equipment" width="1400" height="933" loading="lazy">
+                        <figcaption>Rooftop AC / HVAC<span>Visual context · IR on the job</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="insurance" tabindex="0" role="button">
+                        <span class="badge-th badge-rgb">RGB</span>
+                        <img src="graphics/showcase/gen-insurance-roof.jpg" alt="Aerial insurance roof documentation" width="1600" height="1200" loading="lazy">
+                        <figcaption>Insurance claims<span>RGB claim documentation</span></figcaption>
+                    </figure>
+                    <figure class="solar-shot" data-examples="construction" tabindex="0" role="button">
+                        <span class="badge-th badge-rgb">RGB</span>
+                        <img src="graphics/showcase/gen-construction-aerial.jpg" alt="Construction site aerial documentation" width="1600" height="900" loading="lazy">
+                        <figcaption>Construction docs<span>Click for examples</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="area" id="area">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="section-label">Service area</p>
+                    <h2>Based in New Jersey. Built for local work.</h2>
+                    <p>
+                        Based in New Jersey with a fixed RTK station on the Toms River—serving the region for solar O&amp;M, insurance inspections, thermal, survey, and aerial documentation.
+                        Out-of-state or long-haul jobs are considered case-by-case when scope and pay make the trip worth it—not a standing travel market.
+                    </p>
+                </div>
+                <div class="chip-row" aria-label="Common project types">
+                    <span class="chip">Solar farms &amp; rooftop PV</span>
+                    <span class="chip">Insurance / claims sites</span>
+                    <span class="chip">Commercial properties</span>
+                    <span class="chip">Construction sites</span>
+                    <span class="chip">Residential arrays</span>
+                    <span class="chip">South Jersey · NJ</span>
+                </div>
+                <a class="btn btn-primary" href="#contact">See if we cover your site</a>
+                <a class="btn btn-ghost" href="#rtk" style="margin-left:0.5rem">Working near Toms River RTK?</a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-label">Contact</p>
+                    <h2>What are you trying to get done?</h2>
+                    <p>Share the site and the outcome you need—claim package, solar findings, RTK, progress docs. We reply with a clear next step (and a quote when it fits).</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>What helps us move fast</h3>
+                        <p>A few details beat a long thread: address or city, service type, and timing. Insurance: claim # and adjuster. Solar: array size or production drop. RTK: gear and work area.</p>
+                        <ul class="contact-meta">
+                            <li>
+                                <span class="label">Website</span>
+                                <span>asap-nj.com</span>
+                            </li>
+                            <li>
+                                <span class="label">Instagram</span>
+                                <a href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer">@asap_nj_drone_services</a>
+                            </li>
+                            <li>
+                                <span class="label">Credentials</span>
+                                <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener noreferrer">Airdata safety certificate</a>
+                            </li>
+                            <li>
+                                <span class="label">Typical needs</span>
+                                <span>Insurance · Solar thermal · Survey · Docs</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-card">
+                        <form data-lead-form="web_contact" action="https://formsubmit.co/gary.colyer@asap-nj.com" method="POST">
+                            <input type="hidden" name="_subject" value="ASAP NJ website contact">
+                            <input type="hidden" name="_autoresponse" value="Thank you for contacting ASAP NJ Drone Services. We received your request and will follow up by email with next steps. Please reply to that email with any extra details so everything stays clear and on the record. — Gary Colyer · ASAP NJ · https://asap-nj.com/ · gary.colyer@asap-nj.com">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" name="name" placeholder="Your name" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone <span style="color:var(--text-dim);font-weight:500">(helps us reach you same day)</span></label>
+                                    <input id="phone" type="tel" name="phone" placeholder="(xxx) xxx-xxxx" autocomplete="tel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">What do you need documented / delivered?</label>
+                                    <select id="service" name="service">
+                                        <option value="">Pick the closest match…</option>
+                                        <option selected>Claim Day package (from $349)</option>
+                                        <option>Insurance / claims inspection</option>
+                                        <option>Solar Thermal Scan (from $499)</option>
+                                        <option>Thermal Roof / HVAC (from $449)</option>
+                                        <option>Thermal drone inspection (general)</option>
+                                        <option>Rooftop HVAC / AC thermal</option>
+                                        <option>Solar thermal / PV maintenance</option>
+                                        <option>Solar production loss / troubleshooting</option>
+                                        <option>Building envelope / roof thermal</option>
+                                        <option>Electrical hotspot documentation</option>
+                                        <option>RTK / NTRIP stream (survey, layout, aircraft)</option>
+                                        <option>On-site RTK (remote job quote)</option>
+                                        <option>3D model / photogrammetry</option>
+                                        <option>Construction / land development progress</option>
+                                        <option>Thermal deer recovery (legal harvest)</option>
+                                        <option>Real estate / marketing</option>
+                                        <option>Other / not sure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company / carrier <span style="color:var(--text-dim);font-weight:500">(optional)</span></label>
+                                <input id="company" type="text" name="company" placeholder="Insurance carrier, TPA, GC, or property owner" autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Site address or city</label>
+                                <input id="location" type="text" name="location" data-address-autocomplete
+                                       placeholder="Start typing street, city, NJ…" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Context we need to scope it</label>
+                                <textarea id="message" name="message" placeholder="Claim # / adjuster? Array size or production drop? Access / roof type? When do you need it?" required></textarea>
+                            </div>
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+                            <button class="btn btn-primary" type="submit">Send details — we'll reply with next steps</button>
+                            <p class="form-note" style="margin-top:0.75rem">Used only to answer this request. No newsletter blast.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="mobile-job-bar" aria-label="Start a conversation">
+        <a href="#contact">Tell us about the site</a>
+    </div>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>ASAP NJ Drone Services</strong><br>
+                Thermal · Solar · Insurance · Mapping · RTK
+            </div>
+            <ul class="footer-links">
+                <li><a href="thermal-drone-inspection-nj.html">Thermal drone NJ</a></li>
+                <li><a href="solar-thermal-inspection-nj.html">Solar thermal NJ</a></li>
+                <li><a href="3d-mapping-construction-nj.html">3D / progress</a></li>
+                <li><a href="insurance.html">Insurance</a></li>
+                <li><a href="hoa-property-managers-nj.html">HOA / managers</a></li>
+                <li><a href="#rtk">RTK / NTRIP</a></li>
+                <li><a href="rtk-setup.html">RTK setup</a></li>
+                <li><a href="airspace.html">Airspace check</a></li>
+                <li><a href="client/">Client portal · pay &amp; reports</a></li>
+                <li><a href="#contact">Book / contact</a></li>
+                <li><a href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+            <p class="footer-copy">
+                Flight jobs quoted then invoiced. RTK Pro seats fixed price on this site. Client portal for reports &amp; agreed balances.
+                v3.17.0 · Copyright 2026 ASAP New Jersey Drone Services · All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <div id="video-lightbox" class="video-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+        <button class="video-lightbox-close" type="button" onclick="closeVideoLightbox()" aria-label="Close video">×</button>
+        <video id="lightbox-video" controls playsinline></video>
+    </div>
+
+    <div id="ex-modal" class="ex-modal" role="dialog" aria-modal="true" aria-labelledby="ex-title" hidden>
+        <div class="ex-modal-panel">
+            <div class="ex-modal-head">
+                <div>
+                    <h3 id="ex-title">Examples</h3>
+                    <p id="ex-desc"></p>
+                </div>
+                <button type="button" class="ex-close" id="ex-close" aria-label="Close examples">×</button>
+            </div>
+            <div class="ex-modal-body">
+                <img id="ex-main" class="ex-main" src="" alt="">
+                <div id="ex-thumbs" class="ex-thumbs"></div>
+                <ul id="ex-bullets" class="ex-bullets"></ul>
+                <div class="ex-modal-actions">
+                    <a class="btn btn-primary" id="ex-cta" href="#contact">Tell us about your site</a>
+                    <button type="button" class="btn btn-ghost" id="ex-close-2">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const header = document.getElementById('site-header');
+            const toggle = document.getElementById('nav-toggle');
+            const links = document.getElementById('nav-links');
+
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 20);
+            }
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            toggle.addEventListener('click', () => {
+                const open = links.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+
+            links.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    links.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.setAttribute('aria-label', 'Open menu');
+                });
+            });
+        })();
+
+        /* Service / portfolio example galleries */
+        (function () {
+            const EXAMPLES = {
+                solar: {
+                    title: 'Solar thermal & PV maintenance',
+                    desc: 'How we market the work: thermal that shows problem areas, farm and rooftop arrays, clear O&M storytelling.',
+                    bullets: [
+                        'Thermal maps that highlight hot / underperforming zones',
+                        'Farm-scale and rooftop documentation',
+                        'Production-loss conversation starters for owners & O&M',
+                        'Path to electrical troubleshooting (licensed support when needed)'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal map of solar array with hotspots' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Close thermal of hot solar modules' },
+                        { src: 'graphics/showcase/gen-solar-farm.jpg', alt: 'Aerial large solar farm' },
+                        { src: 'graphics/showcase/solar-rooftop.jpg', alt: 'Solar panel rows' },
+                        { src: 'graphics/showcase/solar-field.jpg', alt: 'Field solar installation' },
+                        { src: 'graphics/showcase/ex-solar-1.jpg', alt: 'Solar panels close view' },
+                        { src: 'graphics/showcase/ex-solar-2.jpg', alt: 'Solar array another angle' }
+                    ]
+                },
+                insurance: {
+                    title: 'Insurance & claims inspections',
+                    desc: 'Claims-ready aerial documentation for roofs, storm damage, and property condition—easy for adjusters to use.',
+                    bullets: [
+                        'Overhead roof condition & debris documentation',
+                        'Storm / wind / hail site context',
+                        'Hard-to-reach elevations without ladder risk',
+                        'Organized photo packages for the claim file'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-insurance-roof.jpg', alt: 'Storm damaged roof aerial' },
+                        { src: 'graphics/showcase/ex-roof-1.jpg', alt: 'Roof aerial inspection' },
+                        { src: 'graphics/showcase/ex-roof-2.jpg', alt: 'Rooftop documentation' },
+                        { src: 'graphics/showcase/roof-aerial.jpg', alt: 'Residential property aerial' },
+                        { src: 'graphics/showcase/ex-house-1.jpg', alt: 'Home exterior for claims context' },
+                        { src: 'graphics/showcase/ex-house-2.jpg', alt: 'Property overview' }
+                    ]
+                },
+                survey: {
+                    title: 'RTK / NTRIP corrections',
+                    desc: 'Standard NTRIP from our Toms River fixed base—for survey poles, construction layout, mapping clients, and RTK aircraft. Not locked to one brand.',
+                    bullets: [
+                        'Standard NTRIP host / port / mount / unique login',
+                        'Ground GNSS & survey rovers (Emlid, Trimble, Leica, more)',
+                        'Construction layout & machine-control workflows that take NTRIP',
+                        'RTK aircraft of any brand with a custom NTRIP profile',
+                        'Quoted on-site RTK when the job is outside base range'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/survey-land.jpg', alt: 'Open land ready for high-accuracy positioning' },
+                        { src: 'graphics/showcase/construction.jpg', alt: 'Active construction site layout work' },
+                        { src: 'graphics/showcase/gen-construction-aerial.jpg', alt: 'Aerial construction progress for engineering' },
+                        { src: 'graphics/showcase/mapping.jpg', alt: 'Site mapping and as-built context' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial site for professional survey support' }
+                    ]
+                },
+                mapping: {
+                    title: '3D mapping & models',
+                    desc: 'Field guy gets the data; engineers lay out the job. Photogrammetry, orthos, 3D—then progress flights as the site changes.',
+                    bullets: [
+                        'Dense photo capture for 3D reconstruction',
+                        'Orthomosaic-style overviews for the office',
+                        'Handoff packages for engineers & GCs',
+                        'Land development & construction progress series',
+                        'RTK-ready capture when accuracy is scoped'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/mapping.jpg', alt: 'Aerial construction site mapping' },
+                        { src: 'graphics/showcase/city-aerial.jpg', alt: 'Dense aerial mapping view' },
+                        { src: 'graphics/showcase/ex-build-2.jpg', alt: 'Built environment aerial' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial site aerial' },
+                        { src: 'graphics/showcase/ex-industrial-1.jpg', alt: 'Facility overview' },
+                        { src: 'graphics/showcase/gen-construction-aerial.jpg', alt: 'Site progress aerial' }
+                    ]
+                },
+                deer: {
+                    title: 'Thermal deer recovery',
+                    desc: 'Legal harvest, trail went cold—thermal search over woods and brush. Landowner permission required. No poaching support.',
+                    bullets: [
+                        'Thermal scan when ground tracking stalls',
+                        'Mark candidate heat signatures for boots on the ground',
+                        'Best with time, access, and shot story from you',
+                        'Legal harvests only · Part 107 ops'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/coastal.jpg', alt: 'Hard-to-reach wooded terrain' },
+                        { src: 'graphics/showcase/survey-land.jpg', alt: 'Open land and tree line' },
+                        { src: 'graphics/showcase/ex-land-1.jpg', alt: 'Wooded landscape aerial' },
+                        { src: 'graphics/showcase/ex-land-2.jpg', alt: 'Rural terrain overview' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Thermal hotspot style imagery' }
+                    ]
+                },
+                thermal: {
+                    title: 'Thermal drone inspections',
+                    desc: 'Infrared from the air—solar, HVAC, roofs, envelopes, electrical gear, and claim sites. Heat tells the story RGB misses.',
+                    bullets: [
+                        'Rooftop AC / HVAC unit heat signatures',
+                        'Solar module & string thermal mapping',
+                        'Roof wet spots, insulation, and repair priorities',
+                        'Building envelope heat-loss context',
+                        'Outdoor electrical / equipment hotspots',
+                        'Insurance loss documentation with thermal when it matters'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-thermal-hvac.jpg', alt: 'Thermal rooftop HVAC units' },
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal solar array' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Thermal hotspot detail' },
+                        { src: 'graphics/showcase/gen-insurance-roof.jpg', alt: 'Roof overhead' },
+                        { src: 'graphics/showcase/ex-hvac-1.jpg', alt: 'HVAC equipment' },
+                        { src: 'graphics/showcase/ex-building-1.jpg', alt: 'Commercial building' },
+                        { src: 'graphics/showcase/ex-electrical-1.jpg', alt: 'Electrical infrastructure' }
+                    ]
+                },
+                'thermal-hvac': {
+                    title: 'Rooftop AC & HVAC thermal',
+                    desc: 'Commercial roofs full of RTUs and condensers—thermal finds units working too hard before you climb every curb.',
+                    bullets: [
+                        'Scan whole rooftops of packaged units in one flight',
+                        'Highlight overheating compressors / blocked airflow clues',
+                        'Pair with visual photos for maintenance tickets',
+                        'Great for facilities, property managers, and service contractors'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-thermal-hvac.jpg', alt: 'Thermal HVAC rooftop' },
+                        { src: 'graphics/showcase/ex-hvac-1.jpg', alt: 'HVAC technician context' },
+                        { src: 'graphics/showcase/ex-hvac-2.jpg', alt: 'Mechanical systems' },
+                        { src: 'graphics/showcase/ex-industrial-1.jpg', alt: 'Industrial roof plant' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Facility exterior' },
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal roof context' }
+                    ]
+                },
+                'thermal-envelope': {
+                    title: 'Building envelope thermal',
+                    desc: 'Where the building is leaking heat or showing faÃ§ade anomalies—useful for energy, owners, and facility teams.',
+                    bullets: [
+                        'Heat-loss patterns on walls and rooflines',
+                        'Support for energy and retrofit conversations',
+                        'Document large faÃ§ades without scaffolding',
+                        'Complements roof and HVAC thermal flights'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/ex-building-1.jpg', alt: 'Tall commercial building' },
+                        { src: 'graphics/showcase/city-aerial.jpg', alt: 'Urban building fabric' },
+                        { src: 'graphics/showcase/ex-house-1.jpg', alt: 'Residential envelope context' },
+                        { src: 'graphics/showcase/gen-thermal-array.jpg', alt: 'Thermal inspection style' },
+                        { src: 'graphics/showcase/roof-aerial.jpg', alt: 'Property aerial' }
+                    ]
+                },
+                'thermal-electrical': {
+                    title: 'Electrical & equipment hotspots',
+                    desc: 'Outdoor gear that runs hotter than it should—document for licensed electrical follow-up.',
+                    bullets: [
+                        'Transformers, service equipment, outdoor gear',
+                        'Visual + thermal package for the file',
+                        'Supports solar combiner / equipment checks',
+                        'Corrective electrical work stays with licensed pros'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/ex-electrical-1.jpg', alt: 'Power infrastructure' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial equipment' },
+                        { src: 'graphics/showcase/ex-industrial-1.jpg', alt: 'Facility equipment' },
+                        { src: 'graphics/showcase/gen-thermal-hotspot.jpg', alt: 'Thermal hotspot style' },
+                        { src: 'graphics/showcase/gen-thermal-hvac.jpg', alt: 'Hot equipment thermal' }
+                    ]
+                },
+                construction: {
+                    title: 'Construction & land development',
+                    desc: 'Progress flights as earthwork and build-out change the ground truth—same loop back to engineers and GCs.',
+                    bullets: [
+                        'Weekly / milestone progress overviews',
+                        'Land development from dirt to vertical',
+                        'Stockpile and open-site context',
+                        'Shareable stills for meetings and RFIs',
+                        'Pairs with 3D / ortho capture when scoped'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/gen-construction-aerial.jpg', alt: 'Construction site aerial' },
+                        { src: 'graphics/showcase/construction.jpg', alt: 'Active construction' },
+                        { src: 'graphics/showcase/ex-build-1.jpg', alt: 'Building construction' },
+                        { src: 'graphics/showcase/ex-build-2.jpg', alt: 'Structure aerial' },
+                        { src: 'graphics/showcase/industrial.jpg', alt: 'Industrial construction context' }
+                    ]
+                },
+                realestate: {
+                    title: 'Real estate & marketing',
+                    desc: 'Cinematic stills that sell scale, access, and surroundings for listings and brands.',
+                    bullets: [
+                        'Property context and neighborhood feel',
+                        'Clean vertical marketing assets',
+                        'Optional short clips from the same mission',
+                        'Looks premium without a full film crew'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/ex-house-1.jpg', alt: 'Attractive home exterior' },
+                        { src: 'graphics/showcase/ex-house-2.jpg', alt: 'Luxury home aerial feel' },
+                        { src: 'graphics/showcase/city-aerial.jpg', alt: 'Neighborhood aerial' },
+                        { src: 'graphics/showcase/gen-drone-hero.jpg', alt: 'Drone over homes at sunset' },
+                        { src: 'graphics/showcase/coastal.jpg', alt: 'Lifestyle coastal property vibe' }
+                    ]
+                },
+                coastal: {
+                    title: 'Coastal & hard-to-reach sites',
+                    desc: 'Shoreline, marsh, and restricted access—where drones beat wet boots and incomplete maps.',
+                    bullets: [
+                        'Coastal and marsh documentation',
+                        'Hard-to-reach property edges',
+                        'Insurance + survey overlap on waterfront jobs',
+                        'Safer than scrambling unstable banks'
+                    ],
+                    images: [
+                        { src: 'graphics/showcase/coastal.jpg', alt: 'Coastal beach aerial' },
+                        { src: 'graphics/showcase/ex-coast-1.jpg', alt: 'Shoreline view' },
+                        { src: 'graphics/showcase/ex-coast-2.jpg', alt: 'Ocean coast aerial' },
+                        { src: 'graphics/showcase/ex-land-1.jpg', alt: 'Natural terrain aerial' },
+                        { src: 'graphics/showcase/survey-land.jpg', alt: 'Open landscape' }
+                    ]
+                }
+            };
+
+            const modal = document.getElementById('ex-modal');
+            const titleEl = document.getElementById('ex-title');
+            const descEl = document.getElementById('ex-desc');
+            const mainEl = document.getElementById('ex-main');
+            const thumbsEl = document.getElementById('ex-thumbs');
+            const bulletsEl = document.getElementById('ex-bullets');
+            let lastFocus = null;
+
+            function openExamples(key) {
+                const data = EXAMPLES[key];
+                if (!data) return;
+                lastFocus = document.activeElement;
+                titleEl.textContent = data.title;
+                descEl.textContent = data.desc;
+                bulletsEl.innerHTML = data.bullets.map((b) => '<li>' + b + '</li>').join('');
+                thumbsEl.innerHTML = '';
+                data.images.forEach((img, i) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = i === 0 ? 'active' : '';
+                    btn.setAttribute('aria-label', 'Show example ' + (i + 1));
+                    const thumb = document.createElement('img');
+                    thumb.src = img.src;
+                    thumb.alt = '';
+                    thumb.loading = 'lazy';
+                    btn.appendChild(thumb);
+                    btn.addEventListener('click', () => {
+                        mainEl.src = img.src;
+                        mainEl.alt = img.alt;
+                        thumbsEl.querySelectorAll('button').forEach((b) => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                    thumbsEl.appendChild(btn);
+                });
+                mainEl.src = data.images[0].src;
+                mainEl.alt = data.images[0].alt;
+                modal.hidden = false;
+                modal.classList.add('open');
+                document.body.classList.add('modal-open');
+                document.getElementById('ex-close').focus();
+            }
+
+            function closeExamples() {
+                modal.classList.remove('open');
+                modal.hidden = true;
+                document.body.classList.remove('modal-open');
+                if (lastFocus && lastFocus.focus) lastFocus.focus();
+            }
+
+            document.getElementById('ex-close').addEventListener('click', closeExamples);
+            document.getElementById('ex-close-2').addEventListener('click', closeExamples);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeExamples();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('open')) closeExamples();
+            });
+
+            document.querySelectorAll('[data-examples]').forEach((el) => {
+                const key = el.getAttribute('data-examples');
+                const open = () => openExamples(key);
+                el.addEventListener('click', open);
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        open();
+                    }
+                });
+            });
+
+            // Solar gallery figures inside #solar also open solar examples when clicked
+            document.querySelectorAll('#solar-gallery .solar-shot').forEach((fig) => {
+                fig.setAttribute('data-examples', 'solar');
+                fig.setAttribute('tabindex', '0');
+                fig.setAttribute('role', 'button');
+                fig.addEventListener('click', () => openExamples('solar'));
+                fig.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openExamples('solar');
+                    }
+                });
+            });
+
+            // Insurance photo block
+            const insPhoto = document.querySelector('.ins-photo');
+            if (insPhoto) {
+                insPhoto.style.cursor = 'pointer';
+                insPhoto.setAttribute('tabindex', '0');
+                insPhoto.setAttribute('role', 'button');
+                insPhoto.setAttribute('aria-label', 'Open insurance examples');
+                const openIns = () => openExamples('insurance');
+                insPhoto.addEventListener('click', openIns);
+                insPhoto.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openIns();
+                    }
+                });
+            }
+        })();
+
+        /* Customer panel-failure playground */
+        (function () {
+            const board = document.getElementById('pg-board');
+            if (!board) return;
+
+            const el = {
+                watts: document.getElementById('pg-watts'),
+                perString: document.getElementById('pg-per-string'),
+                strings: document.getElementById('pg-strings'),
+                rate: document.getElementById('pg-rate'),
+                sun: document.getElementById('pg-sun'),
+                mode: document.getElementById('pg-mode'),
+                wattsVal: document.getElementById('pg-watts-val'),
+                perStringVal: document.getElementById('pg-per-string-val'),
+                stringsVal: document.getElementById('pg-strings-val'),
+                rateVal: document.getElementById('pg-rate-val'),
+                sunVal: document.getElementById('pg-sun-val'),
+                size: document.getElementById('pg-size'),
+                count: document.getElementById('pg-count'),
+                live: document.getElementById('pg-live'),
+                livePct: document.getElementById('pg-live-pct'),
+                kwh: document.getElementById('pg-kwh'),
+                money: document.getElementById('pg-money'),
+                moneySub: document.getElementById('pg-money-sub'),
+                story: document.getElementById('pg-story')
+            };
+
+            /** @type {boolean[][]} failed[string][panel] */
+            let failed = [];
+            const SYSTEM_FACTOR = 0.80;
+
+            function nStrings() { return Number(el.strings.value); }
+            function nPerString() { return Number(el.perString.value); }
+            function watts() { return Number(el.watts.value); }
+            function rate() { return Number(el.rate.value); }
+            function sun() { return Number(el.sun.value); }
+
+            function ensureGrid() {
+                const s = nStrings();
+                const p = nPerString();
+                const next = [];
+                for (let i = 0; i < s; i++) {
+                    const row = [];
+                    for (let j = 0; j < p; j++) {
+                        row.push(failed[i] && failed[i][j] ? true : false);
+                    }
+                    next.push(row);
+                }
+                failed = next;
+            }
+
+            function money(n) {
+                return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+            }
+
+            function fmtKw(w) {
+                if (w >= 1000) return (w / 1000).toFixed(2) + ' kW';
+                return Math.round(w) + ' W';
+            }
+
+            function compute() {
+                const s = nStrings();
+                const p = nPerString();
+                const w = watts();
+                const totalPanels = s * p;
+                const nameplateW = totalPanels * w;
+                const mode = el.mode.value;
+                let liveW = 0;
+                let failedCount = 0;
+                let deadStrings = 0;
+
+                for (let i = 0; i < s; i++) {
+                    const fails = failed[i].filter(Boolean).length;
+                    failedCount += fails;
+                    if (mode === 'open' && fails > 0) {
+                        deadStrings += 1;
+                        // whole string offline
+                    } else {
+                        const healthy = p - fails;
+                        liveW += healthy * w;
+                    }
+                }
+
+                const lostW = nameplateW - liveW;
+                const annualLostKwh = (lostW / 1000) * sun() * 365 * SYSTEM_FACTOR;
+                const annualMoney = annualLostKwh * rate();
+                const livePct = nameplateW > 0 ? (liveW / nameplateW) * 100 : 100;
+
+                return {
+                    totalPanels, nameplateW, liveW, lostW, failedCount, deadStrings,
+                    annualLostKwh, annualMoney, livePct, mode, p, s, w
+                };
+            }
+
+            function renderLabels() {
+                el.wattsVal.textContent = watts() + ' W';
+                el.perStringVal.textContent = String(nPerString());
+                el.stringsVal.textContent = String(nStrings());
+                el.rateVal.textContent = '$' + rate().toFixed(2) + ' / kWh';
+                el.sunVal.textContent = sun().toFixed(1);
+            }
+
+            function renderBoard() {
+                ensureGrid();
+                const mode = el.mode.value;
+                const s = nStrings();
+                const p = nPerString();
+                board.innerHTML = '';
+
+                for (let i = 0; i < s; i++) {
+                    const fails = failed[i].filter(Boolean).length;
+                    const stringDead = mode === 'open' && fails > 0;
+                    const wrap = document.createElement('div');
+                    wrap.className = 'pg-string';
+
+                    const label = document.createElement('div');
+                    label.className = 'pg-string-label';
+                    const status = stringDead
+                        ? '<em class="bad">string offline</em>'
+                        : fails
+                            ? '<em class="bad">' + fails + ' failed</em>'
+                            : '<em>healthy</em>';
+                    label.innerHTML = '<span>String ' + (i + 1) + '</span>' + status;
+                    wrap.appendChild(label);
+
+                    const row = document.createElement('div');
+                    row.className = 'pg-panels';
+
+                    for (let j = 0; j < p; j++) {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'pg-panel';
+                        if (failed[i][j]) btn.classList.add('failed');
+                        if (stringDead) btn.classList.add('string-dead');
+                        btn.setAttribute('aria-pressed', failed[i][j] ? 'true' : 'false');
+                        btn.setAttribute('aria-label', 'String ' + (i + 1) + ' panel ' + (j + 1) + (failed[i][j] ? ' failed' : ' healthy'));
+                        btn.addEventListener('click', () => {
+                            failed[i][j] = !failed[i][j];
+                            render();
+                        });
+                        row.appendChild(btn);
+                    }
+                    wrap.appendChild(row);
+                    board.appendChild(wrap);
+                }
+            }
+
+            function renderStats() {
+                const c = compute();
+                el.size.textContent = fmtKw(c.nameplateW);
+                el.count.textContent = c.totalPanels + ' panels · ' + c.s + ' × ' + c.p;
+                el.live.textContent = fmtKw(c.liveW);
+                el.livePct.textContent = c.livePct.toFixed(0) + '% of nameplate';
+                el.kwh.textContent = c.failedCount === 0 ? '0' : Math.round(c.annualLostKwh).toLocaleString();
+                el.money.textContent = c.failedCount === 0 ? '$0' : money(c.annualMoney);
+                el.moneySub.textContent = c.failedCount === 0 ? 'nothing failed yet' : 'per year (rough)';
+
+                if (c.failedCount === 0) {
+                    el.story.innerHTML = '<strong>All green.</strong> Click a panel (or hit Fail 1 random) to see how one weak module can quietly cost real money over a year. Then <a href="#contact">scope a thermal survey</a> to find the real ones.';
+                } else if (c.mode === 'open' && c.deadStrings) {
+                    el.story.innerHTML = '<strong>' + c.failedCount + ' failed panel' + (c.failedCount > 1 ? 's' : '') + ' took down ' + c.deadStrings + ' string' + (c.deadStrings > 1 ? 's' : '') + '.</strong> In an open-string scenario you are missing about <strong>' + fmtKw(c.lostW) + '</strong> of DC capacity—roughly <strong>' + money(c.annualMoney) + '/yr</strong> at your rate. Thermal + electrical work finds whether it is a module, connector, fuse, or something else. <a href="#contact">Get the real array checked</a>.';
+                } else {
+                    el.story.innerHTML = '<strong>' + c.failedCount + ' panel' + (c.failedCount > 1 ? 's' : '') + ' out.</strong> With typical bypass behavior you are still online but down ~<strong>' + fmtKw(c.lostW) + '</strong> (~' + (100 - c.livePct).toFixed(0) + '%). That is about <strong>' + money(c.annualMoney) + ' a year</strong> left on the table—before dirt, shade, and inverter clipping. Real arrays hide these until someone flies thermal. <a href="#solar">How we inspect</a> · <a href="#contact">Tell us about your array</a>.';
+                }
+            }
+
+            function render() {
+                renderLabels();
+                renderBoard();
+                renderStats();
+            }
+
+            function failRandom(n) {
+                ensureGrid();
+                const slots = [];
+                for (let i = 0; i < failed.length; i++) {
+                    for (let j = 0; j < failed[i].length; j++) {
+                        if (!failed[i][j]) slots.push([i, j]);
+                    }
+                }
+                for (let k = 0; k < n && slots.length; k++) {
+                    const idx = Math.floor(Math.random() * slots.length);
+                    const [i, j] = slots.splice(idx, 1)[0];
+                    failed[i][j] = true;
+                }
+                render();
+            }
+
+            ['input', 'change'].forEach((evt) => {
+                [el.watts, el.perString, el.strings, el.rate, el.sun, el.mode].forEach((node) => {
+                    node.addEventListener(evt, render);
+                });
+            });
+
+            document.getElementById('pg-fail-one').addEventListener('click', () => failRandom(1));
+            document.getElementById('pg-fail-two').addEventListener('click', () => failRandom(2));
+            document.getElementById('pg-reset').addEventListener('click', () => {
+                failed = [];
+                render();
+            });
+
+            render();
+        })();
+    </script>
+
+    <script>
+        window.openVideoLightbox = function (videoUrl) {
+            const box = document.getElementById('video-lightbox');
+            const video = document.getElementById('lightbox-video');
+            if (!box || !video) return;
+            video.src = videoUrl;
+            box.classList.add('active');
+            video.play().catch(() => {});
+        };
+
+        window.closeVideoLightbox = function () {
+            const box = document.getElementById('video-lightbox');
+            const video = document.getElementById('lightbox-video');
+            if (!box || !video) return;
+            video.pause();
+            video.src = '';
+            box.classList.remove('active');
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeVideoLightbox();
+        });
+
+        const vlb = document.getElementById('video-lightbox');
+        if (vlb) {
+            vlb.addEventListener('click', (e) => {
+                if (e.target.id === 'video-lightbox') closeVideoLightbox();
+            });
+        }
+    </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"b7166614da55444ba8a081362dbd66d4","r":1}' crossorigin="anonymous"></script>
+    <div class="money-bar" aria-label="Quick book">
+        <a class="btn btn-ghost" href="mailto:gary.colyer@asap-nj.com">Email Gary</a>
+        <a class="btn btn-primary" href="#contact">Book inspection</a>
+    </div>
+    <script src="js/address-autocomplete.js?v=1"></script>
+    <script src="js/lead-config.js?v=2"></script>
+    <script src="js/rtk-billing.js?v=1"></script>
+    <script src="js/lead-capture.js?v=3"></script>
+    <script>
+      (function () {
+        var B = window.ASAP_RTK_BILLING;
+        if (!B) return;
+        function wire(btnId, plan) {
+          var el = document.getElementById(btnId);
+          if (!el || !plan) return;
+          if (plan.stripeUrl) {
+            el.href = plan.stripeUrl;
+            el.target = '_blank';
+            el.rel = 'noopener';
+            el.textContent = 'Pay ' + (plan.priceLabel || 'now');
+          } else {
+            el.href = '#rtk-register';
+            el.textContent = 'Get free seat first';
+          }
+        }
+        if (B.proMonthly) {
+          var pm = document.getElementById('rtk-price-monthly');
+          if (pm && B.proMonthly.priceLabel) pm.textContent = B.proMonthly.priceLabel;
+          wire('rtk-pay-monthly', B.proMonthly);
+        }
+        if (B.proWeek) {
+          var pw = document.getElementById('rtk-price-week');
+          if (pw && B.proWeek.priceLabel) pw.textContent = B.proWeek.priceLabel;
+          wire('rtk-pay-week', B.proWeek);
+        }
+      })();
+    </script>
+</body>
+</html>

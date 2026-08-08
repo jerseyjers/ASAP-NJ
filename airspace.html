@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job site airspace check | ASAP NJ Drone Services</title>
+    <meta name="description" content="Check airspace near a job site address: class airspace, special-use, UAS Facility Map ceilings, nearby airports. Advisory only.">
+    <meta name="theme-color" content="#0a0c10">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="canonical" href="https://asap-nj.com/airspace.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0c10; --bg-card: #161a23; --bg-elev: #12151c;
+            --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
+            --text: #f3f5f7; --muted: #9aa3b2; --dim: #6b7382;
+            --accent: #3ec4e8; --accent-soft: rgba(62,196,232,0.16);
+            --ok: #3dd68c; --warn: #f0a020; --alert: #f07178;
+            --radius: 14px; --font: 'DM Sans', system-ui, sans-serif; --display: 'Instrument Serif', Georgia, serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* Critical: author CSS must not override HTML hidden (oauth-row used display:grid) */
+        [hidden] { display: none !important; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: var(--accent); }
+        .wrap { width: min(100% - 1.5rem, 1100px); margin: 0 auto; padding: 1.25rem 0 3.5rem; }
+        .topbar { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+        .brand { font-weight: 700; color: var(--text); text-decoration: none; }
+        .brand span { color: var(--accent); }
+        .badge {
+            display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; padding: 0.25rem 0.55rem; border-radius: 999px;
+            background: var(--accent-soft); color: var(--accent); margin-bottom: 0.65rem;
+        }
+        h1 { font-family: var(--display); font-weight: 400; font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0.25rem 0 0.65rem; }
+        .lead { color: var(--muted); margin-bottom: 1rem; max-width: 42rem; font-size: 0.98rem; }
+        .card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 1.15rem 1.2rem; margin-bottom: 1rem;
+        }
+        .card h2 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+        label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--muted); margin-bottom: 0.4rem; }
+        .field-wrap { position: relative; margin-bottom: 0.85rem; }
+        input[type="text"] {
+            width: 100%; padding: 0.95rem 1rem; border-radius: 12px; border: 1px solid var(--border-strong);
+            background: var(--bg-elev); color: var(--text); font: inherit; font-size: 1rem;
+        }
+        input:focus { outline: 2px solid rgba(62,196,232,0.5); border-color: var(--accent); }
+        .as-suggest {
+            position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 50;
+            background: #1a1f2b; border: 1px solid var(--border-strong); border-radius: 12px;
+            max-height: 280px; overflow: auto; box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+        }
+        .as-suggest-item {
+            display: block; width: 100%; text-align: left; padding: 0.85rem 1rem;
+            border: none; border-bottom: 1px solid var(--border); background: transparent;
+            color: var(--text); font: inherit; cursor: pointer; font-size: 0.95rem;
+        }
+        .as-suggest-item:last-child { border-bottom: none; }
+        .as-suggest-item:hover, .as-suggest-item.is-active { background: var(--accent-soft); color: var(--accent); }
+        .btn-stack { display: grid; gap: 0.65rem; margin-top: 0.25rem; }
+        @media (min-width: 560px) {
+            .btn-stack { grid-template-columns: 1fr 1fr; }
+            .btn-stack .btn-wide { grid-column: 1 / -1; }
+        }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+            padding: 0.95rem 1.15rem; border-radius: 12px; font-weight: 700; text-decoration: none;
+            border: none; cursor: pointer; font: inherit; font-size: 1rem; width: 100%;
+        }
+        .btn-primary { background: var(--accent); color: #041016; }
+        .auth-form .btn-primary {
+            margin-top: 0.35rem;
+            background: #3ec4e8;
+            color: #041016;
+            font-weight: 800;
+            box-shadow: 0 0 0 1px rgba(62,196,232,0.4), 0 8px 28px rgba(62,196,232,0.22);
+        }
+        .auth-form .btn-primary:hover { filter: brightness(1.08); }
+        .auth-form .btn-primary:disabled { opacity: 0.65; }
+        .btn-locate {
+            background: #1a3d48; color: #7ee0f5; border: 2px solid var(--accent);
+            font-size: 1.05rem; padding: 1.05rem 1.15rem;
+        }
+        .btn-locate:hover { background: #214a57; }
+        .btn-secondary { background: transparent; border: 1px solid var(--border-strong); color: var(--text); }
+        .btn:hover { filter: brightness(1.06); }
+        .btn:disabled { opacity: 0.5; cursor: wait; }
+        .status {
+            margin-top: 0.9rem; padding: 0.85rem 1rem; border-radius: 10px; font-size: 0.95rem; font-weight: 500;
+            background: rgba(62,196,232,0.1); border: 1px solid rgba(62,196,232,0.3); color: var(--muted);
+        }
+        .status[data-kind="ok"] { background: rgba(61,214,140,0.12); border-color: rgba(61,214,140,0.4); color: var(--ok); }
+        .status[data-kind="err"] { background: rgba(240,113,120,0.12); border-color: rgba(240,113,120,0.4); color: #f5a3a8; }
+        .ready {
+            margin-bottom: 0.75rem; padding: 0.55rem 0.8rem; border-radius: 8px; font-size: 0.85rem;
+            background: rgba(61,214,140,0.1); border: 1px solid rgba(61,214,140,0.3); color: var(--ok);
+        }
+        .muted { color: var(--muted); }
+        .dim { color: var(--dim); font-size: 0.85rem; margin-top: 0.55rem; }
+        .as-flag { border-left: 3px solid var(--accent); background: rgba(255,255,255,0.03); padding: 0.85rem 1rem; border-radius: 0 10px 10px 0; margin: 0.55rem 0; }
+        .as-flag strong { display: block; margin-bottom: 0.25rem; }
+        .as-flag p { color: var(--muted); font-size: 0.92rem; }
+        .as-flag--ok { border-color: var(--ok); }
+        .as-flag--warn { border-color: var(--warn); }
+        .as-flag--alert { border-color: var(--alert); }
+        .as-flag--info { border-color: var(--accent); }
+        .as-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-top: 0.5rem; }
+        .as-table th, .as-table td { text-align: left; padding: 0.45rem 0.35rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .as-table th { color: var(--dim); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        ul { margin: 0.4rem 0 0 1.15rem; color: var(--muted); }
+        li { margin: 0.3rem 0; }
+        .meta { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .legal {
+            border: 1px solid rgba(240,160,32,0.35); background: rgba(240,160,32,0.08);
+            padding: 0.9rem 1rem; border-radius: var(--radius); color: var(--muted); font-size: 0.88rem; margin: 0.85rem 0 1rem;
+        }
+        .legal strong { color: #e8c27a; }
+        footer { text-align: center; color: var(--dim); font-size: 0.8rem; margin-top: 1.75rem; }
+        .links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.85rem; }
+        .links .btn { width: auto; padding: 0.7rem 1rem; font-size: 0.9rem; }
+        .topbar .btn { width: auto; padding: 0.55rem 0.9rem; font-size: 0.88rem; font-weight: 600; }
+        /* Auth gate */
+        .user-bar {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.65rem;
+            margin-bottom: 1rem; padding: 0.65rem 0.9rem; border-radius: 12px;
+            background: rgba(62,196,232,0.08); border: 1px solid rgba(62,196,232,0.25);
+            font-size: 0.9rem; color: var(--muted);
+        }
+        .user-bar strong { color: var(--text); font-weight: 600; }
+        .user-bar .btn { width: auto; padding: 0.4rem 0.75rem; font-size: 0.82rem; }
+        .auth-tabs { display: flex; gap: 0.35rem; margin-bottom: 1rem; }
+        .auth-tab {
+            flex: 1; padding: 0.65rem 0.75rem; border-radius: 10px; border: 1px solid var(--border-strong);
+            background: transparent; color: var(--muted); font: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer;
+        }
+        .auth-tab.is-active { background: var(--accent-soft); color: var(--accent); border-color: rgba(62,196,232,0.45); }
+        .oauth-row { display: grid; gap: 0.55rem; margin: 0.75rem 0 0.5rem; }
+        .oauth-row-primary { grid-template-columns: 1fr; }
+        @media (min-width: 560px) {
+            .oauth-row-secondary { grid-template-columns: 1fr 1fr; }
+        }
+        .btn-oauth {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+            padding: 0.95rem 1rem; border-radius: 12px; font-weight: 700; font-size: 0.95rem;
+            border: 1px solid var(--border-strong); background: var(--bg-elev); color: var(--text); cursor: pointer; font: inherit;
+        }
+        .btn-oauth-google {
+            background: #fff; color: #1f1f1f; border-color: rgba(255,255,255,0.2);
+            font-size: 1.02rem; padding: 1.05rem 1.15rem;
+        }
+        .btn-oauth-google:hover { filter: brightness(0.96); }
+        .btn-oauth .oauth-ico {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 1.35rem; height: 1.35rem; border-radius: 4px; font-weight: 800;
+            background: #4285f4; color: #fff; font-size: 0.85rem;
+        }
+        .btn-oauth:hover:not(:disabled) { border-color: var(--accent); }
+        .btn-oauth:disabled { opacity: 0.45; cursor: not-allowed; }
+        .google-status {
+            margin: 0.35rem 0 0.75rem; padding: 0.7rem 0.85rem; border-radius: 10px;
+            font-size: 0.84rem; color: var(--muted); line-height: 1.45;
+            background: rgba(240,160,32,0.1); border: 1px solid rgba(240,160,32,0.3);
+        }
+        .google-status strong { color: #e8c27a; }
+        .auth-divider {
+            display: flex; align-items: center; gap: 0.75rem; color: var(--dim); font-size: 0.8rem;
+            font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 0.5rem 0 1rem;
+        }
+        .auth-divider::before, .auth-divider::after {
+            content: ""; flex: 1; height: 1px; background: var(--border-strong);
+        }
+        .auth-form label { margin-top: 0.55rem; }
+        .auth-form label:first-of-type { margin-top: 0; }
+        .auth-form input, .auth-form select {
+            width: 100%; padding: 0.85rem 0.95rem; border-radius: 12px; border: 1px solid var(--border-strong);
+            background: var(--bg-elev); color: var(--text); font: inherit; font-size: 0.98rem; margin-top: 0.3rem;
+        }
+        .auth-form input:focus, .auth-form select:focus { outline: 2px solid rgba(62,196,232,0.5); border-color: var(--accent); }
+        .auth-check {
+            display: flex; gap: 0.55rem; align-items: flex-start; margin: 0.9rem 0 1rem;
+            font-size: 0.88rem; color: var(--muted); font-weight: 500;
+        }
+        .auth-check input { width: auto; margin-top: 0.2rem; }
+        .gate-msg {
+            margin-top: 0.75rem; padding: 0.75rem 0.9rem; border-radius: 10px; font-size: 0.92rem; font-weight: 500;
+            background: rgba(62,196,232,0.1); border: 1px solid rgba(62,196,232,0.3); color: var(--muted);
+        }
+        .gate-msg[data-kind="ok"] { background: rgba(61,214,140,0.12); border-color: rgba(61,214,140,0.4); color: var(--ok); }
+        .gate-msg[data-kind="err"] { background: rgba(240,113,120,0.12); border-color: rgba(240,113,120,0.4); color: #f5a3a8; }
+        .oauth-note { color: var(--dim); font-size: 0.82rem; margin-top: 0.35rem; line-height: 1.45; }
+        .setup-hint {
+            margin-top: 0.85rem; padding: 0.75rem 0.9rem; border-radius: 10px; font-size: 0.82rem; color: var(--dim);
+            border: 1px dashed var(--border-strong); background: rgba(0,0,0,0.2);
+        }
+        #as-google-gis { display: flex; justify-content: center; margin: 0.35rem 0 0.5rem; min-height: 0; }
+        #as-google-gis:not([hidden]) { min-height: 44px; }
+        /* Interactive map */
+        .map-card { padding: 0.85rem 0.9rem 0.95rem; overflow: hidden; }
+        .map-head {
+            display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;
+            gap: 0.65rem; margin-bottom: 0.65rem;
+        }
+        .map-head h2 { margin: 0 0 0.2rem; }
+        .map-hint { color: var(--dim); font-size: 0.82rem; max-width: 36rem; line-height: 1.4; }
+        .map-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .map-tools .btn {
+            width: auto; padding: 0.45rem 0.75rem; font-size: 0.8rem; border-radius: 999px;
+        }
+        .map-tools .btn.is-active {
+            background: var(--accent-soft); border-color: rgba(62,196,232,0.5); color: var(--accent);
+        }
+        .map-frame {
+            position: relative; border-radius: 12px; overflow: hidden;
+            border: 1px solid var(--border-strong);
+            height: min(58vh, 520px); min-height: 360px;
+            background: #0d1118;
+        }
+        #as-map { width: 100%; height: 100%; z-index: 1; }
+        .map-stats {
+            display: flex; flex-wrap: wrap; gap: 0.55rem 1rem; margin-top: 0.65rem;
+            font-size: 0.82rem; color: var(--muted);
+        }
+        .map-stats strong { color: var(--text); }
+        .map-legend {
+            display: flex; flex-wrap: wrap; gap: 0.45rem 0.85rem; margin-top: 0.55rem;
+            font-size: 0.75rem; color: var(--dim);
+        }
+        .map-legend i {
+            display: inline-block; width: 11px; height: 11px; border-radius: 2px;
+            margin-right: 0.3rem; vertical-align: -1px; border: 1px solid rgba(255,255,255,0.25);
+        }
+        .as-site-marker { background: transparent !important; border: none !important; }
+        .as-site-pin {
+            width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+        }
+        .as-site-pin span {
+            width: 16px; height: 16px; border-radius: 50%;
+            background: #3ec4e8; border: 3px solid #fff;
+            box-shadow: 0 0 0 6px rgba(62,196,232,0.28), 0 4px 14px rgba(0,0,0,0.45);
+            animation: as-pulse 2s ease-out infinite;
+        }
+        @keyframes as-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(62,196,232,0.45), 0 4px 14px rgba(0,0,0,0.45); }
+            70% { box-shadow: 0 0 0 14px rgba(62,196,232,0), 0 4px 14px rgba(0,0,0,0.45); }
+            100% { box-shadow: 0 0 0 0 rgba(62,196,232,0), 0 4px 14px rgba(0,0,0,0.45); }
+        }
+        /* Leaflet dark-friendly popups */
+        .leaflet-container { font: inherit; background: #0d1118; }
+        .leaflet-popup-content-wrapper {
+            background: #161a23; color: #f3f5f7; border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+        }
+        .leaflet-popup-tip { background: #161a23; }
+        .leaflet-popup-content { margin: 0.75rem 0.9rem; font-size: 0.88rem; line-height: 1.45; }
+        .leaflet-control-layers {
+            background: #161a23; color: #f3f5f7; border: 1px solid rgba(255,255,255,0.12) !important;
+            border-radius: 10px !important;
+        }
+        .leaflet-control-layers label { color: #f3f5f7; }
+        .leaflet-bar a {
+            background: #161a23 !important; color: #f3f5f7 !important;
+            border-bottom-color: rgba(255,255,255,0.1) !important;
+        }
+        .leaflet-bar a:hover { background: #1e2430 !important; }
+        @media (max-width: 560px) {
+            .map-frame { height: 55vh; min-height: 300px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+    <div class="wrap">
+        <div class="topbar">
+            <a class="brand" href="index.html"><span>ASAP</span> NJ Drone Services</a>
+            <a class="btn btn-secondary" href="index.html#contact">Request a quote</a>
+        </div>
+
+        <p class="badge">FAA awareness · Free account · Advisory only</p>
+        <h1>Job site airspace check</h1>
+        <p class="lead">
+            Create a free account (or sign in), then check a job address for nearby controlled airspace, special-use areas,
+            UAS Facility Map ceilings, and airports—so you know what may need LAANC or further review.
+        </p>
+
+        <div class="legal">
+            <strong>Important:</strong>
+            Planning awareness only — <strong>not</strong> FAA authorization, LAANC approval, or a waiver.
+            The pilot in command must still verify with official sources and a LAANC USS (e.g. AirData) before flight.
+        </div>
+
+        <div class="user-bar" id="as-user-bar" hidden>
+            <span><span class="badge" style="margin:0 0.4rem 0 0">Airspace tool</span> Signed in as <strong id="as-user-label">—</strong>
+            <span style="display:block;font-size:0.78rem;color:var(--dim);margin-top:0.25rem">Separate from Client portal &amp; Boss desk logins</span></span>
+            <button type="button" class="btn btn-secondary" id="as-signout">Sign out of airspace</button>
+        </div>
+
+        <!-- Free account gate (lead capture) -->
+        <div class="card" id="as-gate">
+            <h2 style="margin-bottom:0.35rem">Sign in — then the map unlocks</h2>
+            <p class="muted" style="margin-bottom:0.85rem;font-size:0.95rem">
+                Google one-click when enabled, or free email account in 30 seconds.
+            </p>
+
+            <div class="oauth-row oauth-row-primary" id="as-oauth-row">
+                <button type="button" class="btn-oauth btn-oauth-google" id="as-btn-google">
+                    <span class="oauth-ico">G</span> Continue with Google
+                </button>
+            </div>
+            <div class="google-status" id="as-google-status" hidden></div>
+            <div class="oauth-row oauth-row-secondary" id="as-oauth-secondary" style="margin-top:0.45rem">
+                <button type="button" class="btn-oauth" id="as-btn-apple" hidden>ï£¿ Apple</button>
+                <button type="button" class="btn-oauth" id="as-btn-microsoft" hidden>âŠž Microsoft</button>
+            </div>
+            <p class="oauth-note" id="as-oauth-note">Google or email — both open the same map.</p>
+
+            <div class="auth-divider" id="as-auth-divider">or email</div>
+
+            <div class="auth-tabs" role="tablist">
+                <button type="button" class="auth-tab is-active" id="as-tab-signup" role="tab" aria-selected="true">Create free account</button>
+                <button type="button" class="auth-tab" id="as-tab-signin" role="tab" aria-selected="false">Sign in</button>
+            </div>
+
+            <div id="as-panel-signup">
+                <form class="auth-form" id="as-signup-form" autocomplete="on">
+                    <label for="as-auth-name">Full name <span style="color:#f07178">*</span>
+                        <input id="as-auth-name" name="name" required autocomplete="name" placeholder="Type your real name here" autofocus>
+                    </label>
+                    <label for="as-auth-email">Email <span style="color:#f07178">*</span>
+                        <input id="as-auth-email" name="email" type="email" required autocomplete="email" placeholder="you@gmail.com">
+                    </label>
+                    <label for="as-auth-company">Company <span class="dim">(optional)</span>
+                        <input id="as-auth-company" name="company" autocomplete="organization" placeholder="GC, insurance, solo pilot…">
+                    </label>
+                    <label for="as-auth-phone">Phone <span class="dim">(optional — we won’t publish it)</span>
+                        <input id="as-auth-phone" name="phone" type="tel" autocomplete="tel" placeholder="Only if you want a callback">
+                    </label>
+                    <label for="as-auth-role">I am a…
+                        <select id="as-auth-role" name="role">
+                            <option value="">Select…</option>
+                            <option>Part 107 pilot / operator</option>
+                            <option>General contractor / builder</option>
+                            <option>Insurance adjuster / TPA</option>
+                            <option>Engineer / survey / developer</option>
+                            <option>Property owner / facilities</option>
+                            <option>Solar O&amp;M</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <label class="auth-check">
+                        <input id="as-auth-ok" type="checkbox" required>
+                        <span>Create my free airspace account. ASAP NJ may email me about this tool and related flight services. No spam lists sold.</span>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Create free account &amp; open map</button>
+                </form>
+            </div>
+
+            <div id="as-panel-signin" hidden>
+                <form class="auth-form" id="as-signin-form" autocomplete="on">
+                    <label for="as-signin-email">Email
+                        <input id="as-signin-email" name="email" type="email" required autocomplete="username" placeholder="you@company.com">
+                    </label>
+                    <button class="btn btn-primary" type="submit" style="margin-top:0.85rem">Sign in with email</button>
+                    <p class="dim" style="margin-top:0.65rem">Same email you used when creating your free account.</p>
+                </form>
+            </div>
+
+            <div class="gate-msg" id="as-auth-msg" hidden></div>
+        </div>
+
+        <!-- Tool (unlocked after signup / sign-in) -->
+        <div id="as-app" hidden>
+        <div class="card">
+            <div class="ready" id="as-ready" hidden>Tool loading…</div>
+
+            <form id="as-form" autocomplete="off">
+                <div class="btn-stack" style="margin-bottom:1rem">
+                    <button class="btn btn-locate btn-wide" type="button" id="as-locate">
+                        ðŸ“ Use my location
+                    </button>
+                </div>
+
+                <label for="as-address">Or type a job address</label>
+                <div class="field-wrap">
+                    <input id="as-address" type="text" name="address"
+                           autocomplete="off" autocapitalize="words" spellcheck="false"
+                           placeholder="Start typing… e.g. 100 Main St, Toms River, NJ"
+                           aria-autocomplete="list" aria-controls="as-suggest" aria-expanded="false">
+                    <div id="as-suggest" class="as-suggest" role="listbox" hidden></div>
+                </div>
+
+                <div class="btn-stack">
+                    <button class="btn btn-primary" type="submit" id="as-run">Check airspace</button>
+                    <button class="btn btn-secondary" type="button" id="as-demo">Try Toms River demo</button>
+                </div>
+                <p class="dim">Suggestions as you type · GPS · or <strong style="color:var(--muted)">click the map</strong> · ~11 nm radius</p>
+                <div class="status" id="as-status" hidden></div>
+            </form>
+        </div>
+
+        <!-- Interactive airspace map -->
+        <div class="card map-card" id="as-map-card">
+            <div class="map-head">
+                <div>
+                    <h2>Interactive airspace map</h2>
+                    <p class="map-hint" id="as-map-hint">Loading map…</p>
+                </div>
+                <div class="map-tools">
+                    <button type="button" class="btn btn-secondary is-active" id="as-basemap-street">Streets</button>
+                    <button type="button" class="btn btn-secondary" id="as-basemap-sat">Satellite</button>
+                </div>
+            </div>
+            <div class="map-frame">
+                <div id="as-map" role="application" aria-label="Interactive airspace map"></div>
+            </div>
+            <div class="map-stats" id="as-map-stats"></div>
+            <div class="map-legend" aria-hidden="true">
+                <span><i style="background:#ff4d5a"></i>Class B</span>
+                <span><i style="background:#f0a020"></i>Class C</span>
+                <span><i style="background:#f5d76e"></i>Class D</span>
+                <span><i style="background:#3ec4e8"></i>Class E / UASFM</span>
+                <span><i style="background:#f07178"></i>Restricted SUA</span>
+                <span><i style="background:#3ec4e8;border-radius:50%"></i>Airport</span>
+                <span><i style="background:#fff;box-shadow:0 0 0 3px #3ec4e8;border-radius:50%"></i>Job site</span>
+            </div>
+        </div>
+
+        <div id="as-results" hidden>
+            <div class="card">
+                <h2>Location</h2>
+                <div class="meta">
+                    <span id="as-place">—</span>
+                    <span id="as-coords" class="dim">—</span>
+                </div>
+                <div class="links">
+                    <a class="btn btn-secondary" id="as-map-link" href="#" target="_blank" rel="noopener">Open in Google Maps</a>
+                    <a class="btn btn-secondary" id="as-faa-map-link" href="https://faa.maps.arcgis.com/apps/webappviewer/index.html?id=9c2e4406710048e19806ebf6a06754ad" target="_blank" rel="noopener">FAA UAS maps</a>
+                    <a class="btn btn-primary" id="as-quote-link" href="index.html#contact">Quote this site</a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>What this may mean for flight</h2>
+                <div id="as-flags"></div>
+            </div>
+            <div class="card">
+                <h2>UAS Facility Map (grid)</h2>
+                <div id="as-uasfm"></div>
+            </div>
+            <div class="card">
+                <h2>Class airspace (nearby)</h2>
+                <div id="as-class"></div>
+            </div>
+            <div class="card">
+                <h2>Special-use airspace</h2>
+                <div id="as-sua"></div>
+            </div>
+            <div class="card">
+                <h2>Airports &amp; heliports (nearby)</h2>
+                <div id="as-airports"></div>
+            </div>
+            <div class="card">
+                <h2>Next steps with ASAP NJ</h2>
+                <ul>
+                    <li>Need this site flown? <a href="index.html#contact">Tell us the job</a>—we plan with AirData / LAANC tools.</li>
+                    <li>Need RTK near Toms River? <a href="index.html#rtk">Free NTRIP starter or Pro seat</a> — any standard NTRIP client; <a href="rtk-setup.html">connection guide</a>.</li>
+                    <li>Controlled airspace: we request authorization when eligible. Waivers are separate when required.</li>
+                </ul>
+            </div>
+        </div>
+        </div><!-- /#as-app -->
+
+        <footer>
+            ASAP NJ Drone Services · Free airspace account · FAA open data + Esri geocoding<br>
+            Not affiliated with the FAA. Verify before you fly. · Interactive map · Page build 2026-08-01i
+        </footer>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/lead-config.js?v=2"></script>
+    <script src="js/lead-capture.js?v=3"></script>
+    <script src="js/airspace-auth-config.js?build=20260806k"></script>
+    <script src="js/airspace-auth.js?build=20260806k"></script>
+    <script src="js/airspace-map.js?build=20260801j"></script>
+    <script src="js/airspace-app.js?build=20260801j"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+﻿{
+    "generated_at":  1786188646.8126814,
+    "generated_at_iso":  "2026-08-08T07:30:46",
+    "host":  "MINI",
+    "growth":  {
+                   "week_start":  "2026-08-03",
+                   "week_end":  "2026-08-09",
+                   "week_number":  32,
+                   "year":  2026,
+                   "label":  "Week of Aug 3 - Aug 9, 2026",
+                   "refreshed_at_iso":  "2026-08-08T07:30:46",
+                   "theme":  "Grow seats + visibility",
+                   "idea_count":  6
+               },
+    "rtk":  {
+                "base_up":  true,
+                "base_detail":  "base-online [mini-failover]",
+                "live_clients":  2,
+                "live":  [
+                             {
+                                 "who":  "Gary Colyer / ASAP NJ Drone Services",
+                                 "email":  "gary.colyer@asap-nj.com",
+                                 "ip":  "[redacted]",
+                                 "user":  "gary-m4t",
+                                 "connected_for_sec":  null,
+                                 "name":  "Gary Colyer",
+                                 "company":  "ASAP NJ Drone Services",
+                                 "via":  "base-online",
+                                 "phone":  "19082168527",
+                                 "bytes_sent":  null
+                             },
+                             {
+                                 "who":  "Gary Colyer / ASAP NJ Drone Services",
+                                 "email":  "gary.colyer@asap-nj.com",
+                                 "ip":  "[redacted]",
+                                 "user":  "gary-m4t",
+                                 "connected_for_sec":  null,
+                                 "name":  "Gary Colyer",
+                                 "company":  "ASAP NJ Drone Services",
+                                 "via":  "base-online",
+                                 "phone":  "19082168527",
+                                 "bytes_sent":  null
+                             }
+                         ],
+                "sessions_7d":  4,
+                "minutes_7d":  105.2,
+                "kb_7d":  9107.1,
+                "top_users":  [
+                                  {
+                                      "who":  "Gary Colyer / ASAP NJ Drone Services",
+                                      "user":  "gary-m4t",
+                                      "sessions":  3,
+                                      "minutes":  105.2,
+                                      "kb":  9105.7
+                                  },
+                                  {
+                                      "who":  "Status HUD / ASAP-NJ",
+                                      "user":  "asap-monitor",
+                                      "sessions":  1,
+                                      "minutes":  0,
+                                      "kb":  1.4
+                                  }
+                              ],
+                "recent":  [
+                               {
+                                   "connected_at_iso":  "2026-08-01T16:40:46",
+                                   "via":  "base-online",
+                                   "ip":  "[redacted]",
+                                   "user":  "gary-m4t",
+                                   "kb":  62.9,
+                                   "duration_sec":  "41"
+                               },
+                               {
+                                   "connected_at_iso":  "2026-08-01T16:44:17",
+                                   "via":  "local-pc",
+                                   "ip":  "127.0.0.1",
+                                   "user":  "gary-m4t",
+                                   "kb":  6649.8,
+                                   "duration_sec":  "4669"
+                               },
+                               {
+                                   "connected_at_iso":  "2026-08-07T21:16:17",
+                                   "via":  "local-pc",
+                                   "ip":  "127.0.0.1",
+                                   "user":  "asap-monitor",
+                                   "kb":  1.4,
+                                   "duration_sec":  "0"
+                               },
+                               {
+                                   "connected_at_iso":  "2026-08-07T21:33:59",
+                                   "via":  "local-pc",
+                                   "ip":  "127.0.0.1",
+                                   "user":  "gary-m4t",
+                                   "kb":  2393,
+                                   "duration_sec":  "1602"
+                               }
+                           ],
+                "auth_fails_24h":  0,
+                "users_enabled":  3,
+                "users_total":  5,
+                "public_host":  "rtk.asap-nj.com",
+                "public_ip":  "67.205.128.14",
+                "port":  2101,
+                "mount":  "ASAP-NJ"
+            },
+    "site":  {
+                 "note":  "Visitor charts optional right now. Mini is publishing RTK + ops stats (server offline). Add secrets\\cloudflare.env on Mini for page-view numbers, or restore the server.",
+                 "forms_note":  "Contact + RTK registration go to your Formsubmit email. Future: auto-count submits into this file.",
+                 "metrics":  [
+                                 {
+                                     "value":  "missing_token",
+                                     "label":  "Cloudflare status"
+                                 },
+                                 {
+                                     "value":  "Mini Publish-BossStats (15m, server offline)",
+                                     "label":  "Boss stats publisher"
+                                 },
+                                 {
+                                     "value":  "67.205.128.14:2101 (VPS tunnel)",
+                                     "label":  "Public NTRIP host"
+                                 },
+                                 {
+                                     "value":  "server offline - Mini owns RTK + stats",
+                                     "label":  "Ops mode"
+                                 },
+                                 {
+                                     "value":  "GitHub Pages jerseyjers/ASAP-NJ",
+                                     "label":  "Website deploy"
+                                 }
+                             ],
+                 "cloudflare":  {
+                                    "ok":  false,
+                                    "source":  null,
+                                    "fetched_at_iso":  "2026-08-08T07:30:46",
+                                    "period_days":  7,
+                                    "zone_name":  "asap-nj.com",
+                                    "requests_7d":  null,
+                                    "page_views_7d":  null,
+                                    "uniques_7d":  null,
+                                    "bytes_7d":  null,
+                                    "cached_pct":  null,
+                                    "threats_7d":  null,
+                                    "visits_7d":  null,
+                                    "page_loads_7d":  null,
+                                    "daily":  [
+
+                                              ],
+                                    "top_paths":  [
+
+                                                  ],
+                                    "error":  "missing_token",
+                                    "setup_hint":  "Optional: drop secrets\\cloudflare.env (Read Analytics token) on Mini or the server, then re-run Publish-BossStats. RTK numbers already work without it."
+                                }
+             },
+    "notifications":  [
+                          {
+                              "level":  "info",
+                              "text":  "2 live RTK client(s) connected right now.",
+                              "ts":  "2026-08-08T07:30:46"
+                          },
+                          {
+                              "level":  "ok",
+                              "text":  "RTK base UP via base-online [mini-failover] (status source: mini-failover).",
+                              "ts":  "2026-08-08T07:30:46"
+                          }
+                      ],
+    "ideas":  [
+                  {
+                      "priority":  "high",
+                      "title":  "Live clients right now",
+                      "body":  "2 rover(s) connected. Note who they are under RTK usage - warm follow-up while they are mid-job often converts to paid on-site or preferred vendor.",
+                      "tag":  "rtk"
+                  },
+                  {
+                      "priority":  "high",
+                      "title":  "Base is hot - push partner seats",
+                      "body":  "RTK base is UP (base-online [mini-failover]). Good week to onboard 1-2 new survey crews while reliability is strong. Point them at rtk.asap-nj.com + setup guide.",
+                      "tag":  "rtk"
+                  },
+                  {
+                      "priority":  "high",
+                      "title":  "VIP this week: gary-m4t",
+                      "body":  "Gary Colyer / ASAP NJ Drone Services leads usage at ~105.2 min / 3 sessions. Personal thank-you + ask for a referral or paid on-site day.",
+                      "tag":  "sales"
+                  },
+                  {
+                      "priority":  "normal",
+                      "title":  "Visitor charts optional",
+                      "body":  "Server is offline. Boss stats + RTK are from Mini. Page-view numbers need secrets\\cloudflare.env on Mini or the server back online - site itself is fine.",
+                      "tag":  "web"
+                  },
+                  {
+                      "priority":  "normal",
+                      "title":  "Partner one-pager PDF",
+                      "body":  "One-page RTK partner PDF (host, port, mount, how to apply) attached to every approval email.",
+                      "tag":  "weekly"
+                  },
+                  {
+                      "priority":  "normal",
+                      "title":  "Google Business posts",
+                      "body":  "One Google Business post this week with a jobsite still - local search loves fresh photos.",
+                      "tag":  "weekly"
+                  }
+              ]
+}

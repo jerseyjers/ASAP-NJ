@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar Thermal Drone Inspection New Jersey | PV Hot Spots &amp; Loss | ASAP NJ</title>
+  <meta name="description" content="Solar thermal drone inspections in New Jersey—map hot modules, string patterns, and production-loss estimates. Electrical troubleshooting path + licensed electrician backing. FAA Part 107.">
+  <link rel="canonical" href="https://asap-nj.com/solar-thermal-inspection-nj.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asap-nj.com/solar-thermal-inspection-nj.html">
+  <meta property="og:title" content="Solar Thermal Drone Inspection New Jersey | ASAP NJ">
+  <meta property="og:description" content="Thermal mapping of solar arrays in NJ: hot modules, underperformance, dollar-impact estimates, and electrical next steps. FAA Part 107.">
+  <meta property="og:image" content="https://asap-nj.com/graphics/showcase/gen-thermal-array.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solar Thermal Drone Inspection New Jersey | ASAP NJ">
+  <meta name="twitter:description" content="PV thermal mapping, loss estimates &amp; troubleshooting path—South Jersey based, Part 107.">
+  <meta name="twitter:image" content="https://asap-nj.com/graphics/showcase/gen-thermal-array.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="graphics/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0c10; --card: #161a23; --border: rgba(255,255,255,.1);
+      --text: #f3f5f7; --muted: #9aa3b2; --dim: #6b7382;
+      --accent: #3ec4e8; --solar: #f0a020; --radius: 14px;
+      --font: 'DM Sans', system-ui, sans-serif;
+      --display: 'Instrument Serif', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.55; }
+    a { color: var(--accent); }
+    .wrap { width: min(100% - 2rem, 880px); margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky; top: 0; background: rgba(10,12,16,.92); backdrop-filter: blur(12px); z-index: 10;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .brand { color: var(--text); text-decoration: none; font-family: var(--display); font-size: 1.35rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: .75rem 1.2rem; border-radius: 999px; font-weight: 700; font-size: .9rem;
+      text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    }
+    .btn-primary { background: var(--accent); color: #041018; }
+    .btn-solar { background: var(--solar); color: #1a1000; }
+    .btn-ghost { border-color: var(--border); color: var(--text); }
+    .hero {
+      padding: 3rem 0 2.5rem;
+      background: radial-gradient(ellipse 60% 50% at 80% 0%, rgba(240,160,32,.14), transparent 55%);
+    }
+    .eyebrow { color: var(--solar); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .75rem; }
+    h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 5vw, 2.85rem); line-height: 1.15; margin-bottom: .85rem; }
+    h2 { font-family: var(--display); font-weight: 400; font-size: 1.65rem; margin: 2rem 0 .75rem; }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 40em; margin-bottom: 1.5rem; }
+    .prose { color: var(--muted); font-size: 1rem; max-width: 42em; margin-bottom: 1rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: .55rem; }
+    .card p, .card li { color: var(--muted); font-size: .94rem; }
+    .card ul { margin: .65rem 0 0 1.1rem; }
+    .card li { margin: .3rem 0; }
+    .photo {
+      border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border);
+      margin: 1.5rem 0; max-height: 360px;
+    }
+    .photo img { width: 100%; height: 360px; object-fit: cover; display: block; }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: .65rem; margin: 1.5rem 0; }
+    @media (max-width: 800px) { .steps { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+    .step { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .9rem; }
+    .step strong { display: block; color: var(--solar); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .35rem; }
+    .step p { color: var(--muted); font-size: .88rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 1.5rem; }
+    .chips span {
+      font-size: .8rem; font-weight: 600; padding: .35rem .75rem; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .faq details {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: .9rem 1rem; margin-bottom: .55rem;
+    }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq details p { color: var(--muted); font-size: .94rem; margin-top: .55rem; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 2rem; color: var(--dim); font-size: .82rem; margin-top: 2rem; }
+    form label { display: grid; gap: .3rem; font-size: .82rem; font-weight: 600; color: var(--muted); margin-bottom: .75rem; }
+    input, textarea, select {
+      width: 100%; padding: .75rem .85rem; border-radius: 10px; border: 1px solid var(--border);
+      background: rgba(0,0,0,.28); color: var(--text); font: inherit;
+    }
+    form .btn-primary { width: 100%; border: none; margin-top: .25rem; }
+    .related { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1rem 0 2rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Solar thermal drone inspection New Jersey",
+    "serviceType": "Solar PV thermal drone inspection",
+    "url": "https://asap-nj.com/solar-thermal-inspection-nj.html",
+    "description": "Thermal drone mapping of solar PV arrays in New Jersey to locate hot modules, string-level underperformance, estimate production loss, and support electrical troubleshooting with licensed electrician backing when required.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ASAP NJ Drone Services",
+      "url": "https://asap-nj.com/",
+      "email": "gary.colyer@asap-nj.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "areaServed": { "@type": "State", "name": "New Jersey" }
+    },
+    "areaServed": [
+      { "@type": "State", "name": "New Jersey" },
+      { "@type": "AdministrativeArea", "name": "South Jersey" },
+      { "@type": "AdministrativeArea", "name": "Ocean County" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD",
+      "url": "https://asap-nj.com/solar-thermal-inspection-nj.html#quote"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a solar thermal drone inspection include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Thermal and visual survey of the array under suitable conditions, mapping of hot spots and underperforming modules or string patterns, practical production-loss and priority estimates, and an electrical troubleshooting path—with licensed electrician backing when corrective electrical work requires a license."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the best time for solar thermal imaging?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Useful thermal contrasts usually need adequate irradiance and stable conditions. We plan flights so anomalies can actually show up—not a random cloudy pass that wastes everyone’s time. Exact windows depend on site, season, and forecast."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you only fly solar, or can you troubleshoot electrically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASAP NJ brings solar electrical background and circuit-level thinking. Aerial thermal finds the story; electrical expertise helps finish it. When work needs a licensed electrician, we work with licensed support so the job stays compliant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I request a solar thermal quote in New Jersey?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the form on this page. Include site address, array size or inverter info if known, production drop notes, and timing. We reply by email—no public phone number required."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">ASAP NJ</a>
+      <div class="actions">
+        <a class="btn btn-ghost" href="index.html">Full site</a>
+        <a class="btn btn-solar" href="#quote">Request solar quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Solar PV · Thermal · New Jersey</p>
+        <h1>Solar thermal drone inspections in New Jersey</h1>
+        <p class="lead">
+          Map hot modules, string patterns, and underperformance—then turn findings into production-loss and priority insight,
+          not a folder of mystery heat maps.
+          <strong style="color:var(--text)">Solar Thermal Scan from $499</strong> (residential / small commercial; portfolios quoted).
+          Built on solar electrical background with licensed electrician backing when work needs a license.
+        </p>
+        <div class="actions">
+          <a class="btn btn-solar" href="#quote">Scope a solar thermal flight</a>
+          <a class="btn btn-ghost" href="index.html#playground">Panel-fail cost demo</a>
+          <a class="btn btn-ghost" href="thermal-drone-inspection-nj.html">All thermal services</a>
+        </div>
+        <div class="chips">
+          <span>From $499</span>
+          <span>Thermal + visual survey</span>
+          <span>Module &amp; string patterns</span>
+          <span>$ / kWh loss estimates</span>
+          <span>Electrical troubleshooting path</span>
+          <span>FAA Part 107</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="photo">
+        <img src="graphics/showcase/gen-thermal-array.jpg" alt="Thermal map of commercial rooftop solar with hot modules highlighted" width="1600" height="900" loading="eager">
+      </div>
+
+      <h2>Not "fly and email JPGs"</h2>
+      <p class="prose">
+        Owners, O&amp;M teams, and electricians don't need prettier heat maps—they need to know <strong style="color:var(--text)">where to go</strong>,
+        <strong style="color:var(--text)">what's costing money</strong>, and <strong style="color:var(--text)">what to check next</strong>.
+        ASAP NJ pairs aerial thermal with solar-minded diagnosis so repair vs. wait is an informed call.
+      </p>
+
+      <h2>How we work the array</h2>
+      <div class="steps">
+        <div class="step"><strong>1 · Fly &amp; capture</strong><p>Thermal + visual under conditions where anomalies can show up.</p></div>
+        <div class="step"><strong>2 · Map failures</strong><p>Hot spots, weak modules, string patterns, soiling, diode/bypass tells.</p></div>
+        <div class="step"><strong>3 · $ impact</strong><p>Practical production-loss and dollar estimates for prioritization.</p></div>
+        <div class="step"><strong>4 · Next steps</strong><p>Electrical-minded path + licensed backup when required.</p></div>
+      </div>
+
+      <h2>What you walk away with</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Annotated thermal map</h3>
+          <p>Problem modules and zones called out so your team knows exactly where to put boots.</p>
+        </article>
+        <article class="card">
+          <h3>Loss &amp; priority insight</h3>
+          <p>Which issues are costing the most—and what to fix first for the best return.</p>
+        </article>
+        <article class="card">
+          <h3>Electrical troubleshooting path</h3>
+          <p>Circuit-level thinking from someone who lives solar—not a pure photo vendor.</p>
+        </article>
+        <article class="card">
+          <h3>Maintenance-ready notes</h3>
+          <p>Clear findings for O&amp;M, owners, or electricians: repair, replace, or deeper test.</p>
+        </article>
+      </div>
+
+      <h2>Who hires this</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Ideal customers</h3>
+          <ul>
+            <li>Commercial &amp; industrial rooftop PV owners</li>
+            <li>Ground-mount and farm-scale arrays</li>
+            <li>O&amp;M providers needing field intelligence</li>
+            <li>Electricians / EPC follow-up after thermal finds</li>
+            <li>Insurance / loss related to solar performance</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Service area</h3>
+          <ul>
+            <li>New Jersey primary — South Jersey base</li>
+            <li>Toms River / Ocean County hub</li>
+            <li>Rooftop and ground-mount sites</li>
+            <li>Travel for paying work, quoted honestly</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="prose">
+        <strong style="color:var(--text)">Licensed electrician backing.</strong>
+        Aerial thermal finds the story; electrical expertise finishes it. When corrective electrical work needs a license,
+        we work with licensed support so the job stays compliant.
+      </p>
+
+      <h2>Related</h2>
+      <div class="related">
+        <a class="btn btn-ghost" href="thermal-drone-inspection-nj.html">General thermal drone NJ</a>
+        <a class="btn btn-ghost" href="insurance.html">Solar-related insurance claims</a>
+        <a class="btn btn-ghost" href="index.html#demo">Interactive panel-fail demo</a>
+        <a class="btn btn-ghost" href="index.html">Full ASAP NJ site</a>
+      </div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>What does a solar thermal drone inspection include?</summary>
+          <p>Thermal + visual survey, mapping of hot/underperforming modules and string patterns, practical loss and priority estimates, and an electrical troubleshooting path—with licensed electrician backing when required.</p>
+        </details>
+        <details>
+          <summary>When is the best time for solar thermal imaging?</summary>
+          <p>We plan for irradiance and conditions that make anomalies visible. A random low-light pass often wastes the flight—scope includes setting expectations for weather windows.</p>
+        </details>
+        <details>
+          <summary>Do you only fly, or help troubleshoot?</summary>
+          <p>Thermal finds candidates; solar electrical background helps interpret them. Corrective electrical work that requires a license goes through licensed support.</p>
+        </details>
+        <details>
+          <summary>How do I request a quote without a phone call?</summary>
+          <p>Use the form below with site address, array/inverter notes if known, production issues, and timing. We reply by email during business hours.</p>
+        </details>
+      </div>
+
+      <article class="card" id="quote" style="margin:2rem 0 2.5rem">
+        <h3 style="margin-bottom:.4rem">Describe the array</h3>
+        <p style="color:var(--muted);margin:.4rem 0 1rem;font-size:.94rem">
+          Size, inverter notes, and any production drop help us plan irradiance and deliverables—not a sales quiz.
+        </p>
+        <form data-lead-form="solar" action="https://formsubmit.co/gary.colyer@asap-nj.com" method="POST">
+          <input type="hidden" name="_subject" value="Solar thermal inspection request — ASAP NJ">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting ASAP NJ Drone Services. We received your request and will follow up by email with next steps. Please reply to that email with any extra details so everything stays clear and on the record. — Gary Colyer · ASAP NJ · https://asap-nj.com/ · gary.colyer@asap-nj.com">
+          <input type="hidden" name="_next" value="https://asap-nj.com/solar-thermal-inspection-nj.html">
+          <label>Your name <input name="name" required autocomplete="name"></label>
+          <label>Email <input type="email" name="email" required autocomplete="email"></label>
+          <label>Phone <span style="color:var(--dim);font-weight:500">(optional · same-day help)</span> <input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Company (optional) <input name="company" autocomplete="organization"></label>
+          <label>Site address <input id="solar-location" name="location" data-address-autocomplete required placeholder="Start typing street, city, NJ…" autocomplete="off"></label>
+          <label>Array type
+            <select name="array_type">
+              <option>Commercial rooftop PV</option>
+              <option>Residential rooftop PV</option>
+              <option>Ground-mount / farm</option>
+              <option>Portfolio / multiple sites</option>
+              <option>Not sure / mixed</option>
+            </select>
+          </label>
+          <label>Approx. system size or inverter notes (optional)
+            <input name="system_notes" placeholder="e.g. ~250 kW, 2 inverters, production down 15%">
+          </label>
+          <label>What you want out of the flight
+            <textarea name="message" rows="4" required placeholder="Hot modules, O&amp;M check, loss estimate, access, timeline…"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send array details</button>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      ASAP NJ Drone Services · FAA Part 107 · <a href="index.html">asap-nj.com</a> ·
+      <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener">Airdata certificate</a> ·
+      <a href="https://www.instagram.com/asap_nj_drone_services/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+<script src="js/address-autocomplete.js?v=1"></script>
+<script src="js/lead-config.js?v=2"></script>
+<script src="js/lead-capture.js?v=3"></script>
+</body>
+</html>

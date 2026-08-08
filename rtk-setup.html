@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RTK connection setup | ASAP NJ Drone Services</title>
+    <meta name="description" content="Connect to ASAP-NJ NTRIP: rtk.asap-nj.com port 2101 mount ASAP-NJ. Free starter or Pro seat. Survey, construction, mapping, any NTRIP client. Setup steps included.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0c10">
+    <link rel="canonical" href="https://asap-nj.com/rtk-setup.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0c10; --bg-card: #161a23; --bg-elev: #12151c;
+            --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.14);
+            --text: #f3f5f7; --muted: #9aa3b2; --dim: #6b7382;
+            --accent: #3ec4e8; --accent-soft: rgba(62,196,232,0.14); --ok: #3dd68c;
+            --radius: 14px; --font: 'DM Sans', system-ui, sans-serif; --display: 'Instrument Serif', Georgia, serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: var(--accent); }
+        .wrap { width: min(100% - 2rem, 760px); margin: 0 auto; padding: 2rem 0 4rem; }
+        .ok-banner {
+            display: none; background: rgba(61,214,140,0.12); border: 1px solid rgba(61,214,140,0.4);
+            color: var(--ok); padding: 1rem 1.15rem; border-radius: var(--radius); margin-bottom: 1.5rem; font-weight: 600;
+        }
+        .ok-banner.show { display: block; }
+        .ok-banner p { font-weight: 400; color: var(--muted); margin-top: 0.35rem; font-size: 0.92rem; }
+        h1 { font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0.5rem 0 0.75rem; }
+        .lead { color: var(--muted); margin-bottom: 1.5rem; }
+        .card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 1.25rem 1.35rem; margin-bottom: 1.25rem;
+        }
+        .card h2 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+        .card h3 { font-size: 0.95rem; margin: 1rem 0 0.5rem; color: var(--accent); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th, td { text-align: left; padding: 0.5rem 0.4rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        th { color: var(--dim); font-weight: 600; width: 8rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        td code, .mono { font-family: ui-monospace, Consolas, monospace; color: var(--text); font-size: 0.86rem; word-break: break-all; }
+        ol, ul { margin: 0.5rem 0 0 1.2rem; color: var(--muted); }
+        li { margin: 0.35rem 0; }
+        .badge {
+            display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; padding: 0.25rem 0.55rem; border-radius: 999px;
+            background: var(--accent-soft); color: var(--accent); margin-bottom: 0.75rem;
+        }
+        .gear-panel { display: none; }
+        .gear-panel.active { display: block; }
+        .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0; }
+        .tabs button {
+            border: 1px solid var(--border-strong); background: var(--bg-elev); color: var(--muted);
+            padding: 0.45rem 0.75rem; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.82rem; font-weight: 600;
+        }
+        .tabs button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+        .warn {
+            border-left: 3px solid #f0a020; background: rgba(240,160,32,0.08);
+            padding: 0.85rem 1rem; border-radius: 0 10px 10px 0; color: var(--muted); font-size: 0.9rem; margin: 1rem 0;
+        }
+        .ok-box {
+            border-left: 3px solid var(--ok); background: rgba(61,214,140,0.08);
+            padding: 0.85rem 1rem; border-radius: 0 10px 10px 0; color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem;
+        }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 0.75rem 1.2rem; border-radius: 999px; font-weight: 600; text-decoration: none;
+            background: var(--accent); color: #041016; border: none; cursor: pointer; font: inherit;
+        }
+        .btn:hover { filter: brightness(1.05); color: #041016; }
+        .btn-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+        .btn-ghost { background: transparent; border: 1px solid var(--border-strong); color: var(--text); }
+        footer { text-align: center; color: var(--dim); font-size: 0.8rem; margin-top: 2rem; }
+        .copy-row { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin: 0.25rem 0; }
+        .copy-btn {
+            font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 6px; border: 1px solid var(--border-strong);
+            background: var(--bg-elev); color: var(--muted); cursor: pointer; font: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="ok-banner" id="ok-banner">
+            ✓ Seat request received — your login activates automatically.
+            <p id="ok-detail">If you just signed up, your <strong style="color:var(--text)">unique username and password</strong> were shown on the previous screen (and appear below if this browser still has them). Seat is usually live within about a minute.</p>
+        </div>
+
+        <div class="card" id="personal-creds" style="display:none;border-color:rgba(61,214,140,0.35)">
+            <h2 style="color:var(--ok)">Your private login (this browser only)</h2>
+            <p style="color:var(--muted);font-size:0.9rem;margin-bottom:0.75rem">Copy these into your NTRIP client (survey rover, layout software, or aircraft app). Do not share.</p>
+            <table>
+                <tr><th>Username</th><td><span class="mono" id="pc-user">—</span> <button type="button" class="copy-btn" id="pc-user-copy">Copy</button></td></tr>
+                <tr><th>Password</th><td><span class="mono" id="pc-pass">—</span> <button type="button" class="copy-btn" id="pc-pass-copy">Copy</button></td></tr>
+            </table>
+            <p style="color:var(--dim);font-size:0.82rem;margin-top:0.65rem">If you closed the signup page without saving, re-register with the same email or email ASAP NJ.</p>
+        </div>
+
+        <p class="badge">ASAP NJ · Standard NTRIP · Any compatible client</p>
+        <h1>Connect to the ASAP-NJ stream</h1>
+        <p class="lead">
+            Standard NTRIP corrections from our <strong style="color:var(--text)">fixed base on the Toms River</strong>—best
+            <strong style="color:var(--text)">near the station</strong>, not free statewide coverage.
+            Works with <strong style="color:var(--text)">any gear that accepts NTRIP</strong>: ground GNSS, construction layout,
+            mapping collectors, and RTK aircraft of any brand.
+        </p>
+        <div class="ok-box" style="margin-bottom:1.25rem">
+            <strong style="color:var(--ok)">What ASAP NJ provides</strong>
+            <ul style="margin:0.5rem 0 0 1.1rem;color:var(--muted)">
+                <li><strong style="color:var(--text)">Live NTRIP RTCM</strong> — host <span class="mono">rtk.asap-nj.com</span>, port <span class="mono">2101</span>, mount <span class="mono">ASAP-NJ</span></li>
+                <li><strong style="color:var(--text)">Free starter seat</strong> — unique login at signup, fair-use daily limits</li>
+                <li><strong style="color:var(--text)">Pro seat</strong> — same login, full workday allowance (monthly or week pass)</li>
+                <li><strong style="color:var(--text)">Base data / RINEX packs</strong> — quoted by day for office post-process (not on free seats)</li>
+                <li><strong style="color:var(--text)">On-site RTK</strong> — quoted when your job is outside practical base range</li>
+            </ul>
+        </div>
+        <p style="margin-bottom:1.25rem">
+            <a href="index.html#rtk-register">Get a free seat</a>
+            · <a href="index.html#rtk-plans">Plans &amp; pricing</a>
+            · <a href="index.html#contact">On-site RTK / data pack</a>
+            · <a href="airspace.html">Check job airspace</a>
+        </p>
+
+        <div class="card" id="creds">
+            <h2>Connection parameters</h2>
+            <div class="ok-box">
+                <strong style="color:var(--ok)">Unique partner credentials · never a shared public password.</strong>
+                You choose or we generate a login at signup; the seat auto-activates on our caster.
+                Do not share. Compromised accounts are disabled individually.
+            </div>
+            <div class="warn" style="margin-bottom:1rem">
+                <strong style="color:#d4b06a">Coverage note:</strong>
+                Fix quality declines with distance from the Toms River base. Outside practical range, arrange on-site RTK with ASAP NJ rather than relying on this stream.
+            </div>
+            <table>
+                <tr>
+                    <th>Public host<br><span style="font-weight:400;text-transform:none;letter-spacing:0">(internet / cellular)</span></th>
+                    <td>
+                        <div class="copy-row"><span class="mono" id="v-public-dns">rtk.asap-nj.com</span> <button type="button" class="copy-btn" data-copy="rtk.asap-nj.com">Copy</button></div>
+                        <div class="copy-row"><span class="mono" id="v-public-ip">67.205.128.14</span> <button type="button" class="copy-btn" data-copy="67.205.128.14">Copy IP</button></div>
+                        <p style="color:var(--dim);font-size:0.82rem;margin-top:0.4rem">Use this for all field work. Works from cellular, hotspot, or any internet. If the name is not resolving yet, use the IP.</p>
+                    </td>
+                </tr>
+                <tr><th>Mount</th><td class="mono" id="v-mount">ASAP-NJ</td></tr>
+                <tr><th>Port</th><td class="mono" id="v-port">2101</td></tr>
+                <tr>
+                    <th>Username</th>
+                    <td><span class="mono" id="v-user">— from signup (unique) —</span></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><span class="mono" id="v-pass">— from signup (unique) —</span></td>
+                </tr>
+            </table>
+            <div class="warn">
+                <strong style="color:#d4b06a">Just signed up?</strong>
+                Your username/password were shown right after submit. Seat enables automatically within about a minute.
+                Free starter = fair-use daily limits. Need a full workday? Upgrade to Pro (same login) from the
+                <a href="index.html#rtk-plans">RTK plans</a> on the main site after Stripe is linked—or email ASAP NJ.
+            </div>
+            <div class="ok-box" id="paid-banner" style="display:none;margin-top:1rem">
+                <strong style="color:var(--ok)">Payment received — thanks.</strong>
+                Keep your existing username/password. We promote your seat to Pro after payment confirmation
+                (usually same business day). Email <a href="mailto:gary.colyer@asap-nj.com">gary.colyer@asap-nj.com</a>
+                with your NTRIP username if you need it faster.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Setup by gear type</h2>
+            <p style="color:var(--muted);font-size:0.92rem;margin-bottom:0.5rem">
+                Every path uses the <strong style="color:var(--text)">same NTRIP fields</strong> above.
+                Use the <strong style="color:var(--text)">username and password from signup</strong> (not a shared public login).
+            </p>
+            <div class="tabs" id="gear-tabs" role="tablist">
+                <button type="button" class="active" data-gear="generic">Survey / GNSS / layout</button>
+                <button type="button" data-gear="dji">DJI aircraft (Pilot 2)</button>
+                <button type="button" data-gear="other-air">Other RTK aircraft</button>
+            </div>
+
+            <div class="gear-panel active" id="panel-generic">
+                <h3>Ground GNSS, survey, construction &amp; mapping clients</h3>
+                <p style="color:var(--muted);font-size:0.9rem;margin:0.35rem 0 0.75rem">
+                    Emlid, Trimble, Leica, Topcon, Spectra, Carlson, CHC, South, and most software that has an “NTRIP caster” or “CORS” profile.
+                </p>
+                <ol>
+                    <li>Add a new <strong style="color:var(--text)">NTRIP caster / network profile</strong> (wording varies by brand).</li>
+                    <li>Address / host: <span class="mono">rtk.asap-nj.com</span> — if the name fails, use <span class="mono">67.205.128.14</span>.</li>
+                    <li>Port: <span class="mono">2101</span></li>
+                    <li>Mount point / mount: <span class="mono">ASAP-NJ</span></li>
+                    <li>Username &amp; password: <strong style="color:var(--text)">from your ASAP NJ signup</strong></li>
+                    <li>Protocol: NTRIP (v1 is fine). Corrections: RTCM 3.x from our fixed base.</li>
+                    <li>Connect and confirm stream age / status is live before you survey or stake.</li>
+                    <li>Need internet on the rover or controller (cellular, hotspot, or field modem)—same as any cloud caster.</li>
+                </ol>
+                <div class="ok-box" style="margin-top:1rem">
+                    <strong style="color:var(--ok)">Brand-agnostic:</strong>
+                    If the device asks for host, port, mount, user, and password, you’re set. We are not locked to one manufacturer.
+                </div>
+            </div>
+
+            <div class="gear-panel" id="panel-dji">
+                <h3>DJI aircraft — Pilot 2 Custom Network RTK</h3>
+                <p style="color:var(--muted);font-size:0.9rem;margin:0.35rem 0 0.75rem">
+                    One supported path among many—not the only use of this stream. Matrice / Mavic RTK models with Custom Network RTK.
+                </p>
+                <ol>
+                    <li>Power on RC + aircraft. Open <strong style="color:var(--text)">DJI Pilot 2</strong>.</li>
+                    <li>Confirm the RC has internet (cellular, hotspot, or Wi‑Fi with data path).</li>
+                    <li>Camera view → <strong style="color:var(--text)">RTK</strong> (or Settings → RTK).</li>
+                    <li>RTK Positioning <strong style="color:var(--text)">ON</strong> → Service Type → <strong style="color:var(--text)">Custom Network RTK</strong>.</li>
+                    <li>Enter:
+                        <table style="margin-top:0.5rem">
+                            <tr><th>Host</th><td class="mono">rtk.asap-nj.com</td></tr>
+                            <tr><th>If DNS fails</th><td class="mono">67.205.128.14</td></tr>
+                            <tr><th>Port</th><td class="mono">2101</td></tr>
+                            <tr><th>User / password</th><td class="mono">from your ASAP NJ signup</td></tr>
+                            <tr><th>Mount point</th><td class="mono">ASAP-NJ</td></tr>
+                        </table>
+                    </li>
+                    <li>Save / connect. Wait for <strong style="color:var(--text)">FIX</strong>.</li>
+                </ol>
+                <div class="warn" style="margin-top:1rem">
+                    <strong style="color:#d4b06a">Note:</strong> Custom Network RTK uses the <strong>controller’s</strong> network path. No internet on the RC = no FIX.
+                </div>
+            </div>
+
+            <div class="gear-panel" id="panel-other-air">
+                <h3>Other RTK aircraft / non-DJI NTRIP</h3>
+                <ol>
+                    <li>Open your flight app’s RTK / NTRIP / CORS settings (labels vary by brand).</li>
+                    <li>Choose custom / network / NTRIP caster—not a closed manufacturer-only network if you want ASAP-NJ.</li>
+                    <li>Same fields: host <span class="mono">rtk.asap-nj.com</span>, port <span class="mono">2101</span>, mount <span class="mono">ASAP-NJ</span>, your unique user/pass.</li>
+                    <li>If the app says “Server” instead of “Host,” use the same value.</li>
+                    <li>Confirm the aircraft or controller has a working internet path before expecting FIX.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Still stuck?</h2>
+            <ul>
+                <li><strong style="color:var(--text)">401 / unauthorized:</strong> wrong unique login, or seat still activating (wait ~1 min after signup) — re-check username/password or contact us.</li>
+                <li><strong style="color:var(--text)">Timeout / can’t connect:</strong> try public IP <span class="mono">67.205.128.14</span> instead of the name; confirm the rover/controller has working internet.</li>
+                <li><strong style="color:var(--text)">Connects, no FIX:</strong> sky view, distance from base, or base momentarily offline — wait / recheck with us.</li>
+                <li><strong style="color:var(--text)">Email us:</strong> reply to your registration confirmation or use the site contact form and mention RTK.</li>
+            </ul>
+            <div class="btn-row">
+                <a class="btn" href="index.html#rtk">Back to RTK section</a>
+                <a class="btn btn-ghost" href="index.html#contact">Contact ASAP NJ</a>
+            </div>
+        </div>
+
+        <footer>
+            ASAP NJ Drone Services · Partner RTK setup · Unique logins only · Do not share credentials
+        </footer>
+    </div>
+    <script>
+        (function () {
+            const params = new URLSearchParams(location.search);
+            if (params.get('ok') === '1' || params.get('registered') === '1') {
+                document.getElementById('ok-banner').classList.add('show');
+            }
+            if (params.get('paid') === '1') {
+                var pb = document.getElementById('paid-banner');
+                if (pb) pb.style.display = 'block';
+                document.getElementById('ok-banner').classList.add('show');
+            }
+
+            // Private login from same-browser signup (sessionStorage only — never in URL)
+            try {
+                const raw = sessionStorage.getItem('asap_rtk_creds');
+                if (raw) {
+                    const c = JSON.parse(raw);
+                    const age = Date.now() - (c.at || 0);
+                    if (c.username && c.password && age < 24 * 60 * 60 * 1000) {
+                        const box = document.getElementById('personal-creds');
+                        document.getElementById('pc-user').textContent = c.username;
+                        document.getElementById('pc-pass').textContent = c.password;
+                        document.getElementById('pc-user-copy').setAttribute('data-copy', c.username);
+                        document.getElementById('pc-pass-copy').setAttribute('data-copy', c.password);
+                        box.style.display = 'block';
+                        document.getElementById('ok-banner').classList.add('show');
+                    }
+                }
+            } catch (e) { /* ignore */ }
+
+            const gearRaw = (params.get('gear') || '').toLowerCase();
+            let tab = 'generic'; // default: survey / any NTRIP client
+            if (gearRaw.includes('dji') || gearRaw.includes('m4t') || gearRaw.includes('matrice') || gearRaw.includes('mavic') || gearRaw.includes('pilot')) tab = 'dji';
+            else if (gearRaw.includes('aircraft') || gearRaw.includes('drone') || gearRaw.includes('other brand')) tab = 'other-air';
+            else if (gearRaw.includes('emlid') || gearRaw.includes('trimble') || gearRaw.includes('leica') || gearRaw.includes('survey') || gearRaw.includes('gnss') || gearRaw.includes('layout') || gearRaw.includes('construction') || gearRaw.includes('mapping') || gearRaw.includes('rover')) tab = 'generic';
+
+            function showGear(id) {
+                document.querySelectorAll('.gear-panel').forEach(p => p.classList.remove('active'));
+                document.querySelectorAll('#gear-tabs button').forEach(b => b.classList.remove('active'));
+                const panel = document.getElementById('panel-' + id);
+                if (panel) panel.classList.add('active');
+                const btn = document.querySelector('#gear-tabs button[data-gear="' + id + '"]');
+                if (btn) btn.classList.add('active');
+            }
+            showGear(tab);
+            document.querySelectorAll('#gear-tabs button').forEach(btn => {
+                btn.addEventListener('click', () => showGear(btn.getAttribute('data-gear')));
+            });
+
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const t = btn.getAttribute('data-copy') || '';
+                    try {
+                        await navigator.clipboard.writeText(t);
+                        const old = btn.textContent;
+                        btn.textContent = 'Copied';
+                        setTimeout(() => { btn.textContent = old; }, 1200);
+                    } catch (e) { /* ignore */ }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

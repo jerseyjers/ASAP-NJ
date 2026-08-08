@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boss desk · ASAP NJ</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="../graphics/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="boss.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner wrap">
+      <a class="brand" href="./">
+        <strong>ASAP NJ</strong>
+        <span>Boss desk</span>
+      </a>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <a class="btn btn-ghost" href="../index.html">Main site</a>
+        <button type="button" class="btn btn-ghost hidden" id="btn-logout">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- LOGIN / FIRST-TIME SETUP -->
+  <main class="auth" id="view-login">
+    <div class="auth-card">
+      <h1 id="auth-title">Boss login</h1>
+      <p class="lead" id="auth-lead">Sign in with your company email.</p>
+
+      <!-- Step 1: email -->
+      <form id="email-form">
+        <label>Company email
+          <input id="email" type="email" autocomplete="username" required
+                 placeholder="gary.colyer@asap-nj.com" value="gary.colyer@asap-nj.com">
+        </label>
+        <p class="msg" id="email-msg" role="status"></p>
+        <button class="btn btn-primary" type="submit" style="width:100%">Continue</button>
+      </form>
+
+      <!-- Step 2a: existing password -->
+      <form id="login-form" class="hidden">
+        <p class="fine" id="login-email-label" style="margin-bottom:.8rem"></p>
+        <label>Password
+          <input id="password" type="password" autocomplete="current-password" required placeholder="Your boss password">
+        </label>
+        <p class="msg" id="login-msg" role="status"></p>
+        <button class="btn btn-primary" type="submit" style="width:100%">Enter desk</button>
+        <button class="btn btn-ghost" type="button" id="btn-back-login" style="width:100%;margin-top:.5rem">Back</button>
+      </form>
+
+      <!-- Step 2b: first-time create password -->
+      <form id="setup-form" class="hidden">
+        <p class="fine" id="setup-email-label" style="margin-bottom:.8rem"></p>
+        <div class="ok-box" style="margin-bottom:1rem;padding:.75rem;border-radius:10px;border:1px solid rgba(62,196,232,.25);background:rgba(62,196,232,.08);color:var(--muted);font-size:.88rem">
+          First time here — choose a strong password for the boss desk. You’ll use it next time on this device.
+        </div>
+        <label>Create password
+          <input id="new-pass" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters">
+        </label>
+        <label>Confirm password
+          <input id="new-pass2" type="password" autocomplete="new-password" required minlength="8" placeholder="Repeat password">
+        </label>
+        <p class="msg" id="setup-msg" role="status"></p>
+        <button class="btn btn-primary" type="submit" style="width:100%">Save password &amp; enter</button>
+        <button class="btn btn-ghost" type="button" id="btn-back-setup" style="width:100%;margin-top:.5rem">Back</button>
+      </form>
+
+      <p class="fine">Only <strong style="color:var(--text-muted)">gary.colyer@asap-nj.com</strong> can open this desk. Not linked from the public site. Protected by Cloudflare Access when enabled.</p>
+    </div>
+  </main>
+
+  <!-- DASHBOARD -->
+  <main class="dash wrap hidden" id="view-dash">
+    <div class="dash-head">
+      <div>
+        <h1>Command center</h1>
+        <p>Signed in as <strong id="dash-email">—</strong></p>
+      </div>
+      <div style="text-align:right">
+        <div class="stamp" id="gen-stamp">Loading stats…</div>
+        <button type="button" class="btn btn-ghost" id="btn-refresh" style="margin-top:.4rem">Refresh</button>
+      </div>
+    </div>
+
+    <div class="nav-tabs" role="tablist">
+      <button type="button" class="active" data-tab="overview">Overview</button>
+      <button type="button" data-tab="crm-home">CRM</button>
+      <button type="button" data-tab="crm-leads">Leads</button>
+      <button type="button" data-tab="crm-pipeline">Pipeline</button>
+      <button type="button" data-tab="crm-contacts">Contacts</button>
+      <button type="button" data-tab="crm-companies">Companies</button>
+      <button type="button" data-tab="field-tools">Field tools</button>
+      <button type="button" data-tab="rtk">RTK usage</button>
+      <button type="button" data-tab="site">Site metrics</button>
+      <button type="button" data-tab="notifications">Notifications</button>
+      <button type="button" data-tab="growth">Growth ideas</button>
+    </div>
+
+    <section class="section active" id="tab-overview">
+      <div class="grid" id="overview-stats">
+        <div class="stat sk-card"><div class="k">Loading</div><div class="v">—</div><div class="s">stats</div></div>
+        <div class="stat sk-card"><div class="k">Loading</div><div class="v">—</div><div class="s">pipeline</div></div>
+        <div class="stat sk-card"><div class="k">Loading</div><div class="v">—</div><div class="s">rtk</div></div>
+        <div class="stat sk-card"><div class="k">Loading</div><div class="v">—</div><div class="s">site</div></div>
+      </div>
+      <div class="panel">
+        <h2>CRM snapshot <span>leads &amp; pipeline</span></h2>
+        <div id="overview-crm"><p class="empty">Loading CRM…</p></div>
+      </div>
+      <div class="panel">
+        <h2>At a glance <span>what needs attention</span></h2>
+        <div id="overview-alerts" class="notif"></div>
+      </div>
+      <div class="panel">
+        <h2>Quick links</h2>
+        <p class="note">
+          <a href="../rtk-setup.html" target="_blank">Partner RTK setup</a> ·
+          <a href="../#rtk" target="_blank">Public RTK section</a> ·
+          <a href="../client/" target="_blank">Client portal</a> ·
+          <a id="link-cf" href="#" target="_blank">Cloudflare analytics</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="tab-crm-home"></section>
+    <section class="section" id="tab-crm-leads"></section>
+    <section class="section" id="tab-crm-pipeline"></section>
+    <section class="section" id="tab-crm-contacts"></section>
+    <section class="section" id="tab-crm-companies"></section>
+
+    <section class="section" id="tab-field-tools">
+      <div class="panel">
+        <h2>Field tools <span>solo web tools · stay in the browser</span></h2>
+        <p class="note">Quick helpers for quotes and job days. Data stays on this device until you copy it out.</p>
+      </div>
+      <div class="panel">
+        <h2>Quick quote sketch</h2>
+        <div class="crm-form" id="quote-sketch" style="max-width:420px">
+          <label>Job name <input id="qs-name" placeholder="e.g. Smith roof thermal"></label>
+          <label>Flight hours <input id="qs-hours" type="number" min="0" step="0.25" value="1.5"></label>
+          <label>Rate $/hr <input id="qs-rate" type="number" min="0" step="25" value="250"></label>
+          <label>Travel / mob $ <input id="qs-travel" type="number" min="0" step="25" value="0"></label>
+          <label>Report / processing $ <input id="qs-report" type="number" min="0" step="25" value="150"></label>
+          <p class="note" style="margin:0.5rem 0">Est. total: <strong id="qs-total" style="color:var(--accent);font-size:1.25rem">$525</strong></p>
+          <div class="crm-actions">
+            <button type="button" class="btn btn-primary" id="qs-copy">Copy quote text</button>
+            <button type="button" class="btn btn-ghost" id="qs-to-crm">Save as CRM deal</button>
+          </div>
+          <p class="note" id="qs-msg" style="margin-top:0.5rem"></p>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Pre-job checklist</h2>
+        <ul class="note" id="job-check" style="list-style:none;margin:0;padding:0">
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Weather / wind window OK</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Airspace check done (airspace tool)</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Site access / contact confirmed</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Batteries charged · props inspected</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Airdata / LAANC / auth as needed</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Scope + deliverables confirmed with client</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> Payment / deposit terms clear</label></li>
+          <li style="margin:0.4rem 0"><label style="display:flex;gap:0.5rem;align-items:flex-start;font-weight:500;color:var(--text)"><input type="checkbox" data-jc> After flight: cards pulled, notes, CRM deal updated</label></li>
+        </ul>
+        <div class="crm-actions" style="margin-top:0.75rem">
+          <button type="button" class="btn btn-ghost" id="jc-reset">Reset checklist</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Web shortcuts</h2>
+        <p class="note">
+          <a href="../airspace.html" target="_blank">Airspace check</a> ·
+          <a href="../#playground" target="_blank">Solar panel calculator</a> ·
+          <a href="../#rtk" target="_blank">RTK section</a> ·
+          <a href="../#contact" target="_blank">Public contact form</a> ·
+          <a href="../client/" target="_blank">Client portal</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="tab-rtk">
+      <div class="grid" id="rtk-stats"></div>
+      <div class="panel">
+        <h2>Top users <span>by minutes connected</span></h2>
+        <div id="rtk-top"></div>
+      </div>
+      <div class="panel">
+        <h2>Partners by seat <span>logins this period · not a spam of duplicate lines</span></h2>
+        <div id="rtk-recent"></div>
+      </div>
+      <div class="panel">
+        <h2>Live now</h2>
+        <div id="rtk-live"></div>
+      </div>
+    </section>
+
+    <section class="section" id="tab-site">
+      <div class="viz-grid" id="site-stats"></div>
+      <div class="panel">
+        <h2>Traffic trend <span>last 7 days · page views vs requests</span></h2>
+        <p class="note" id="site-metrics-note">Loading…</p>
+        <div id="site-daily" class="bars-panel"></div>
+        <p class="note" style="margin-top:.75rem">
+          <a id="link-cf-site" href="#" target="_blank" rel="noopener">Open full Cloudflare Web Analytics →</a>
+        </p>
+      </div>
+      <div class="panel">
+        <h2>Top paths <span>where people land</span></h2>
+        <div id="site-top-paths"></div>
+      </div>
+      <div class="panel">
+        <h2>More site notes</h2>
+        <ul class="note" id="site-metrics-list"></ul>
+      </div>
+      <div class="panel">
+        <h2>Forms &amp; leads</h2>
+        <p class="note" id="forms-note"></p>
+      </div>
+      <div class="panel">
+        <h2>What we track next</h2>
+        <ul class="note">
+          <li>RTK registration form submits (count into stats.json)</li>
+          <li>Contact form by service interest</li>
+          <li>Client portal logins &amp; report opens</li>
+          <li>Outbound clicks (Instagram, Airdata, call CTA)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="tab-notifications">
+      <div class="panel">
+        <h2>Ops notifications</h2>
+        <div id="notifications" class="notif"></div>
+      </div>
+    </section>
+
+    <section class="section" id="tab-growth">
+      <div class="panel">
+        <h2>Growth ideas <span id="growth-week-label">weekly pack</span></h2>
+        <p class="note" id="growth-meta">Loading this week’s focus…</p>
+        <div class="ideas" id="growth-ideas"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js?v=3"></script>
+  <script src="boss.js?v=7"></script>
+  <script src="crm.js?v=7"></script>
+</body>
+</html>

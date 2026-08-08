@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Mapping &amp; Construction Progress Drone | New Jersey | ASAP NJ</title>
+  <meta name="description" content="Field-to-engineer drone data for NJ land development and construction: photogrammetry, orthomosaics, 3D models, progress flights, and RTK-ready capture. FAA Part 107.">
+  <link rel="canonical" href="https://asap-nj.com/3d-mapping-construction-nj.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asap-nj.com/3d-mapping-construction-nj.html">
+  <meta property="og:title" content="3D Mapping &amp; Construction Progress | ASAP NJ">
+  <meta property="og:description" content="Get the data in the field. Engineers lay out the job. Progress flights as the site changes. New Jersey.">
+  <meta property="og:image" content="https://asap-nj.com/graphics/showcase/mapping.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3D Mapping &amp; Construction Progress | ASAP NJ">
+  <meta name="twitter:description" content="Photogrammetry, orthos, 3D, progress docs for GCs, engineers, and developers in NJ.">
+  <meta name="twitter:image" content="https://asap-nj.com/graphics/showcase/mapping.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="graphics/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0c10; --card: #161a23; --border: rgba(255,255,255,.1);
+      --text: #f3f5f7; --muted: #9aa3b2; --dim: #6b7382;
+      --accent: #3ec4e8; --radius: 14px;
+      --font: 'DM Sans', system-ui, sans-serif;
+      --display: 'Instrument Serif', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.55; }
+    a { color: var(--accent); }
+    .wrap { width: min(100% - 2rem, 880px); margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky; top: 0; background: rgba(10,12,16,.92); backdrop-filter: blur(12px); z-index: 10;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .brand { color: var(--text); text-decoration: none; font-family: var(--display); font-size: 1.35rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: .75rem 1.2rem; border-radius: 999px; font-weight: 700; font-size: .9rem;
+      text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    }
+    .btn-primary { background: var(--accent); color: #041018; }
+    .btn-ghost { border-color: var(--border); color: var(--text); }
+    .hero {
+      padding: 3rem 0 2.5rem;
+      background: radial-gradient(ellipse 60% 50% at 80% 0%, rgba(62,196,232,.12), transparent 55%);
+    }
+    .eyebrow { color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .75rem; }
+    h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 5vw, 2.85rem); line-height: 1.15; margin-bottom: .85rem; }
+    h2 { font-family: var(--display); font-weight: 400; font-size: 1.65rem; margin: 2rem 0 .75rem; }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 40em; margin-bottom: 1.5rem; }
+    .prose { color: var(--muted); font-size: 1rem; max-width: 42em; margin-bottom: 1rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: .55rem; }
+    .card p, .card li { color: var(--muted); font-size: .94rem; }
+    .card ul { margin: .65rem 0 0 1.1rem; }
+    .card li { margin: .3rem 0; }
+    .photo {
+      border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border);
+      margin: 1.5rem 0; max-height: 360px;
+    }
+    .photo img { width: 100%; height: 360px; object-fit: cover; display: block; }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: .65rem; margin: 1.5rem 0; }
+    @media (max-width: 800px) { .steps { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+    .step { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .9rem; }
+    .step strong { display: block; color: var(--accent); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .35rem; }
+    .step p { color: var(--muted); font-size: .88rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 1.5rem; }
+    .chips span {
+      font-size: .8rem; font-weight: 600; padding: .35rem .75rem; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .faq details {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: .9rem 1rem; margin-bottom: .55rem;
+    }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq details p { color: var(--muted); font-size: .94rem; margin-top: .55rem; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 2rem; color: var(--dim); font-size: .82rem; margin-top: 2rem; }
+    form label { display: grid; gap: .3rem; font-size: .82rem; font-weight: 600; color: var(--muted); margin-bottom: .75rem; }
+    input, textarea, select {
+      width: 100%; padding: .75rem .85rem; border-radius: 10px; border: 1px solid var(--border);
+      background: rgba(0,0,0,.28); color: var(--text); font: inherit;
+    }
+    form .btn-primary { width: 100%; border: none; margin-top: .25rem; }
+    .related { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1rem 0 2rem; }
+    .loop {
+      display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .5rem; align-items: center;
+      margin: 1.5rem 0 2rem;
+    }
+    @media (max-width: 720px) { .loop { grid-template-columns: 1fr; } .loop .arrow { display: none; } }
+    .loop .node {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; text-align: center;
+    }
+    .loop .node strong { display: block; color: var(--accent); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .35rem; }
+    .loop .node span { color: var(--muted); font-size: .88rem; }
+    .loop .arrow { color: var(--dim); font-size: 1.4rem; text-align: center; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "3D mapping and construction progress drone New Jersey",
+    "serviceType": "Aerial photogrammetry and construction documentation",
+    "url": "https://asap-nj.com/3d-mapping-construction-nj.html",
+    "description": "Field drone capture for photogrammetry, orthomosaics, 3D models, and progress documentation for engineers, GCs, and land development in New Jersey.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ASAP NJ Drone Services",
+      "url": "https://asap-nj.com/",
+      "email": "gary.colyer@asap-nj.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": [
+      { "@type": "State", "name": "New Jersey" },
+      { "@type": "AdministrativeArea", "name": "South Jersey" },
+      { "@type": "AdministrativeArea", "name": "Ocean County" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do engineers and GCs get from a mapping flight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dense aerial imagery processed into deliverables they can use—orthomosaic-style overviews, 3D model outputs, progress packages, and clear stills for meetings. Scope is set before flight so formats match how the team works."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you fly the same site as the project develops?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Progress and land-development work is a loop: capture on site, hand data to the office for layout and decisions, then return as earthwork and construction change the ground truth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer RTK for higher accuracy mapping?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASAP NJ operates a fixed-base NTRIP stream on the Toms River (free starter seat or Pro upgrade; any standard NTRIP client). On-site RTK is quoted for projects outside practical range. Mapping missions can use RTK-capable aircraft when the job needs it."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">ASAP NJ</a>
+      <div class="actions">
+        <a class="btn btn-ghost" href="index.html">Full site</a>
+        <a class="btn btn-primary" href="#quote">Request a mapping job</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">3D · Photogrammetry · Progress · NJ</p>
+        <h1>Field data for engineers. Progress for the job.</h1>
+        <p class="lead">
+          This is why we got into drones in the first place: be the field guy, get clean aerial data,
+          send it to the engineers so they can lay out the work—then fly again as the site and land development change.
+          Not just pretty flyovers. Deliverables crews can actually use.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#quote">Describe the site &amp; deliverable</a>
+          <a class="btn btn-ghost" href="index.html#rtk">RTK partner stream</a>
+          <a class="btn btn-ghost" href="airspace.html">Check airspace first</a>
+        </div>
+        <div class="chips">
+          <span>Photogrammetry / 3D</span>
+          <span>Orthomosaic overviews</span>
+          <span>Construction progress</span>
+          <span>Land development</span>
+          <span>RTK-ready when scoped</span>
+          <span>FAA Part 107</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="photo">
+        <img src="graphics/showcase/mapping.jpg" alt="Drone aerial of an active construction site for 3D mapping and progress documentation" width="1280" height="720" loading="eager">
+      </div>
+
+      <h2>The loop we built the business around</h2>
+      <div class="loop" aria-label="Field to office workflow">
+        <div class="node"><strong>1 · Field</strong><span>Fly the site. Dense photos. Clear coverage.</span></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node"><strong>2 · Office</strong><span>Engineers / GCs layout, plan, decide.</span></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node"><strong>3 · Progress</strong><span>Refly as dirt moves and buildings rise.</span></div>
+      </div>
+      <p class="prose">
+        Land development and active jobs don’t freeze after one flight. ASAP NJ is set up for
+        <strong style="color:var(--text)">repeat missions</strong>—same site language, consistent angles,
+        packages that make sense in a project folder, not a random phone dump.
+      </p>
+
+      <h2>What we capture</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>3D mapping &amp; models</h3>
+          <p>Dense photo capture for photogrammetry-style reconstruction—models and visuals for planning, sales decks, and design conversations.</p>
+        </article>
+        <article class="card">
+          <h3>Orthomosaic-style overviews</h3>
+          <p>Top-down site context so everyone shares the same picture of access, stockpiles, pads, and surroundings.</p>
+        </article>
+        <article class="card">
+          <h3>Construction progress</h3>
+          <p>Milestone or weekly flights so owners, GCs, and stakeholders see the same reality without a tower climb.</p>
+        </article>
+        <article class="card">
+          <h3>Land development</h3>
+          <p>Early site docs through earthwork and build-out—back and forth as the parcel becomes a project.</p>
+        </article>
+        <article class="card">
+          <h3>RTK when accuracy matters</h3>
+          <p>Fixed-base NTRIP near Toms River (free starter or Pro), or quoted on-site RTK for remote jobs. <a href="index.html#rtk">RTK details →</a></p>
+        </article>
+        <article class="card">
+          <h3>Engineer / GC friendly handoff</h3>
+          <p>Scope formats before takeoff—stills, maps, 3D outputs, portal delivery—so the office isn’t guessing what you meant to send.</p>
+        </article>
+      </div>
+
+      <h2>How a typical job runs</h2>
+      <div class="steps">
+        <div class="step"><strong>1 · Scope</strong><p>Site, goals, deliverable types, accuracy needs, schedule.</p></div>
+        <div class="step"><strong>2 · Capture</strong><p>Part 107 flight plan; RTK when the job calls for it.</p></div>
+        <div class="step"><strong>3 · Package</strong><p>Organized files for engineers, GCs, and owners.</p></div>
+        <div class="step"><strong>4 · Repeat</strong><p>Progress flights as the job and land change.</p></div>
+      </div>
+
+      <h2>Who this is for</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Teams we support</h3>
+          <ul>
+            <li>Civil / site engineers &amp; survey-adjacent workflows</li>
+            <li>General contractors &amp; project managers</li>
+            <li>Developers &amp; land development partners</li>
+            <li>Owners who need visual truth on a schedule</li>
+            <li>Anyone tired of “someone’s drone footage” with no structure</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Service area</h3>
+          <ul>
+            <li>New Jersey primary — South Jersey base</li>
+            <li>Toms River / Ocean County hub</li>
+            <li>Travel for real project scope</li>
+            <li>Quote by form — no public phone</li>
+          </ul>
+        </article>
+      </div>
+
+      <h2>Related</h2>
+      <div class="related">
+        <a class="btn btn-ghost" href="index.html#rtk">RTK / NTRIP</a>
+        <a class="btn btn-ghost" href="rtk-setup.html">RTK setup guide</a>
+        <a class="btn btn-ghost" href="thermal-drone-inspection-nj.html">Thermal inspections</a>
+        <a class="btn btn-ghost" href="insurance.html">Insurance docs</a>
+        <a class="btn btn-ghost" href="index.html">Full site</a>
+      </div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>What do engineers and GCs get from a mapping flight?</summary>
+          <p>Scoped deliverables—dense capture for 3D/ortho-style products, progress packages, and meeting-ready stills. We align formats before the flight.</p>
+        </details>
+        <details>
+          <summary>Can you fly the same site as the project develops?</summary>
+          <p>Yes. Field → office → progress is the core loop. Same site, updated reality, consistent handoff.</p>
+        </details>
+        <details>
+          <summary>Do you offer RTK for higher accuracy mapping?</summary>
+          <p>Fixed-base NTRIP on the Toms River (instant free seat or Pro upgrade for full workdays; any NTRIP client). On-site RTK quoted for remote projects. Ask when you request a mapping job—or open the <a href="index.html#rtk">RTK section</a>.</p>
+        </details>
+        <details>
+          <summary>Is this a licensed land survey?</summary>
+          <p>No. ASAP NJ provides aerial capture and documentation products for project use. Boundary, legal surveys, and sealed work stay with licensed surveyors when the law requires them.</p>
+        </details>
+      </div>
+
+      <article class="card" id="quote" style="margin:2rem 0 2.5rem">
+        <h3 style="margin-bottom:.4rem">Site capture brief</h3>
+        <p style="color:var(--muted);margin:.4rem 0 1rem;font-size:.94rem">
+          Who gets the files (engineer, GC, owner) and one-time vs progress series—that’s enough to scope.
+        </p>
+        <form data-lead-form="mapping_3d" action="https://formsubmit.co/gary.colyer@asap-nj.com" method="POST">
+          <input type="hidden" name="_subject" value="3D / construction mapping request — ASAP NJ">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting ASAP NJ Drone Services. We received your request and will follow up by email with next steps. Please reply to that email with any extra details so everything stays clear and on the record. — Gary Colyer · ASAP NJ · https://asap-nj.com/ · gary.colyer@asap-nj.com">
+          <input type="hidden" name="_next" value="https://asap-nj.com/3d-mapping-construction-nj.html">
+          <label>Your name <input name="name" required autocomplete="name"></label>
+          <label>Email <input type="email" name="email" required autocomplete="email"></label>
+          <label>Phone <span style="color:var(--dim);font-weight:500">(optional)</span> <input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Company / role (optional) <input name="company" placeholder="GC, engineer, developer…" autocomplete="organization"></label>
+          <label>Site address / area <input id="map-location" name="location" data-address-autocomplete required placeholder="Start typing street, city, NJ…" autocomplete="off"></label>
+          <label>What do you need?
+            <select name="service">
+              <option>3D model / photogrammetry</option>
+              <option>Orthomosaic / site overview</option>
+              <option>Construction progress series</option>
+              <option>Land development documentation</option>
+              <option>RTK-supported mapping</option>
+              <option>Not sure — help scope it</option>
+            </select>
+          </label>
+          <label>Project details
+            <textarea name="message" rows="4" required placeholder="Acreage, stage of job, deliverable formats, timeline, who receives the files…"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send site brief</button>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      ASAP NJ Drone Services · FAA Part 107 · <a href="index.html">asap-nj.com</a> ·
+      <a href="https://certificates.airdata.com/BGSepI" target="_blank" rel="noopener">Airdata certificate</a>
+    </div>
+  </footer>
+<script src="js/address-autocomplete.js?v=1"></script>
+<script src="js/lead-config.js?v=2"></script>
+<script src="js/lead-capture.js?v=3"></script>
+</body>
+</html>
